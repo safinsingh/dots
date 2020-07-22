@@ -86,21 +86,21 @@ enable-ipc = true
 [module/i3]
 type = internal/i3
 
-label-focused = %index%
+label-focused = %name%
 ;label-focused-background = ${colors.background-alt}
 label-focused-foreground = ${colors.primary}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 1
 
-label-occupied = %index%
+label-occupied = %name%
 label-occupied-foreground = ${colors.primary}
 label-occupied-padding = 1
 
-label-urgent = %index%!
+label-urgent = %name%!
 label-urgent-background = ${colors.primary}
 label-urgent-padding = 1
 
-label-unfocused = %index%
+label-unfocused = %name%
 label-unfocused-foreground = ${colors.foreground}
 label-unfocused-padding = 1
 
