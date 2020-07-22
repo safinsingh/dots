@@ -1,0 +1,109 @@
+/**
+ * User: qball
+ * Copyright: Dave Davenport
+ */
+* {
+    text-color:  #f4f2f0;
+    background-color:  rgba(0,0,0,0);
+    dark: #2c2541;
+    // Black
+    black:       #3d335c;
+    lightblack:  #483c6c;
+    //
+    // Red
+    red:         #cd5c5c;
+    lightred:    #cc5533;
+    //
+    // Green
+    green:       #86af80;
+    lightgreen:  #88cc22;
+    //
+    // Yellow
+    yellow:      #e8ae5b;
+    lightyellow:     #ffa75d;
+    //
+    // Blue
+    blue:      #6495ed;
+    lightblue:     #87ceeb;
+    //
+    // Magenta
+    magenta:      #deb887;
+    lightmagenta:     #996600;
+    //
+    // Cyan
+    cyan:      #b0c4de;
+    lightcyan:     #b0c4de;
+    //
+    // White
+    white:      #bbaa99;
+    lightwhite:     #ddccbb;
+    //
+    // Bold, Italic, Underline
+    highlight:     bold #ffffff;
+}
+#window {
+    height:   50%;
+    width: 15em;
+    location: north east;
+    anchor:   north east;
+    border:  0px 0px 0px 0px;
+    x-offset: -30px;
+    y-offset: 39px;
+    text-color: @lightwhite;
+    border-radius: 0px 0px 19px 19px;
+}
+
+#mode-switcher {
+    border: 2px 0px 0px 0px;
+    background-color: @lightblack;
+    padding: 4px;
+}
+#button selected {
+    border-color: @lightgreen;
+    text-color: @lightgreen;
+}
+#inputbar {
+    background-color: #2c2541;
+    text-color: @lightgreen;
+    padding: 4px 4px 4px 4px;
+    border: 0px 0px 0px 0px;
+}
+#mainbox {
+    expand: true;
+    background-color: #1c1c1cee;
+    spacing: 1em;
+}
+#listview {
+    padding: 0em 1em 0em 1em;
+    dynamic: false;
+    lines: 0;
+}
+
+#prompt {
+margin: 0px 6px 0px 0px;
+}
+#element selected  normal {
+    background-color: #da0f7a;
+}
+#element normal active {
+    text-color: @lightblue;
+}
+#element normal urgent {
+    text-color: @lightred;
+}
+#element alternate normal {
+}
+#element alternate active {
+    text-color: @lightblue;
+}
+#element alternate urgent {
+    text-color: @lightred;
+}
+#element selected active {
+    background-color: @lightblue;
+    text-color: @dark;
+}
+#element selected urgent {
+    background-color: @lightred;
+    text-color: @dark;
+}
