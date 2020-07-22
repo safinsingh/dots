@@ -67,13 +67,9 @@ modules-right = network-wlan battery-internal battery-external pulseaudio backli
 ;tray-padding = 2
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
 wm-restack = i3
 
 override-redirect = false
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
@@ -224,7 +220,7 @@ type = internal/network
 ; Name of the network interface to display. You can get the names of the
 ; interfaces on your machine with `ip link`
 ; Wireless interfaces often start with `wl` and ethernet interface with `eno` or `eth`
-interface = wlp4s0
+interface = wlp2s0
 
 ; Seconds to sleep between updates
 ; Default: 1
