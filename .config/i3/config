@@ -37,7 +37,7 @@ gaps outer 8
 bindsym $mod+d exec rofi -show run --config ~/.config/rofi/config.rasi
 
 # Screenshot
-bindsym Print exec scrot -q 100 '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+bindsym Print exec scrot -q 100 '%Y-%m-%d-%s_screenshot_$wx$h.png' -e 'mv $f ~/Pictures/'
 
 # Change focus
 bindsym $mod+Left focus left
