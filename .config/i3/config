@@ -9,7 +9,7 @@ floating_modifier $mod
 bindsym $mod+Return exec termite
 
 # Lock screen
-bindsym $mod+l i3lock-fancy -f "Cascadia-Code-Regular"
+bindsym $mod+l exec i3lock-fancy -f "Cascadia-Code-Regular"
 
 # Kill focused window
 bindsym $mod+q kill
