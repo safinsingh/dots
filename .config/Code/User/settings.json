@@ -1,0 +1,23 @@
+{
+  "editor.fontFamily": "CaskaydiaCove Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "terminal.integrated.shell.linux": "/bin/zsh",
+  "workbench.iconTheme": "eq-material-theme-icons-darker",
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".min.css"
+    }
+  ],
+  "editor.renameOnType": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "python.languageServer": "Microsoft",
+  "editor.fontSize": 18,
+  "workbench.colorTheme": "Dracula Refined",
+  "editor.formatOnSave": true
+}
