@@ -1,4 +1,5 @@
-set $mod Mod4
+# Alt as mod ree? (4)
+set $mod Mod1
 
 font pango:DejaVu Sans Mono 8
 
