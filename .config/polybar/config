@@ -62,7 +62,7 @@ font-2 = "JetBrainsMono Nerd Font:style=Solid:pixelsize=18;3"
 font-3 = "JetBrainsMono Nerd Font:pixelsize=18;3"
 
 modules-left = i3
-modules-right = network-wlan battery-internal pulseaudio backlight date separator bluetooth power-menu
+modules-right = network-wlan battery-internal pulseaudio date separator bluetooth power-menu
 
 ;tray-position = right
 ;tray-padding = 2
