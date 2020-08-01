@@ -1,11 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=techset
-Comment=Techset Theme
+Name=oomox-NewTheme-dark-compact
+Comment=A Material Design theme
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-Name=techset
-GtkTheme=techset
-IconTheme=techset
-MetacityTheme=techset
+GtkTheme=oomox-NewTheme-dark-compact
+MetacityTheme=oomox-NewTheme-dark-compact
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24
