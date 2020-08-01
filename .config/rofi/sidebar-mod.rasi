@@ -1,7 +1,7 @@
 * {
   text-color: #f4f2f0;
   background-color: rgba(0, 0, 0, 0);
-  dark: #2c2541;
+  dark: #22192C;
   black: #3d335c;
   lightblack: #483c6c;
   red: #cd5c5c;
@@ -47,7 +47,7 @@
 #inputbar {
   background-color: #22192C;
   text-color: @lightgreen;
-  padding: 4px 4px 4px 4px;
+  padding: 5px 20px 0px 20px;
   border: 0px 0px 0px 0px;
 }
 
@@ -65,6 +65,11 @@
 
 #prompt {
   margin: 0px 6px 0px 0px;
+}
+
+#element {
+  padding: 4px;
+  border-radius: 10px;
 }
 
 #element selected normal {
