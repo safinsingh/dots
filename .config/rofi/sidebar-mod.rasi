@@ -45,7 +45,7 @@
 }
 
 #inputbar {
-  background-color: #2c2541;
+  background-color: #22192C;
   text-color: @lightgreen;
   padding: 4px 4px 4px 4px;
   border: 0px 0px 0px 0px;
@@ -53,7 +53,7 @@
 
 #mainbox {
   expand: true;
-  background-color: #2c2541fa;
+  background-color: #22192C;
   spacing: 1em;
 }
 
@@ -68,7 +68,7 @@
 }
 
 #element selected normal {
-  background-color: #00ded3;
+  background-color: #FF2B77;
 }
 
 #element normal active {
