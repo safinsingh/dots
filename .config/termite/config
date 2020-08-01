@@ -6,7 +6,7 @@
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
-font = CaskaydiaCove Nerd Font 12
+font = JetBrainsMono Nerd Font 12
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -46,7 +46,7 @@ scrollback_lines = 10000
 foreground      = #f4f2f0
 foreground_bold = #f4f2f0
 cursor          = #f4f2f0
-background      = #2c2541
+background      = #22192C
 
 # black
 color0  = #3d335c
