@@ -17,8 +17,8 @@ antibody bundle < ~/.config/antibody/zsh_plugins.txt
 
 source /usr/share/nvm/init-nvm.sh
 source $HOME/.cargo/env
-export DENO_INSTALL="/home/safin/.deno"
-export PATH="$DENO_INSTALL/bin:/home/safin/Documents/vault:$PATH"
+
+export PATH="/home/safin/.deno/bin:/home/safin/Documents/vault:/usr/local/bin/trck:$PATH"
 
 alias mirror='xrandr --output DP-1 --auto --same-as eDP-1 && killall polybar && polybar &'
 alias ls='exa --icons'
