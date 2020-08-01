@@ -3,7 +3,7 @@ modi: "window,run,ssh,drun";
 /*	width: 50;*/
 lines: 15;
 /*	columns: 1;*/
-font: "Cascadia Code 12";
+font: "JetBrainsMono Nerd Font 12";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/
