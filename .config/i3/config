@@ -1,7 +1,7 @@
 # Alt as mod ree? (4)
 set $mod Mod1
 
-font pango:DejaVu Sans Mono 8
+font pango:JetBrainsMono Nerd Font 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -32,7 +32,7 @@ for_window [class="^.*"] border pixel 0
 
 # Gaps
 gaps inner 20
-gaps outer 8
+gaps outer 7
 
 # Rofi
 bindsym $mod+d exec rofi -show run --config ~/.config/rofi/config.rasi
