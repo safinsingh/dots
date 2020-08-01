@@ -20,7 +20,7 @@ source $HOME/.cargo/env
 
 export PATH="/home/safin/.deno/bin:/home/safin/Documents/vault:/usr/local/bin/trck:$PATH"
 
-alias mirror='xrandr --output DP-1 --auto --same-as eDP-1 && killall polybar && polybar &'
+alias mirror='xrandr --output DP-1 --auto --same-as eDP-1 && killall polybar && bash ~/.config/polybar/launch.sh'
 alias ls='exa --icons'
 alias la='exa -a --icons'
 alias ll='exa -l --icons'
