@@ -23,10 +23,10 @@ scrollback_lines = 10000
 #browser = xdg-open
 
 # "system", "on" or "off"
-#cursor_blink = system
+cursor_blink = off
 
 # "block", "underline" or "ibeam"
-#cursor_shape = block
+cursor_shape = underline
 
 # Hide links that are no longer valid in url select overlay mode
 #filter_unmatched_urls = true
@@ -53,16 +53,16 @@ color0  = #3d335c
 color8  = #483c6c
 
 # red
-color1  = #da0f7a
-color9  = #ff217c
+color1  = #ff2b77
+color9  = #ff2b77
 
 # green
 color2  = #00f58f
 color10 = #21ffa2
 
 # yellow
-color3  = #ffc65c
-color11 = #ffd486
+color3  = #fee353
+color11 = #fee353
 
 # blue
 color4  = #008bd7
@@ -88,8 +88,8 @@ color15 = #d5d8d5
 #active_foreground = #e68080
 #active_background = #3f3f3f
 #padding = 2
-#border = #3f3f3f
-#border_width = 0.5
+border = #fee353
+border_width = 0.5
 #roundness = 2.0
 
 # vim: ft=dosini cms=#%s
