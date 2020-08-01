@@ -418,12 +418,12 @@ format-volume = <ramp-volume> <label-volume>
 ; Available tokens:
 ;   %percentage% (default)
 ;   %decibels% (unreleased)
-;label-volume = %percentage%%
+label-volume = %{F#FFFFFF}%percentage%%
 
 ; Available tokens:
 ;   %percentage% (default)
 ;   %decibels% (unreleased)
-label-muted = %{F#FF2B77}%{F-} %{F#FFFFFF}off
+label-muted = %{F#FF2B77}%{F-} %{F#FFFFFF}off
 ;label-muted-foreground = #666
 
 ; Only applies if <ramp-volume> is used
@@ -456,7 +456,7 @@ type = internal/date
 ; Seconds to sleep between updates
 interval = 1.0
 
-date = %d-%m-%Y%
+date = %m/%d/%y%
 time = %I:%M %p
 
 label = %{F#FF2B77}%{F-} %{F#FFFFFF} %time% %date% 
@@ -498,8 +498,6 @@ menu-0-3-exec = shutdown now
 menu-0-4 = "%{F#FEE353}%{F-}"
 menu-0-4-exec = i3lock-fancy -f "JetBrains-Mono-Regular-Nerd-Font-Complete-Mono"
 
-
-
 ; Available tags:
 ;   <label-toggle> (default) - gets replaced with <label-(open|close)>
 ;   <menu> (default)
@@ -511,7 +509,7 @@ format =<menu>  <label-toggle>
 
 label-open = "%{F#FF2B77}%{F-}"
 
-label-close = "%{F#FF2B77}%{F-}"
+label-close = "%{F#FF2B77}%{F-}"
 
 
 ; Optional item separator

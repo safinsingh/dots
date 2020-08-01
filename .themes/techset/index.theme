@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=techset
+Comment=Techset Theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+Name=techset
+GtkTheme=techset
+IconTheme=techset
+MetacityTheme=techset
