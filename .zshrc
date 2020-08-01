@@ -1,8 +1,4 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-source <(antibody init)
+eval "$(starship init zsh)"
 export TERM="xterm-256color"
 
 HISTFILE=~/.zsh_history
@@ -11,9 +7,6 @@ SAVEHIST=1000
 
 autoload -Uz compinit
 compinit
-
-antibody bundle < ~/.config/antibody/zsh_plugins.txt
-[[ ! -f ~/.config/antibody/p10k.zsh ]] || source ~/.config/antibody/p10k.zsh 
 
 source /usr/share/nvm/init-nvm.sh
 source $HOME/.cargo/env
