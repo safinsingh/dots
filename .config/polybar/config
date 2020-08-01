@@ -17,13 +17,15 @@
 ;==========================================================
 
 [colors]
-background = ${xrdb:background}
+;background = ${xrdb:background}
+background = #22192C
 ;background = #222
 background-alt = #444
-foreground = ${xrdb:foreground}
-;foreground = #dfdfdf
+;foreground = ${xrdb:foreground}
+foreground = #FF2B77
 foreground-alt = ${xrdb:color7}
-primary = ${xrdb:color6}
+;primary = ${xrdb:color6}
+primary = #FEE353
 secondary = #0000ff
 alert = #ffff00
 
@@ -54,14 +56,14 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = "Cascadia Code:pixelsize=12;2"
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=14;3"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=14;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=14;3"
+font-0 = "JetBrainsMono Nerd Font:pixelsize=12;2"
+font-1 = "JetBrainsMono Nerd Font:style=Regular:pixelsize=18;3"
+font-2 = "JetBrainsMono Nerd Font:style=Solid:pixelsize=18;3"
+font-3 = "JetBrainsMono Nerd Font:pixelsize=18;3"
 
 modules-left = i3
 modules-center = spotify spotify-prev spotify-play-pause spotify-next
-modules-right = network-wlan battery-internal battery-external pulseaudio backlight date separator bluetooth power-menu
+modules-right = network-wlan battery-internal pulseaudio backlight date separator bluetooth power-menu
 
 ;tray-position = right
 ;tray-padding = 2
@@ -103,35 +105,6 @@ label-unfocused-padding = 1
 ; Separator in between workspaces
 ; label-separator = -
 
-[module/spotify]
-type = custom/script
-interval = 1
-format-prefix = "%{F#00ded3}%{F-} "
-format = <label>
-exec = sh ~/.config/polybar/scripts/spotify.sh -i "%artist%{F#00ded3}:%{F-} %title" -e " "
-exec-if = pgrep -x spotify
-
-[module/spotify-prev]
-type = custom/script
-format = <label>
-exec = echo "%{F#00ded3}%{F-}"
-click-left = playerctl previous spotify
-exec-if = pgrep -x spotify
-
-[module/spotify-play-pause]
-type = custom/script
-format = <label>
-exec = echo "%{F#00ded3}%{F-}"
-click-left = playerctl play-pause spotify 
-exec-if = pgrep -x spotify
-
-[module/spotify-next]
-type = custom/script
-format = <label>
-exec = echo "%{F#00ded3}%{F-}"
-click-left = playerctl next spotify
-exec-if = pgrep -x spotify
-
 [module/network-ethernet]
 type = internal/network
 ; Name of the network interface to display. You can get the names of the
@@ -163,7 +136,7 @@ unknown-as-up = true
 ; Available tags:
 ;   <label-connected> (default)
 ;   <ramp-signal>
-format-connected = %{F#00ded3}%{F-} <label-connected>
+format-connected = %{F#FF2B77}%{F-} <label-connected>
 
 ; Available tags:
 ;   <label-disconnected> (default)
@@ -206,9 +179,9 @@ ramp-signal-4 = 😃
 ramp-signal-5 = 😈
 
 ; Only applies if <animation-packetloss> is used
-animation-packetloss-0 =%{F#00ded3}%{F-} 
+animation-packetloss-0 =%{F#FF2B77}%{F-} 
 animation-packetloss-0-foreground = #ffa64c
-animation-packetloss-1 =%{F#00ded3}%{F-} 
+animation-packetloss-1 =%{F#FF2B77}%{F-} 
 animation-packetloss-1-foreground = #000000
 ; Framerate in milliseconds
 animation-packetloss-framerate = 500
@@ -217,68 +190,24 @@ animation-packetloss-framerate = 500
 
 [module/network-wlan]
 type = internal/network
-; Name of the network interface to display. You can get the names of the
-; interfaces on your machine with `ip link`
-; Wireless interfaces often start with `wl` and ethernet interface with `eno` or `eth`
 interface = wlp2s0
-
-; Seconds to sleep between updates
-; Default: 1
 interval = 3.0
 
-; Test connectivity every Nth update
-; A value of 0 disables the feature
-; NOTE: Experimental (needs more testing)
-; Default: 0
-;ping-interval = 3
-
-; Accumulate values from all interfaces
-; when querying for up/downspeed rate
-; Default: false
 accumulate-stats = true
-
-; Consider an `UNKNOWN` interface state as up.
-; Some devices like USB network adapters have 
-; an unknown state, even when they're running
-; Default: false
 unknown-as-up = true
 
-; Available tags:
-;   <label-connected> (default)
-;   <ramp-signal>
-format-connected = %{F#00ded3}%{F-} <label-connected>
-
-; Available tags:
-;   <label-disconnected> (default)
+format-connected = %{F#FF2B77}%{F-}  <label-connected>
 format-disconnected = 
-
-; Available tags:
-;   <label-connected> (default)
-;   <label-packetloss>
-;   <animation-packetloss>
 format-packetloss = <animation-packetloss> <label-connected>
 
-; All labels support the following tokens:
-;   %ifname%    [wireless+wired]
-;   %local_ip%  [wireless+wired]
-;   %local_ip6% [wireless+wired]
-;   %essid%     [wireless]
-;   %signal%    [wireless]
-;   %upspeed%   [wireless+wired]
-;   %downspeed% [wireless+wired]
-;   %linkspeed% [wired]
-
-; Default: %ifname% %local_ip%
 label-connected =  %essid%
-label-connected-foreground = #eefafafa
+label-connected-foreground = #eefafa
 
-; Default: (none)
 label-disconnected = not connected
 label-disconnected-foreground = #66ffffff
 
-; Default: (none)
 ;label-packetloss = %essid%
-;label-packetloss-foreground = #eefafafa
+;label-packetloss-foreground = #eefafa
 
 ; Only applies if <ramp-signal> is used
 ramp-signal-0 = 😱
@@ -289,9 +218,9 @@ ramp-signal-4 = 😃
 ramp-signal-5 = 😈
 
 ; Only applies if <animation-packetloss> is used
-animation-packetloss-0 =%{F#00ded3}%{F-} 
+animation-packetloss-0 =%{F#FF2B77}%{F-} 
 animation-packetloss-0-foreground = #ffa64c
-animation-packetloss-1 =%{F#00ded3}%{F-} 
+animation-packetloss-1 =%{F#FF2B77}%{F-} 
 animation-packetloss-1-foreground = #000000
 ; Framerate in milliseconds
 animation-packetloss-framerate = 500
@@ -315,7 +244,7 @@ format-spacing = 0
 ;   %number%
 ;   %icon%
 ; Default: %layout%
-label-layout = %{F#00ded3}%{F-} %layout%
+label-layout = %{F#FF2B77}%{F-} %layout%
 ;label-layout-padding = 2
 ;label-layout-background = #bc99ed
 ;label-layout-foreground = #000
@@ -365,6 +294,8 @@ label-indicator-off-scrolllock =
 
 [module/battery-internal]
 type = internal/battery
+label-foreground = #eefafa
+label-charging-foreground = #eefafa
 
 ; This is useful in case the battery never reports 100% charge
 full-at = 97
@@ -415,144 +346,47 @@ format-discharging = <ramp-capacity> <label-discharging>
 ;   %percentage_raw%
 ;   %time%
 ;   %consumption% (shows current charge rate in watts)
-label-charging = %percentage%%
+label-charging = %{F#FFFFFF}%percentage%%{F-} 
 
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
 ;   %percentage_raw%
 ;   %time%
 ;   %consumption% (shows current discharge rate in watts)
-label-discharging = %percentage%%
+label-discharging = %{F#FFFFFF} %percentage%%
 
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
 ;   %percentage_raw%
- label-full = %{F#00ded3}%{F-} 100%
+ label-full = %{F#FF2B77}%{F-}  %{F#eefafa}100%{F-}
 
 ; Only applies if <ramp-capacity> is used
-ramp-capacity-0 =%{F#00ded3}%{F-} 
-ramp-capacity-1 =%{F#00ded3}%{F-} 
-ramp-capacity-2 =%{F#00ded3}%{F-} 
-ramp-capacity-3 =%{F#00ded3}%{F-} 
-ramp-capacity-4 =%{F#00ded3}%{F-} 
+ramp-capacity-0 =%{F#FF2B77}%{F-} 
+ramp-capacity-1 =%{F#FF2B77}%{F-} 
+ramp-capacity-2 =%{F#FF2B77}%{F-} 
+ramp-capacity-3 =%{F#FF2B77}%{F-} 
+ramp-capacity-4 =%{F#FF2B77}%{F-} 
 
 ; Only applies if <bar-capacity> is used
 bar-capacity-width = 10
 
 ; Only applies if <animation-charging> is used
-animation-charging-0 =%{F#00ded3}%{F-} 
-animation-charging-1 =%{F#00ded3}%{F-} 
-animation-charging-2 =%{F#00ded3}%{F-} 
-animation-charging-3 =%{F#00ded3}%{F-} 
-animation-charging-4 =%{F#00ded3}%{F-} 
+animation-charging-0 =%{F#FF2B77}%{F-} 
+animation-charging-1 =%{F#FF2B77}%{F-} 
+animation-charging-2 =%{F#FF2B77}%{F-} 
+animation-charging-3 =%{F#FF2B77}%{F-} 
+animation-charging-4 =%{F#FF2B77}%{F-} 
 ; Framerate in milliseconds
 animation-charging-framerate = 500
 
 ; Only applies if <animation-discharging> is used
-animation-discharging-0 =%{F#00ded3}%{F-} 
-animation-discharging-1 =%{F#00ded3}%{F-} 
-animation-discharging-2 =%{F#00ded3}%{F-} 
-animation-discharging-3 =%{F#00ded3}%{F-} 
-animation-discharging-4 =%{F#00ded3}%{F-} 
+animation-discharging-0 =%{F#FF2B77}%{F-} 
+animation-discharging-1 =%{F#FF2B77}%{F-} 
+animation-discharging-2 =%{F#FF2B77}%{F-} 
+animation-discharging-3 =%{F#FF2B77}%{F-} 
+animation-discharging-4 =%{F#FF2B77}%{F-} 
 ; Framerate in milliseconds
 animation-discharging-framerate = 500
-
-
-
-[module/battery-external]
-type = internal/battery
-
-; This is useful in case the battery never reports 100% charge
-full-at = 97
-
-; Use the following command to list batteries and adapters:
-; $ ls -1 /sys/class/power_supply/
-battery = BAT1
-adapter = AC
-
-; If an inotify event haven't been reported in this many
-; seconds, manually poll for new values.
-;
-; Needed as a fallback for systems that don't report events
-; on sysfs/procfs.
-;
-; Disable polling by setting the interval to 0.
-;
-; Default: 5
-poll-interval = 5
-
-; see "man date" for details on how to format the time string
-; NOTE: if you want to use syntax tags here you need to use %%{...}
-; Default: %H:%M:%S
-time-format = %H:%M
-
-; Available tags:
-;   <label-charging> (default)
-;   <bar-capacity>
-;   <ramp-capacity>
-;   <animation-charging>
-format-charging = <animation-charging> <label-charging>
-
-; Available tags:
-;   <label-discharging> (default)
-;   <bar-capacity>
-;   <ramp-capacity>
-;   <animation-discharging>
-format-discharging = <ramp-capacity> <label-discharging>
-
-; Available tags:
-;   <label-full> (default)
-;   <bar-capacity>
-;   <ramp-capacity>
-;   format-full = <label-full>
-
-; Available tokens:
-;   %percentage% (default) - is set to 100 if full-at is reached
-;   %percentage_raw%
-;   %time%
-;   %consumption% (shows current charge rate in watts)
-label-charging = %percentage%%
-
-; Available tokens:
-;   %percentage% (default) - is set to 100 if full-at is reached
-;   %percentage_raw%
-;   %time%
-;   %consumption% (shows current discharge rate in watts)
-label-discharging = %percentage%%
-
-; Available tokens:
-;   %percentage% (default) - is set to 100 if full-at is reached
-;   %percentage_raw%
- label-full = %{F#00ded3}%{F-} 100%
-
-; Only applies if <ramp-capacity> is used
-ramp-capacity-0 =%{F#00ded3}%{F-} 
-ramp-capacity-1 =%{F#00ded3}%{F-} 
-ramp-capacity-2 =%{F#00ded3}%{F-} 
-ramp-capacity-3 =%{F#00ded3}%{F-} 
-ramp-capacity-4 =%{F#00ded3}%{F-} 
-
-; Only applies if <bar-capacity> is used
-bar-capacity-width = 10
-
-; Only applies if <animation-charging> is used
-animation-charging-0 =%{F#00ded3}%{F-} 
-animation-charging-1 =%{F#00ded3}%{F-} 
-animation-charging-2 =%{F#00ded3}%{F-} 
-animation-charging-3 =%{F#00ded3}%{F-} 
-animation-charging-4 =%{F#00ded3}%{F-} 
-; Framerate in milliseconds
-animation-charging-framerate = 500
-
-; Only applies if <animation-discharging> is used
-animation-discharging-0 =%{F#00ded3}%{F-} 
-animation-discharging-1 =%{F#00ded3}%{F-} 
-animation-discharging-2 =%{F#00ded3}%{F-} 
-animation-discharging-3 =%{F#00ded3}%{F-} 
-animation-discharging-4 =%{F#00ded3}%{F-} 
-; Framerate in milliseconds
-animation-discharging-framerate = 500
-
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -589,13 +423,13 @@ format-volume = <ramp-volume> <label-volume>
 ; Available tokens:
 ;   %percentage% (default)
 ;   %decibels% (unreleased)
-label-muted = %{F#00ded3}%{F-} off
+label-muted = %{F#FF2B77}%{F-} %{F#FFFFFF}off
 ;label-muted-foreground = #666
 
 ; Only applies if <ramp-volume> is used
-ramp-volume-0 =%{F#00ded3}%{F-} 
-ramp-volume-1 =%{F#00ded3}%{F-} 
-ramp-volume-2 =%{F#00ded3}%{F-} 
+ramp-volume-0 =%{F#FF2B77}%{F-} 
+ramp-volume-1 =%{F#FF2B77}%{F-} 
+ramp-volume-2 =%{F#FF2B77}%{F-} 
 
 ; Right and Middle click (unreleased)
 ; click-right = pavucontrol &
@@ -606,7 +440,7 @@ type = internal/xbacklight
 
 format = <label>
 
-label = %{F#00ded3}%{F-} %percentage%%
+label = %{F#FF2B77}%{F-} %percentage%%
 
 ; XRandR output to get get values from
 ; Default: the monitor defined for the running bar
@@ -623,9 +457,9 @@ type = internal/date
 interval = 1.0
 
 date = %d-%m-%Y%
-time = %H:%M
+time = %I:%M %p
 
-label = %{F#00ded3}%{F-} %date% %time%
+label = %{F#FF2B77}%{F-} %{F#FFFFFF} %time% %date% 
 
 [module/separator]
 type = custom/script
@@ -634,7 +468,7 @@ exec = echo "|"
 
 [module/bluetooth]
 type = custom/script
-exec = echo "%{F#00ded3}%{F-}"
+exec = echo "%{F#FF2B77}%{F-}"
 interval = 1
 click-left = rofi-bluetooth
 
@@ -655,14 +489,14 @@ expand-right = true
 
 menu-0-0 ="|"
 menu-0-0-exec =
-menu-0-1 ="%{F#00ded3}%{F-}"
+menu-0-1 ="%{F#FEE353}%{F-}"
 menu-0-1-exec = systemctl suspend 
-menu-0-2 = "%{F#00ded3}%{F-}"
+menu-0-2 = "%{F#FEE353}%{F-}"
 menu-0-2-exec = reboot
-menu-0-3 = "%{F#00ded3}%{F-}"
+menu-0-3 = "%{F#FEE353}%{F-}"
 menu-0-3-exec = shutdown now
-menu-0-4 = "%{F#00ded3}%{F-}"
-menu-0-4-exec = loginctl lock-session 
+menu-0-4 = "%{F#FEE353}%{F-}"
+menu-0-4-exec = i3lock-fancy -f "JetBrains-Mono-Regular-Nerd-Font-Complete-Mono"
 
 
 
@@ -675,9 +509,9 @@ menu-0-4-exec = loginctl lock-session
 ; the definition for <label-open>
 format =<menu>  <label-toggle>
 
-label-open = "%{F#00ded3}%{F-}"
+label-open = "%{F#FF2B77}%{F-}"
 
-label-close = "%{F#00ded3}%{F-}"
+label-close = "%{F#FF2B77}%{F-}"
 
 
 ; Optional item separator

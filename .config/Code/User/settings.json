@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "CaskaydiaCove Nerd Font",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
   "editor.suggestSelection": "first",
@@ -18,6 +18,16 @@
   "git.enableSmartCommit": true,
   "python.languageServer": "Microsoft",
   "editor.fontSize": 18,
+  "editor.formatOnSave": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.packageManager": "yarn",
   "workbench.colorTheme": "Dracula Refined",
-  "editor.formatOnSave": true
+  "[v]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "go.formatTool": "goimports"
 }
