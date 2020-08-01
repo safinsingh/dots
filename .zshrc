@@ -1,4 +1,3 @@
-eval "$(starship init zsh)"
 export TERM="xterm-256color"
 
 HISTFILE=~/.zsh_history
@@ -20,3 +19,5 @@ alias ll='exa -l --icons'
 alias lal='exa -l -a --icons'
 alias lbuilda="go build -ldflags '-s -w ' -o ./aeacus ./src; go build -ldflags '-w -s' -tags phocus -o  ./phocus ./src"
 alias wbuilda="GOOS=windows go build -ldflags '-s -w ' -o ./aeacus.exe ./src; GOOS=windows go build -ldflags '-w -s' -tags phocus -o ./phocus.exe ./src"
+
+eval "$(starship init zsh)"
