@@ -25,7 +25,7 @@ exec_always ~/.config/polybar/launch.sh
 exec_always dunst
 
 # Background
-exec_always feh --bg-fill ~/dots/.config/images/alt2.jpg
+exec_always feh --bg-fill ~/dots/.config/images/alt3.jpg
 
 # Borders
 for_window [class="^.*"] border pixel 0

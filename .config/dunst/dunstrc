@@ -275,7 +275,7 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#22192C"
+    background = "#1B1E27"
     foreground = "#FEE353"
     frame_width = 3
     frame_color = "#ff2b77"
@@ -284,7 +284,7 @@
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#22192C"
+    background = "#1B1E27"
     foreground = "#FEE353"
     timeout = 10
     frame_width = 3
