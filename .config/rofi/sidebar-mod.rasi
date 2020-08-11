@@ -1,7 +1,7 @@
 * {
   text-color: #f4f2f0;
   background-color: rgba(0, 0, 0, 0);
-  dark: #22192C;
+  dark: #1B1E27;
   black: #3d335c;
   lightblack: #483c6c;
   red: #cd5c5c;
@@ -45,7 +45,7 @@
 }
 
 #inputbar {
-  background-color: #22192C;
+  background-color: #1B1E27;
   text-color: @lightgreen;
   padding: 5px 20px 0px 20px;
   border: 0px 0px 0px 0px;
@@ -53,7 +53,7 @@
 
 #mainbox {
   expand: true;
-  background-color: #22192C;
+  background-color: #1B1E27;
   spacing: 1em;
 }
 
@@ -68,12 +68,13 @@
 }
 
 #element {
-  padding: 4px;
-  border-radius: 10px;
+  padding: 4.5px;
+  border-radius: 5px;
 }
 
 #element selected normal {
-  background-color: #FF2B77;
+  background-color: #DEA584;
+  color: #1B1E27;
 }
 
 #element normal active {
