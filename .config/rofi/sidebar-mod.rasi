@@ -73,8 +73,8 @@
 }
 
 #element selected normal {
-  background-color: #DEA584;
-  color: #1B1E27;
+  background-color: #E95378;
+  color: #FFF;
 }
 
 #element normal active {
