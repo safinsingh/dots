@@ -1,0 +1,1 @@
+/home/safin/dots/.themes/SpaceOdyssey/assets/change_dpi.sh
