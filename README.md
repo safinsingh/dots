@@ -2,4 +2,4 @@
 
 My dotfiles for Manjaro and i3
 
-![Screenshot](./.config/images/ss2.jpg)
+![Screenshot](./.config/images/ss.png)
