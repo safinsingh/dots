@@ -9,6 +9,8 @@ compinit
 
 source /usr/share/nvm/init-nvm.sh
 source $HOME/.cargo/env
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="/home/safin/.deno/bin:/home/safin/Documents/vault:/usr/local/bin/trck:/opt/Discord/$PATH"
 
