@@ -12,7 +12,7 @@ source $HOME/.cargo/env
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export PATH="/home/safin/.deno/bin:/home/safin/Documents/vault:/usr/local/bin/trck:/opt/Discord/$PATH"
+export PATH="/home/safin/.deno/bin:/home/safin/Documents/vault:/usr/local/bin/trck:/opt/Discord/:/home/safin/dots/minfetch:/home/safin/go/bin:$PATH"
 
 alias mirror='xrandr --output DP-1 --auto --same-as eDP-1 && killall polybar && bash ~/.config/polybar/launch.sh'
 alias fetch='/home/safin/Downloads/rsfetch -P -d -H -w -U -t -s -r'
