@@ -20,5 +20,9 @@ alias ls='exa --icons'
 alias la='exa -a --icons'
 alias ll='exa -l -a --icons'
 alias tree='exa -a --icons --tree'
+alias g='git'
+alias gcl='git clone'
+alias gignore='git rm -r --cached . && git add .'
+mkcd() { mkdir -p "$1" && cd "$1"; }
 
 eval "$(starship init zsh)"
