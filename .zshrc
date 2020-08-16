@@ -23,6 +23,7 @@ alias tree='exa -a --icons --tree'
 alias g='git'
 alias gcl='git clone'
 alias gignore='git rm -r --cached . && git add .'
+alias npm='pnpm'
 mkcd() { mkdir -p "$1" && cd "$1"; }
 
 eval "$(starship init zsh)"
