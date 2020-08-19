@@ -17,7 +17,7 @@ bindsym $mod+l exec i3lock-fancy -f "JetBrains-Mono-Regular-Nerd-Font-Complete-M
 bindsym $mod+q kill
 
 # Compositor
-exec_always picom
+exec_always picom --experimental-backends
 
 # Polybar
 exec_always ~/.config/polybar/launch.sh
