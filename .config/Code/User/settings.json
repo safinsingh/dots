@@ -20,14 +20,20 @@
   "editor.fontSize": 18,
   "editor.formatOnSave": true,
   "prettier.jsxSingleQuote": true,
-  "prettier.packageManager": "yarn",
-  "workbench.colorTheme": "Dracula Refined",
-  "[v]": {
-    "editor.insertSpaces": false,
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    }
+  "prettier.packageManager": "pnpm",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
   },
-  "go.formatTool": "goimports"
+  "java.semanticHighlighting.enabled": true,
+  "terminal.integrated.rendererType": "dom",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.colorTheme": "Techset Dark",
+  "files.associations": {
+    "**/i3/config": "i3",
+    "**/polybar/config": "ini"
+  }
 }
