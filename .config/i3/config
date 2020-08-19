@@ -1,9 +1,10 @@
-# Alt as mod ree? (4)
+# Alt as mod
 set $mod Mod1
 
+# Font
 font pango:JetBrainsMono Nerd Font 12
 
-# Use Mouse+$mod to drag floating windows to their wanted position
+# Mod as floating modifier
 floating_modifier $mod
 
 # Start a terminal
@@ -16,7 +17,7 @@ bindsym $mod+l exec i3lock-fancy -f "JetBrains-Mono-Regular-Nerd-Font-Complete-M
 bindsym $mod+q kill
 
 # Compositor
-exec_always picom --experimental-backends
+exec_always picom
 
 # Polybar
 exec_always ~/.config/polybar/launch.sh
@@ -25,7 +26,7 @@ exec_always ~/.config/polybar/launch.sh
 exec_always dunst
 
 # Background
-exec_always feh --bg-fill ~/dots/.config/images/alt3.jpg
+exec_always hsetroot -solid "#191A1C"
 
 # Borders
 for_window [class="^.*"] border pixel 0
