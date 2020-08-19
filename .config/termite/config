@@ -46,7 +46,7 @@ cursor_shape = underline
 foreground      = #f4f2f0
 foreground_bold = #f4f2f0
 cursor          = #f4f2f0
-background      = #1B1E27
+background      = #191A1C
 
 # black
 color0  = #3d335c
