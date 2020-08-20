@@ -38,9 +38,13 @@ gaps outer 7
 # Rofi
 bindsym $mod+d exec rofi -show run --config ~/.config/rofi/config.rasi
 
+# Volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+
 # Screenshot
-bindsym Print exec maim ~/Pictures/$(date +%s).png
-bindsym $mod+Print exec maim -s ~/Pictures/$(date +%s).png | xclip -selection clipboard -t image/png
+bindsym Print exec scr -S
+bindsym --release Shift+Print exec scr -m s -f 60 -c -n
 
 # Change focus
 bindsym $mod+Left focus left
