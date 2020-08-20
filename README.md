@@ -26,7 +26,7 @@ My dotfiles for Manjaro and i3
  - xob
  - shotgun
  - wmutils
- - xclipl
+ - xclip
 
 ## Programs
  - visual-studio-code-bin
