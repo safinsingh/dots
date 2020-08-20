@@ -40,3 +40,7 @@ endif
 
 " theme
 set background=dark
+
+" cursor
+set guicursor+=a:blinkon0
+let &t_SI .= "\<Esc>[4 q"
