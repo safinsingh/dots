@@ -16,6 +16,10 @@ export PATH="/home/safin/.deno/bin:/home/safin/Documents/vault:/usr/local/bin/tr
 export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 export JAVA_HOME='/usr/lib/jvm/java-8-openjdk'
 export ANDROID_SDK_ROOT='/opt/android-sdk'
+export SCR_DIR='/home/safin/Documents/scr/img'
+export REC_DIR='/home/safin/Documents/scr/vid'
+export REC_FILE='$(date "+%m_%d_%y-%H_%M_%S\").png'
+export REC_FILE='$(date "+%m_%d_%y-%H_%M_%S\").mp4'
 
 alias mirror='xrandr --output DP-1 --auto --same-as eDP-1 && killall polybar && bash ~/.config/polybar/launch.sh'
 alias fetch='/home/safin/Downloads/rsfetch -P -d -H -w -U -t -s -r'
