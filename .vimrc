@@ -4,7 +4,7 @@ filetype on
 
 " plugins
 call plug#begin('~/.vim/plugged')
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'itchyny/lightline.vim'
   Plug 'sheerun/vim-polyglot'
 call plug#end()
@@ -39,6 +39,7 @@ if !has('gui_running')
 endif
 
 " theme
+set termguicolors
 set background=dark
 
 " cursor
