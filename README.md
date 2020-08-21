@@ -17,7 +17,7 @@ My dotfiles for Manjaro and i3
  - ffmpeg
  - exa
  - git
- - scr
+ - scr-git
  - zsh autosuggestions & syntax
  - vim-plug
  - nerd-fonts-jetbrains-mono
