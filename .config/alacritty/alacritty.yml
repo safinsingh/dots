@@ -1,0 +1,42 @@
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Regular
+
+  bold:
+    family: JetBrainsMono Nerd Font
+    style: Bold
+
+  italic:
+    family: JetBrainsMono Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: JetBrainsMono Nerd Font
+    style: Bold Italic
+
+  size: 8
+
+colors:
+  primary:
+    background: "#191A1C"
+    foreground: "#EEFFFF"
+
+  # Cursor colors
+  cursor:
+    text: "#EEFFFF"
+    cursor: "#EEFFFF"
+
+  # Normal colors
+  normal:
+    black: "#252729"
+    red: "#E95378"
+    green: "#00f58f"
+    yellow: "#fee353"
+    blue: "#008bd7"
+    magenta: "#CF74FF"
+    cyan: "#00ded3"
+    white: "#EEFFFF"
+
+cursor:
+  style: Underline
