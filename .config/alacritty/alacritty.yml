@@ -22,12 +22,10 @@ colors:
     background: "#191A1C"
     foreground: "#EEFFFF"
 
-  # Cursor colors
   cursor:
     text: "#EEFFFF"
     cursor: "#EEFFFF"
 
-  # Normal colors
   normal:
     black: "#252729"
     red: "#E95378"
