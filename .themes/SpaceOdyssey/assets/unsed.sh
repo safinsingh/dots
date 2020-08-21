@@ -1,1 +1,0 @@
-/home/safin/dots/.themes/SpaceOdyssey/assets/unsed.sh
