@@ -11,7 +11,6 @@ My dotfiles for Manjaro and i3
 - go 1.15
 - i3-gaps
 - dunst
-- picom-jonaburg-git
 - polybar
 - rofi
 - termite
