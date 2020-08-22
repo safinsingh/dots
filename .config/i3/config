@@ -17,7 +17,7 @@ bindsym $mod+l exec i3lock-fancy -f "JetBrains-Mono-Regular-Nerd-Font-Complete-M
 bindsym $mod+q kill
 
 # Compositor
-exec_always picom --experimental-backends
+exec_always /home/safin/dots/scripts/phicom --experimental-backends
 
 # Polybar
 exec_always ~/.config/polybar/launch.sh
@@ -39,7 +39,7 @@ gaps outer 7
 bindsym $mod+d exec rofi -show run --config ~/.config/rofi/config.rasi
 
 # Volume
-exec_always python /home/safin/dots/xob.py | xob
+exec_always python /home/safin/dots/scripts/xob.py | xob
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 

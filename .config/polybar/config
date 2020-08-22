@@ -13,11 +13,14 @@ radius = 10.0
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-left-size = 35
-border-right-size = 35
+border-left-size = 28
+border-right-size = 28
 border-top-size = 16
 border-bottom-size = 0
 border-color = ${colors.transparent}
+
+padding-left = 2
+padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 1
