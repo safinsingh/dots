@@ -38,3 +38,7 @@ colors:
 
 cursor:
   style: Underline
+
+window:
+  padding:
+    x: 10
