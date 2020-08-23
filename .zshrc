@@ -18,7 +18,7 @@ export ANDROID_SDK_ROOT='/opt/android-sdk'
 export SCR_DIR='/home/safin/Documents/scr/img'
 export REC_DIR='/home/safin/Documents/scr/vid'
 export PAGER="most"
-export PATH="/home/safin/.deno/bin:/home/safin/Documents/vault:/usr/local/bin/trck:/opt/Discord/:/home/safin/dots/scripts/minfetch:/home/safin/go/bin:/opt/android-sdk/tools/bin/:$ANDROID_HOME/emulator/:$ANDROID_HOME/platform-tools/:$ANDROID_HOME/tools/bin/:$ANDROID_HOME/tools/:$ANDROID_HOME/emulator:/home/safin/.nvm/versions/node/v14.5.0/pnpm-global/4/node_modules/strap-cli/build:$PATH"
+export PATH="/home/safin/.deno/bin:/home/safin/Documents/vault:/usr/local/bin/trck:/opt/Discord/:/home/safin/dots/scripts/minfetch:/home/safin/dots/scripts:/home/safin/go/bin:/opt/android-sdk/tools/bin/:$ANDROID_HOME/emulator/:$ANDROID_HOME/platform-tools/:$ANDROID_HOME/tools/bin/:$ANDROID_HOME/tools/:$ANDROID_HOME/emulator:/home/safin/.nvm/versions/node/v14.5.0/pnpm-global/4/node_modules/strap-cli/build:$PATH"
 
 alias mirror='xrandr --output DP-1 --auto --same-as eDP-1 && killall polybar && bash ~/.config/polybar/launch.sh'
 alias fetch='/home/safin/Downloads/rsfetch -P -d -H -w -U -t -s -r'
@@ -32,6 +32,8 @@ alias gignore='git rm -r --cached . && git add .'
 alias npm='pnpm'
 alias strap get='strap.js'
 alias cat='bat'
+alias xwin='Xephyr -br -ac -noreset -screen 1600x900 :1'
+alias xdisp='DISPLAY=:1'
 mkcd() { mkdir -p "$1" && cd "$1"; }
 
 eval "$(starship init zsh)"
