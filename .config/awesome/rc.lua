@@ -9,6 +9,7 @@ local naughty = require("naughty")
 local ruled = require("ruled")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local xrdb = beautiful.xresources.get_current_theme()
 
 require("awful.hotkeys_popup.keys")
 require("awful.autofocus")
@@ -28,7 +29,6 @@ end)
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty -1"
@@ -547,3 +547,26 @@ collectgarbage("setstepmul", 1000)
 client.connect_signal("manage", function(c)
     c.shape = function(cr, w, h) gears.shape.rounded_rect(cr, w, h, 10) end
 end)
+
+x = {
+    background = xrdb.background,
+    foreground = xrdb.foreground,
+    color0 = xrdb.color0,
+    color1 = xrdb.color1,
+    color2 = xrdb.color2,
+    color3 = xrdb.color3,
+    color4 = xrdb.color4,
+    color5 = xrdb.color5,
+    color6 = xrdb.color6,
+    color7 = xrdb.color7,
+    color8 = xrdb.color8,
+    color9 = xrdb.color9,
+    color10 = xrdb.color10,
+    color11 = xrdb.color11,
+    color12 = xrdb.color12,
+    color13 = xrdb.color13,
+    color14 = xrdb.color14,
+    color15 = xrdb.color15
+}
+
+beautiful.init("/home/safin/dots/.config/awesome/themes/rainfall/theme.lua")
