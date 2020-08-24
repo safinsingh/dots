@@ -1,6 +1,6 @@
 # dots
 
-My dotfiles for Manjaro and i3
+My [old] dotfiles for Manjaro and i3 (new dots for awesomea are in progress!)
 
 ![Screenshot](./.config/images/ss.png)
 
