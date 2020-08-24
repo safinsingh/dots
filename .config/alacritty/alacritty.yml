@@ -15,29 +15,35 @@ font:
     family: JetBrainsMono Nerd Font
     style: Bold Italic
 
-  size: 8
+  size: 14
 
 colors:
+  # Default colors
   primary:
-    background: "#191A1C"
-    foreground: "#EEFFFF"
+    background: "0x1a2026"
+    foreground: "0xffffff"
 
-  cursor:
-    text: "#EEFFFF"
-    cursor: "#EEFFFF"
-
+  # Normal colors
   normal:
-    black: "#252729"
-    red: "#E95378"
-    green: "#00f58f"
-    yellow: "#fee353"
-    blue: "#008bd7"
-    magenta: "#CF74FF"
-    cyan: "#00ded3"
-    white: "#EEFFFF"
+    black: "0x1a2026"
+    red: "0xfe6464"
+    green: "0x91ed86"
+    yellow: "0xfee164"
+    blue: "0x86b9ed"
+    magenta: "0xe586ed"
+    cyan: "0x86edd5"
+    white: "0xffffff"
 
-cursor:
-  style: Underline
+  # Bright colors
+  bright:
+    black: "0x2c343c"
+    red: "0xf04444"
+    green: "0x00f58f"
+    yellow: "0xfee353"
+    blue: "0x0c86f0"
+    magenta: "0xcf74ff"
+    cyan: "0x0cffe1"
+    white: "0xeeffff"
 
 window:
   padding:

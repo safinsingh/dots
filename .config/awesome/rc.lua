@@ -30,7 +30,7 @@ end)
 -- Themes define colours, icons, font and wallpapers.
 
 -- This is used later as the default terminal and editor to run.
-terminal = "kitty -1"
+terminal = "alacritty"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = "kitty -1 --class editor -e vim"
 
@@ -484,15 +484,8 @@ client.connect_signal("request::titlebars", function(c)
     }
 
     awful.titlebar(c).widget = {
-        { -- Left
-            buttons = buttons,
-            layout = wibox.layout.fixed.horizontal
-        },
-        { -- Middle
-
-            buttons = buttons,
-            layout = wibox.layout.flex.horizontal
-        },
+        {buttons = buttons, layout = wibox.layout.fixed.horizontal},
+        {buttons = buttons, layout = wibox.layout.flex.horizontal},
         {
             awful.titlebar.widget.minimizebutton(c),
             awful.titlebar.widget.maximizedbutton(c),
