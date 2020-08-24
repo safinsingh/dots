@@ -8,7 +8,7 @@ font pango:JetBrainsMono Nerd Font 12
 floating_modifier $mod
 
 # Start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 # Lock screen
 bindsym $mod+l exec i3lock-fancy -f "JetBrains-Mono-Regular-Nerd-Font-Complete-Mono"
