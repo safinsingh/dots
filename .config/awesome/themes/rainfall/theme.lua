@@ -17,15 +17,15 @@ theme.bg_urgent = x.color6
 theme.bg_minimize = x.background
 theme.bg_systray = x.background
 
-theme.fg_normal = x.background
-theme.fg_focus = x.background
+theme.fg_normal = x.foreground
+theme.fg_focus = x.foreground
 theme.fg_urgent = x.color5
-theme.fg_minimize = x.background
+theme.fg_minimize = x.foreground
 
 theme.useless_gap = dpi(0)
 theme.border_width = dpi(1)
 theme.border_color_normal = x.background
-theme.border_color_active = x.color8
+theme.border_color_active = "#1f272e"
 theme.border_color_marked = x.background
 
 -- There are other variable sets
