@@ -10,7 +10,6 @@ local ruled = require("ruled")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local xrdb = beautiful.xresources.get_current_theme()
-
 require("awful.hotkeys_popup.keys")
 require("awful.autofocus")
 
@@ -500,6 +499,7 @@ client.connect_signal("request::titlebars", function(c)
             awful.titlebar.widget.closebutton(c),
             layout = wibox.layout.fixed.horizontal()
         },
+        widget = wibox.container.margin,
         layout = wibox.layout.align.horizontal
     }
 end)
