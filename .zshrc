@@ -50,6 +50,8 @@ aegis() {
   git reset --hard HEAD
   notify-send "Aeacus builds finished!"
 }
-mkcd() { mkdir -p "$1" && cd "$1"; }
+
+mkcd() { mkdir -p "$1" && cd "$1" }
+precmd() $funcstack[1]() echo
 
 eval "$(starship init zsh)"
