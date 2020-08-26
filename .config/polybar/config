@@ -1,21 +1,18 @@
 [colors]
-background = #191A1C
+background = #282828
 foreground = #52575d
-primary = #E95378
+primary = #ebdbb2
 transparent = #00000000
 
 [bar/example]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 38
-radius = 10.0
+height = 40
+radius = 0.0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-left-size = 28
-border-right-size = 28
-border-top-size = 16
 border-bottom-size = 0
 border-color = ${colors.transparent}
 
@@ -27,9 +24,9 @@ module-margin-right = 1
 
 font-0 = "JetBrainsMono Nerd Font:size=12:style=bold"
 
-modules-left = element
+modules-left = filesystem cpu memory
 modules-center = i3
-modules-right = date
+modules-right = battery pulseaudio date
 
 wm-restack = i3
 
@@ -41,7 +38,7 @@ enable-ipc = true
 
 [module/element]
 type = custom/text
-content = element
+content = /
 content-foreground = ${colors.primary}
 
 [module/i3]
@@ -71,4 +68,57 @@ interval = 1.0
 time = %I:%M %p
 
 label-foreground = ${colors.primary}
-label = %time%
+label =  %time%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+
+use-ui-max = true
+interval = 5
+
+label-volume = 墳 %percentage%%
+label-volume-foreground = ${colors.primary}
+label-muted = 🔇 0%
+label-muted-foreground = ${colors.primary}
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+label-mounted =  %percentage_used%%
+label-mounted-foreground = ${colors.primary}
+interval = 600
+fixed-values = true
+
+[module/cpu]
+type = internal/cpu
+interval = 5
+label =  %percentage%%
+label-foreground = ${colors.primary}
+
+[module/memory]
+type = internal/memory
+format = <label>
+label = ﬙ %percentage_used%%
+label-foreground = ${colors.primary}
+
+[module/battery]
+type = internal/battery
+
+full-at = 96
+
+battery = BAT0
+adapter = AC0
+
+poll-interval = 10
+
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+
+label-charging =  %percentage%%
+label-discharging =  %percentage%%
+label-full =  100%
+
+label-charging-foreground = ${colors.primary}
+label-discharging-foreground = ${colors.primary}
+label-full-foreground = ${colors.primary}
