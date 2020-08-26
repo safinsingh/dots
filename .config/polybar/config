@@ -2,13 +2,14 @@
 background = #282828
 foreground = #52575d
 primary = #ebdbb2
+urgent = #d79921
 transparent = #00000000
 
 [bar/gruv]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 40
-radius = 0.0
+height = 50
+radius = 10.0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -18,6 +19,10 @@ border-color = ${colors.transparent}
 
 padding-left = 2
 padding-right = 2
+
+border-left-size = 40
+border-right-size = 40
+border-top-size = 16
 
 module-margin-left = 1
 module-margin-right = 1
@@ -29,11 +34,8 @@ modules-center = i3
 modules-right = battery pulseaudio date
 
 wm-restack = i3
-
 override-redirect = false
-
 cursor-click = pointer
-
 enable-ipc = true
 
 [module/i3]
@@ -55,7 +57,7 @@ label-visible-padding = 1
 label-visible-margin = 0.5
 
 label-urgent = 
-label-urgent-foreground = ${colors.primary}
+label-urgent-foreground = ${colors.urgent}
 label-urgent-padding = 1
 label-urgent-margin = 0.5
 
