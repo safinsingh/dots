@@ -119,7 +119,7 @@ end)
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
-    awful.tag({"1", "2", "3", "4", "5", "6", "7", "8", "9"}, s,
+    awful.tag({" ", " ", " ", " ", " ", " ", " ", " ", " "}, s,
               awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
@@ -129,6 +129,10 @@ screen.connect_signal("request::desktop_decoration", function(s)
     s.mytaglist = awful.widget.taglist {
         screen = s,
         filter = awful.widget.taglist.filter.all,
+        layout = {
+            spacing = 10,
+            layout  = wibox.layout.fixed.horizontal
+        },
         buttons = {
             awful.button({}, 1, function(t) t:view_only() end),
             awful.button({modkey}, 1, function(t)
@@ -152,20 +156,22 @@ screen.connect_signal("request::desktop_decoration", function(s)
         screen = s,
         height = 35,
         bg = "#00000000",
-        fg = x.color6
+        fg = x.color6,
+        cursor = "hand2"
     })
 
     -- Add widgets to the wibox
-    s.mywibox.widget = {
-        {layout = wibox.layout.fixed.horizontal},
+    s.mywibox:setup({
+        layout = wibox.layout.align.horizontal,
+        expand = 'outside',
+        nil,
         {
             layout = wibox.layout.fixed.horizontal,
             s.mytaglist,
             s.mypromptbox
         },
-        {layout = wibox.layout.fixed.horizontal},
-        layout = wibox.layout.align.horizontal,
-    }
+        nil,
+    })
 end)
 -- }}}
 
