@@ -15,36 +15,34 @@ font:
     family: JetBrainsMono Nerd Font
     style: Bold Italic
 
-  size: 12
+  size: 10
 
 colors:
-  # Default colors
   primary:
-    background: "0x1a2026"
-    foreground: "0xffffff"
+    background: "#282828"
+    foreground: "#ebdbb2"
 
-  # Normal colors
   normal:
-    black: "0x1a2026"
-    red: "0xfe6464"
-    green: "0x91ed86"
-    yellow: "0xfee164"
-    blue: "0x86b9ed"
-    magenta: "0xe586ed"
-    cyan: "0x86edd5"
-    white: "0xffffff"
+    black: "#282828"
+    red: "#cc241d"
+    green: "#98971a"
+    yellow: "#d79921"
+    blue: "#458588"
+    magenta: "#b16286"
+    cyan: "#689d6a"
+    white: "#a89984"
 
-  # Bright colors
   bright:
-    black: "0x2c343c"
-    red: "0xf04444"
-    green: "0x00f58f"
-    yellow: "0xfee353"
-    blue: "0x0c86f0"
-    magenta: "0xcf74ff"
-    cyan: "0x0cffe1"
-    white: "0xeeffff"
+    black: "#928374"
+    red: "#fb4934"
+    green: "#b8bb26"
+    yellow: "#fabd2f"
+    blue: "#83a598"
+    magenta: "#d3869b"
+    cyan: "#8ec07c"
+    white: "#ebdbb2"
 
 window:
   padding:
-    x: 10
+    x: 15
+    y: 15

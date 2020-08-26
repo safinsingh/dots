@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'itchyny/lightline.vim'
   Plug 'sheerun/vim-polyglot'
+  Plug 'sainnhe/gruvbox-material'
 call plug#end()
 
 " syntax
@@ -40,6 +41,9 @@ endif
 
 " theme
 set termguicolors
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox_material'
+colorscheme gruvbox-material
 set background=dark
 
 " cursor
