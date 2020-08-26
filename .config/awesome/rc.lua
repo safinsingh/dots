@@ -13,6 +13,27 @@ local xrdb = beautiful.xresources.get_current_theme()
 require("awful.hotkeys_popup.keys")
 require("awful.autofocus")
 
+x = {
+    background = xrdb.background,
+    foreground = xrdb.foreground,
+    color0 = xrdb.color0,
+    color1 = xrdb.color1,
+    color2 = xrdb.color2,
+    color3 = xrdb.color3,
+    color4 = xrdb.color4,
+    color5 = xrdb.color5,
+    color6 = xrdb.color6,
+    color7 = xrdb.color7,
+    color8 = xrdb.color8,
+    color9 = xrdb.color9,
+    color10 = xrdb.color10,
+    color11 = xrdb.color11,
+    color12 = xrdb.color12,
+    color13 = xrdb.color13,
+    color14 = xrdb.color14,
+    color15 = xrdb.color15
+}
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -32,7 +53,7 @@ end)
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "vim"
-editor_cmd = "kitty -1 --class editor -e vim"
+editor_cmd = "vim"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -86,12 +107,6 @@ end)
 
 -- {{{ Wibar
 
--- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
-
--- Create a textclock widget
-mytextclock = wibox.widget.textclock()
-
 screen.connect_signal("request::wallpaper", function(s)
     -- Wallpaper
     if beautiful.wallpaper then
@@ -109,18 +124,6 @@ screen.connect_signal("request::desktop_decoration", function(s)
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
-
-    -- Create an imagebox widget which will contain an icon indicating which layout we're using.
-    -- We need one layoutbox per screen.
-    s.mylayoutbox = awful.widget.layoutbox {
-        screen = s,
-        buttons = {
-            awful.button({}, 1, function() awful.layout.inc(1) end),
-            awful.button({}, 3, function() awful.layout.inc(-1) end),
-            awful.button({}, 4, function() awful.layout.inc(-1) end),
-            awful.button({}, 5, function() awful.layout.inc(1) end)
-        }
-    }
 
     -- Create a taglist widget
     s.mytaglist = awful.widget.taglist {
@@ -143,45 +146,25 @@ screen.connect_signal("request::desktop_decoration", function(s)
         }
     }
 
-    -- Create a tasklist widget
-    s.mytasklist = awful.widget.tasklist {
-        screen = s,
-        filter = awful.widget.tasklist.filter.currenttags,
-        buttons = {
-            awful.button({}, 1, function(c)
-                c:activate{context = "tasklist", action = "toggle_minimization"}
-            end), awful.button({}, 3, function()
-                awful.menu.client_list {theme = {width = 250}}
-            end),
-            awful.button({}, 4, function()
-                awful.client.focus.byidx(-1)
-            end),
-            awful.button({}, 5, function()
-                awful.client.focus.byidx(1)
-            end)
-        }
-    }
-
     -- Create the wibox
-    s.mywibox = awful.wibar({position = "top", screen = s})
+    s.mywibox = awful.wibar({
+        position = "bottom",
+        screen = s,
+        height = 35,
+        bg = "#00000000",
+        fg = x.color6
+    })
 
     -- Add widgets to the wibox
     s.mywibox.widget = {
-        layout = wibox.layout.align.horizontal,
-        { -- Left widgets
+        {layout = wibox.layout.fixed.horizontal},
+        {
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
             s.mytaglist,
             s.mypromptbox
         },
-        s.mytasklist, -- Middle widget
-        { -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
-            wibox.widget.systray(),
-            mytextclock,
-            s.mylayoutbox
-        }
+        {layout = wibox.layout.fixed.horizontal},
+        layout = wibox.layout.align.horizontal,
     }
 end)
 -- }}}
@@ -207,17 +190,9 @@ awful.keyboard.append_global_keybindings(
                   {description = "reload awesome", group = "awesome"}),
         awful.key({modkey, "Shift"}, "q", awesome.quit,
                   {description = "quit awesome", group = "awesome"}),
-        awful.key({modkey}, "x", function()
-            awful.prompt.run {
-                prompt = "Run Lua code: ",
-                textbox = awful.screen.focused().mypromptbox.widget,
-                exe_callback = awful.util.eval,
-                history_path = awful.util.get_cache_dir() .. "/history_eval"
-            }
-        end, {description = "lua execute prompt", group = "awesome"}),
         awful.key({modkey}, "Return", function() awful.spawn(terminal) end,
                   {description = "open a terminal", group = "launcher"}),
-        awful.key({modkey}, "r",
+        awful.key({modkey}, "d",
                   function() awful.screen.focused().mypromptbox:run() end,
                   {description = "run prompt", group = "launcher"}),
         awful.key({modkey}, "p", function() menubar.show() end,
@@ -534,26 +509,5 @@ collectgarbage("setstepmul", 1000)
 client.connect_signal("manage", function(c)
     c.shape = function(cr, w, h) gears.shape.rounded_rect(cr, w, h, 10) end
 end)
-
-x = {
-    background = xrdb.background,
-    foreground = xrdb.foreground,
-    color0 = xrdb.color0,
-    color1 = xrdb.color1,
-    color2 = xrdb.color2,
-    color3 = xrdb.color3,
-    color4 = xrdb.color4,
-    color5 = xrdb.color5,
-    color6 = xrdb.color6,
-    color7 = xrdb.color7,
-    color8 = xrdb.color8,
-    color9 = xrdb.color9,
-    color10 = xrdb.color10,
-    color11 = xrdb.color11,
-    color12 = xrdb.color12,
-    color13 = xrdb.color13,
-    color14 = xrdb.color14,
-    color15 = xrdb.color15
-}
 
 beautiful.init("/home/safin/dots/.config/awesome/themes/rainfall/theme.lua")
