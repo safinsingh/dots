@@ -36,7 +36,7 @@ gaps inner 40
 gaps outer 0
 
 # Rofi
-bindsym $mod+d exec rofi -show run --config ~/.config/rofi/config.rasi
+bindsym $mod+d exec rofi -show drun --config ~/.config/rofi/config.rasi
 
 # Volume
 exec_always python /home/safin/dots/scripts/xob.py | xob

@@ -2,7 +2,7 @@
 
 My [old] dotfiles for Manjaro and i3 (new dots for awesomea are in progress!)
 
-![Screenshot](./.config/images/ss.png)
+![Screenshot](./.config/images/scrot.png)
 
 ## Dependencies
 
@@ -13,7 +13,7 @@ My [old] dotfiles for Manjaro and i3 (new dots for awesomea are in progress!)
 - dunst
 - polybar
 - rofi
-- termite
+- alacritty
 - ffmpeg
 - exa
 - git
@@ -21,8 +21,8 @@ My [old] dotfiles for Manjaro and i3 (new dots for awesomea are in progress!)
 - zsh autosuggestions & syntax
 - vim-plug
 - nerd-fonts-jetbrains-mono
-- hsetroot
-- pulseaudio (for pactl)
+- feh
+- pulseaudio
 - xob
 - shotgun
 - wmutils
@@ -31,8 +31,8 @@ My [old] dotfiles for Manjaro and i3 (new dots for awesomea are in progress!)
 ## Programs
 
 - visual-studio-code-bin
-- jdk8-openjdk
-- jre8-openjdk
+- jdk-openjdk
+- jre-openjdk
 - node (pnpm)
 - brave
 - starship.rs
