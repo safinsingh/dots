@@ -26,14 +26,14 @@ exec_always ~/.config/polybar/launch.sh
 exec_always dunst
 
 # Background
-exec_always hsetroot -solid "#191A1C"
+exec_always feh --bg-fill /home/safin/dots/.config/images/gruv.jpg
 
 # Borders
 for_window [class="^.*"] border pixel 0
 
 # Gaps
-gaps inner 20
-gaps outer 7
+gaps inner 40
+gaps outer 0
 
 # Rofi
 bindsym $mod+d exec rofi -show run --config ~/.config/rofi/config.rasi
