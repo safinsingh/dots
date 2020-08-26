@@ -17,11 +17,11 @@ theme.bg_minimize = x.background
 theme.bg_systray = x.background
 
 theme.fg_normal = x.foreground
-theme.fg_focus = x.foreground
-theme.fg_urgent = x.color5
+theme.fg_focus = x.color6
+theme.fg_urgent = x.color6
 theme.fg_minimize = x.foreground
 
-theme.useless_gap = dpi(0)
+theme.useless_gap = dpi(20)
 theme.border_width = dpi(1)
 theme.border_color_normal = x.background
 theme.border_color_active = "#1f272e"
@@ -40,13 +40,6 @@ theme.border_color_marked = x.background
 -- Example:
 -- theme.taglist_bg_focus = "#ff0000"
 
--- Generate taglist squares:
-local taglist_square_size = dpi(4)
-theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
-                                taglist_square_size, theme.fg_normal)
-theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
-                                  taglist_square_size, theme.fg_normal)
-
 -- Variables set for theming notifications:
 -- notification_font
 -- notification_[bg|fg]
@@ -56,6 +49,13 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
+
+theme.taglist_bg_focus = "transparent"
+theme.taglist_fg_occupied = "#ffffff44"
+theme.taglist_fg_urgent   = "#ffffff44"
+theme.taglist_fg_empty    = "#ffffff44"
+theme.taglist_font = "JetBrainsMono Nerd Font 15"
+
 theme.menu_submenu_icon = themes_path .. "default/submenu.png"
 theme.menu_height = dpi(0)
 theme.menu_width = dpi(100)
