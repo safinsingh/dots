@@ -11,7 +11,7 @@ type info struct {
 }
 
 func (i info) Fetch() {
-	l := color.Black
+	l := color.BgBlack
 	b := color.New(color.FgWhite, color.OpBold)
 
 	hex := color.HEX(i.color)
