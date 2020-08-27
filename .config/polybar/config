@@ -5,6 +5,9 @@ primary = #ebdbb2
 urgent = #d79921
 transparent = #00000000
 
+[settings]
+pseudo-transparency = true
+
 [bar/gruv]
 monitor = ${env:MONITOR:}
 width = 100%
