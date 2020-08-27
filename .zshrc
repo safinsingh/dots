@@ -37,6 +37,7 @@ alias xwin='Xephyr -br -ac -noreset -screen 1600x900 :1'
 alias xdisp='DISPLAY=:1'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
+alias record='scr -m s -f 60 -c -n'
 
 
 aegis() {
