@@ -7,15 +7,15 @@ import (
 type info struct {
 	key   string
 	val   string
-	color string
+	color color.Color
 }
 
 func (i info) Fetch() {
-	l := color.BgBlack
+	l := color.HEX("928374")
 	b := color.New(color.FgWhite, color.OpBold)
+	f := color.New(i.color)
 
-	hex := color.HEX(i.color)
-	hex.Print(i.key)
+	f.Print(i.key)
 	l.Print(" | ")
 	b.Println(i.val)
 }
@@ -25,32 +25,32 @@ func main() {
 		{
 			key:   "os",
 			val:   "mj",
-			color: "#E95378",
+			color: color.FgRed,
 		},
 		{
 			key:   "kr",
 			val:   "lx",
-			color: "#FC78A8",
+			color: color.FgYellow,
 		},
 		{
 			key:   "sh",
 			val:   "zh",
-			color: "#DEA584",
+			color: color.FgGreen,
 		},
 		{
 			key:   "wm",
 			val:   "i3",
-			color: "#69F595",
+			color: color.FgCyan,
 		},
 		{
 			key:   "cu",
 			val:   "i7",
-			color: "#3EE2F0",
+			color: color.FgBlue,
 		},
 		{
 			key:   "mm",
 			val:   "16",
-			color: "#CF74FF",
+			color: color.FgMagenta,
 		},
 	}
 
