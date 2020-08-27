@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'sainnhe/gruvbox-material'
+  Plug 'junegunn/goyo.vim'
 call plug#end()
 
 " syntax
@@ -49,3 +50,6 @@ set background=dark
 " cursor
 set guicursor+=a:blinkon0
 let &t_SI .= "\<Esc>[4 q"
+
+" keybinds
+" map <C-f
