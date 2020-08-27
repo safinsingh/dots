@@ -1,31 +1,27 @@
 [colors]
-background = ${xrdb:background}
-foreground = #6b645c
-primary = ${xrdb:foreground}
-accent = ${xrdb:color2}
-urgent = ${xrdb:color3}
-transparent = #00000000
-
-[settings]
-pseudo-transparency = true
+background = "#050505"
+foreground = "#f0f0f0"
+gray = "#363636"
+transparent = "#00000000"
 
 [bar/gruv]
 monitor = ${env:MONITOR:}
 width = 100%
 height = 50
-radius = 10.0
+radius-top = 7.0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 border-bottom-size = 0
 border-color = ${colors.transparent}
+bottom = true
 
 padding-left = 2
 padding-right = 2
 
-border-left-size = 40
-border-right-size = 40
+border-left-size = 60
+border-right-size = 60
 border-top-size = 16
 
 module-margin-left = 1
@@ -33,7 +29,7 @@ module-margin-right = 1
 
 font-0 = "JetBrainsMono Nerd Font:size=12:style=bold"
 
-modules-left = filesystem separator cpu separator memory
+modules-left = filesystem separator cpu
 modules-center = i3
 modules-right = battery separator pulseaudio separator date
 
@@ -44,28 +40,28 @@ enable-ipc = true
 
 [module/separator]
 type = custom/text
-content =  / 
+content =  
 
 [module/i3]
 type = internal/i3
 
-label-focused = 
-label-focused-foreground = ${colors.accent}
+label-focused = %index%
+label-focused-foreground = ${colors.foreground}
 label-focused-padding = 1
 label-focused-margin = 0.5
 
-label-unfocused = 
-label-unfocused-foreground = ${colors.foreground}
+label-unfocused = %index%
+label-unfocused-foreground = ${colors.gray}
 label-unfocused-padding = 1
 label-unfocused-margin = 0.5
 
-label-visible = 
-label-visible-foreground = ${colors.primary}
+label-visible = %index%
+label-visible-foreground = ${colors.foreground}
 label-visible-padding = 1
 label-visible-margin = 0.5
 
-label-urgent = 
-label-urgent-foreground = ${colors.urgent}
+label-urgent = %index%
+label-urgent-foreground = ${colors.gray}
 label-urgent-padding = 1
 label-urgent-margin = 0.5
 
@@ -75,10 +71,9 @@ type = internal/date
 interval = 1.0
 
 time = %I:%M %p
-date = %D
 
-label-foreground = ${colors.primary}
-label = %{F#8ec07c}%{F-} %{F#ebdbb2}%date% %time%
+label-foreground = ${colors.foreground}
+label =   %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -87,35 +82,35 @@ sink = alsa_output.pci-0000_00_1f.3.analog-stereo
 use-ui-max = true
 interval = 5
 
-label-volume = %{F#8ec07c}墳%{F-} %{F#ebdbb2}%percentage%%
-label-volume-foreground = ${colors.primary}
-label-muted = %{F#8ec07c}🔇%{F-} %{F#ebdbb2}0%
-label-muted-foreground = ${colors.primary}
+label-volume = 墳 %percentage%%
+label-volume-foreground = ${colors.foreground}
+label-muted = 🔇 0%
+label-muted-foreground = ${colors.foreground}
 
 [module/filesystem]
 type = internal/fs
 mount-0 = /
-label-mounted = %{F#8ec07c}%{F-} %{F#ebdbb2}%percentage_used%%
-label-mounted-foreground = ${colors.primary}
+label-mounted =  %percentage_used%%
+label-mounted-foreground = ${colors.foreground}
 interval = 600
 fixed-values = true
 
 [module/cpu]
 type = internal/cpu
 interval = 5
-label = %{F#8ec07c}%{F-} %{F#ebdbb2}%percentage%%
-label-foreground = ${colors.primary}
+label =  %percentage%%
+label-foreground = ${colors.foreground}
 
 [module/memory]
 type = internal/memory
 format = <label>
-label = %{F#8ec07c}﬙%{F-} %{F#ebdbb2}%percentage_used%%
-label-foreground = ${colors.primary}
+label = ﬙ %percentage_used%%
+label-foreground = ${colors.foreground}
 
 [module/battery]
 type = internal/battery
 
-full-at = 96
+full-at = 95
 
 battery = BAT0
 adapter = AC0
@@ -125,12 +120,12 @@ poll-interval = 10
 format-charging = <label-charging>
 format-discharging = <label-discharging>
 
-label-charging = %{F#8ec07c}%{F-} %{F#ebdbb2}%percentage%%
-label-discharging = %{F#8ec07c}%{F-} %{F#ebdbb2}%percentage%%
-label-full = %{F#8ec07c}%{F-} %{F#ebdbb2}100%
+label-charging =  %percentage%%
+label-discharging =  %percentage%%
+label-full =  100%
 
-label-charging-foreground = ${colors.primary}
-label-discharging-foreground = ${colors.primary}
-label-full-foreground = ${colors.primary}
+label-charging-foreground = ${colors.foreground}
+label-discharging-foreground = ${colors.foreground}
+label-full-foreground = ${colors.foreground}
 
 ; vim:syntax=dosini
