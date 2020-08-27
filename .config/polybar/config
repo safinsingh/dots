@@ -33,14 +33,18 @@ module-margin-right = 1
 
 font-0 = "JetBrainsMono Nerd Font:size=12:style=bold"
 
-modules-left = filesystem cpu memory
+modules-left = filesystem separator cpu separator memory
 modules-center = i3
-modules-right = battery pulseaudio date
+modules-right = battery separator pulseaudio separator date
 
 wm-restack = i3
 override-redirect = false
 cursor-click = pointer
 enable-ipc = true
+
+[module/separator]
+type = custom/text
+content =  / 
 
 [module/i3]
 type = internal/i3
@@ -71,9 +75,10 @@ type = internal/date
 interval = 1.0
 
 time = %I:%M %p
+date = %D
 
 label-foreground = ${colors.primary}
-label = %{F#8ec07c}%{F-} %{F#ebdbb2}%time%
+label = %{F#8ec07c}%{F-} %{F#ebdbb2}%date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
