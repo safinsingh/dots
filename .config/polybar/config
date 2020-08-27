@@ -9,6 +9,7 @@ monitor = ${env:MONITOR:}
 width = 100%
 height = 50
 radius-top = 7.0
+click-middle = "/home/safin/dots/.config/polybar/toggle"
 
 background = ${colors.background}
 foreground = ${colors.foreground}
