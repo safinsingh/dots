@@ -26,7 +26,7 @@ exec_always ~/.config/polybar/launch.sh
 exec_always dunst
 
 # Background
-exec_always feh --bg-fill /home/dots/.config/images/gruv.jpg
+exec_always feh --bg-fill /home/safin/dots/.config/images/gruv.jpg
 
 # Borders
 for_window [class="^.*"] border pixel 0
