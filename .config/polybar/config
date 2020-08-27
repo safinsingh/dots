@@ -2,6 +2,7 @@
 background = ${xrdb:background}
 foreground = #6b645c
 primary = ${xrdb:foreground}
+accent = ${xrdb:color2}
 urgent = ${xrdb:color3}
 transparent = #00000000
 
@@ -45,7 +46,7 @@ enable-ipc = true
 type = internal/i3
 
 label-focused = 
-label-focused-foreground = ${colors.primary}
+label-focused-foreground = ${colors.accent}
 label-focused-padding = 1
 label-focused-margin = 0.5
 
@@ -72,7 +73,7 @@ interval = 1.0
 time = %I:%M %p
 
 label-foreground = ${colors.primary}
-label =  %time%
+label = %{F#8ec07c}%{F-} %{F#ebdbb2}%time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -81,15 +82,15 @@ sink = alsa_output.pci-0000_00_1f.3.analog-stereo
 use-ui-max = true
 interval = 5
 
-label-volume = 墳 %percentage%%
+label-volume = %{F#8ec07c}墳%{F-} %{F#ebdbb2}%percentage%%
 label-volume-foreground = ${colors.primary}
-label-muted = 🔇 0%
+label-muted = %{F#8ec07c}🔇%{F-} %{F#ebdbb2}0%
 label-muted-foreground = ${colors.primary}
 
 [module/filesystem]
 type = internal/fs
 mount-0 = /
-label-mounted =  %percentage_used%%
+label-mounted = %{F#8ec07c}%{F-} %{F#ebdbb2}%percentage_used%%
 label-mounted-foreground = ${colors.primary}
 interval = 600
 fixed-values = true
@@ -97,13 +98,13 @@ fixed-values = true
 [module/cpu]
 type = internal/cpu
 interval = 5
-label =  %percentage%%
+label = %{F#8ec07c}%{F-} %{F#ebdbb2}%percentage%%
 label-foreground = ${colors.primary}
 
 [module/memory]
 type = internal/memory
 format = <label>
-label = ﬙ %percentage_used%%
+label = %{F#8ec07c}﬙%{F-} %{F#ebdbb2}%percentage_used%%
 label-foreground = ${colors.primary}
 
 [module/battery]
@@ -119,9 +120,9 @@ poll-interval = 10
 format-charging = <label-charging>
 format-discharging = <label-discharging>
 
-label-charging =  %percentage%%
-label-discharging =  %percentage%%
-label-full =  100%
+label-charging = %{F#8ec07c}%{F-} %{F#ebdbb2}%percentage%%
+label-discharging = %{F#8ec07c}%{F-} %{F#ebdbb2}%percentage%%
+label-full = %{F#8ec07c}%{F-} %{F#ebdbb2}100%
 
 label-charging-foreground = ${colors.primary}
 label-discharging-foreground = ${colors.primary}
