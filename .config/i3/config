@@ -45,7 +45,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 
 # Screenshot
 bindsym Print exec SCR_DIR='/home/safin/Documents/scr/img' scr -S
-# bindsym --release Shift+Print exec REC_DIR='/home/safin/Documents/scr/vid' scr -m s -f 60 -c -n
 
 # Change focus
 bindsym $mod+Left focus left
