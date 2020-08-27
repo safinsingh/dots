@@ -1,8 +1,8 @@
 [colors]
-background = #282828
-foreground = #52575d
-primary = #ebdbb2
-urgent = #d79921
+background = ${xrdb:background}
+foreground = #6b645c
+primary = ${xrdb:foreground}
+urgent = ${xrdb:color3}
 transparent = #00000000
 
 [settings]
@@ -49,7 +49,7 @@ label-focused-foreground = ${colors.primary}
 label-focused-padding = 1
 label-focused-margin = 0.5
 
-label-unfocused = 
+label-unfocused = 
 label-unfocused-foreground = ${colors.foreground}
 label-unfocused-padding = 1
 label-unfocused-margin = 0.5
