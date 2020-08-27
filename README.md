@@ -1,6 +1,6 @@
 # dots
 
-My [old] dotfiles for Manjaro and i3 (new dots for awesomea are in progress!)
+My [old] dotfiles for Manjaro and i3 (new dots for franken are in progress!)
 
 ![Screenshot](./.config/images/scrot.png)
 
