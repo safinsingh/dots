@@ -1,4 +1,5 @@
 export TERM="xterm-256color"
+xrdb -load ~/.Xresources
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -34,6 +35,9 @@ alias strap get='strap.js'
 alias cat='bat'
 alias xwin='Xephyr -br -ac -noreset -screen 1600x900 :1'
 alias xdisp='DISPLAY=:1'
+alias grep='grep --color=auto'
+alias ip='ip -color=auto'
+
 
 aegis() {
   cd /home/safin/Documents/aeacus/
@@ -51,7 +55,18 @@ aegis() {
   notify-send "Aeacus builds finished!"
 }
 
+man() {
+  LESS_TERMCAP_md=$'\e[01;31m' \
+  LESS_TERMCAP_me=$'\e[0m' \
+  LESS_TERMCAP_se=$'\e[0m' \
+  LESS_TERMCAP_so=$'\e[01;44;33m' \
+  LESS_TERMCAP_ue=$'\e[0m' \
+  LESS_TERMCAP_us=$'\e[01;32m' \
+  command man "$@"
+}
+
 mkcd() { mkdir -p "$1" && cd "$1" }
+
 precmd() $funcstack[1]() echo
 
 eval "$(starship init zsh)"
