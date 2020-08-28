@@ -28,7 +28,7 @@ My dotfiles for Manjaro and i3!
 - `shotgun`
 - `wmutils`
 - `xclip`
-- `phicom` (nope, not `picom`)
+- `phicom2` (nope, not `picom`)
 
 ## Programs
 
