@@ -22,6 +22,7 @@ bottom = true
 padding-left = 2
 padding-right = 2
 
+# Handle transparency with compositor
 border-left-size = 60
 border-right-size = 60
 border-top-size = 16
