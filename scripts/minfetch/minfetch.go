@@ -1,60 +1,43 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/gookit/color"
 )
 
 type info struct {
-	key   string
-	val   string
-	color color.Color
+	key string
+	val string
 }
 
 func (i info) Fetch() {
-	l := color.HEX("928374")
 	b := color.New(color.FgWhite, color.OpBold)
-	f := color.New(i.color)
+	f := color.New(color.FgRed)
 
-	f.Print(i.key)
-	l.Print(" | ")
+	f.Print("    " + i.key + "  ")
 	b.Println(i.val)
 }
 
 func main() {
 	fetch := []info{
 		{
-			key:   "os",
-			val:   "mj",
-			color: color.FgRed,
+			key: "os",
+			val: "mj",
 		},
 		{
-			key:   "kr",
-			val:   "lx",
-			color: color.FgYellow,
+			key: "wm",
+			val: "i3",
 		},
 		{
-			key:   "sh",
-			val:   "zh",
-			color: color.FgGreen,
-		},
-		{
-			key:   "wm",
-			val:   "i3",
-			color: color.FgCyan,
-		},
-		{
-			key:   "cu",
-			val:   "i7",
-			color: color.FgBlue,
-		},
-		{
-			key:   "mm",
-			val:   "16",
-			color: color.FgMagenta,
+			key: "up",
+			val: "zh",
 		},
 	}
 
+	fmt.Println()
 	for _, info := range fetch {
 		info.Fetch()
 	}
+	fmt.Println()
 }
