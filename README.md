@@ -12,7 +12,7 @@ My dotfiles for Manjaro and i3!
 - `i3-gaps`
 - `dunst`
 - `polybar`
-- `rofi
+- `rofi`
 - `alacritty`
 - `ffmpeg`
 - `exa`
