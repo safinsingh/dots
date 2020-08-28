@@ -1,8 +1,8 @@
 # dots
 
-My [old] dotfiles for Manjaro and i3 (new dots for franken are in progress!)
+My dotfiles for Manjaro and i3!
 
-![Screenshot](./.config/images/scrot.png)
+![Screenshot](./.config/images/ss.png)
 
 ## Dependencies
 
@@ -18,7 +18,8 @@ My [old] dotfiles for Manjaro and i3 (new dots for franken are in progress!)
 - exa
 - git
 - scr-git
-- zsh autosuggestions & syntax
+- zsh-autosuggestions
+- zsh-syntax-highlighting
 - vim-plug
 - nerd-fonts-jetbrains-mono
 - feh
@@ -27,6 +28,7 @@ My [old] dotfiles for Manjaro and i3 (new dots for franken are in progress!)
 - shotgun
 - wmutils
 - xclip
+- phicom
 
 ## Programs
 
@@ -36,3 +38,4 @@ My [old] dotfiles for Manjaro and i3 (new dots for franken are in progress!)
 - node (pnpm)
 - brave
 - starship.rs
+- oomox
