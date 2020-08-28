@@ -5,7 +5,6 @@ filetype on
 " plugins
 call plug#begin('~/.vim/plugged')
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-  Plug 'itchyny/lightline.vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'sainnhe/gruvbox-material'
   Plug 'junegunn/goyo.vim'
@@ -42,6 +41,7 @@ endif
 
 " theme
 set termguicolors
+colorscheme skybox
 set background=dark
 
 " cursor
