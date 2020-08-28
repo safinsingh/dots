@@ -39,9 +39,10 @@ gaps outer 0
 bindsym $mod+d exec rofi -show run --config ~/.config/rofi/config.rasi
 
 # Volume
-exec_always killall xob && python /home/safin/dots/scripts/xob.py | xob
+exec_always killall xob; python /home/safin/dots/scripts/xob.py | xob
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # Screenshot
 bindsym Print exec SCR_DIR='/home/safin/Documents/scr/img' scr -S
