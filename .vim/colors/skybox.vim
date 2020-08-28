@@ -78,7 +78,7 @@ exe 'hi Todo guifg='s:fg2'  gui=inverse,bold'
 exe 'hi Type guifg='s:type
 exe 'hi Underlined   gui=underline'
 
-" Neovim Terminal Mode
+" nvim
 let g:terminal_color_0 = s:bg
 let g:terminal_color_1 = s:warning
 let g:terminal_color_2 = s:keyword
@@ -142,5 +142,3 @@ exe 'hi htmlSpecialTagName guifg='s:keyword
 
 " Markdown
 exe 'hi mkdCode guifg='s:builtin
-
-

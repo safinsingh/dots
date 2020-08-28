@@ -5,7 +5,6 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "terminal.integrated.shell.linux": "/bin/zsh",
-  "workbench.iconTheme": "eq-material-theme-icons-darker",
   "liveSassCompile.settings.formats": [
     {
       "format": "compressed",
@@ -31,9 +30,33 @@
   "terminal.integrated.rendererType": "dom",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "diffEditor.ignoreTrimWhitespace": false,
-  "workbench.colorTheme": "Techset Dark",
   "files.associations": {
     "**/i3/config": "i3",
-    "**/polybar/config": "ini"
+    "**/polybar/config": "ini",
+    "*.patch": "diff"
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "explorer.confirmDelete": false,
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--fast"],
+  "window.title": "",
+  "window.titleBarStyle": "custom",
+  "workbench.colorTheme": "Techset Dark",
+  "workbench.iconTheme": "quill-icons",
+  "workbench.colorCustomizations": {
+    "[Techset Dark]": {
+      "activityBar.foreground": "#f07f7f",
+      "statusBar.foreground": "#f07f7f",
+      "activityBar.inactiveForeground": "#f07f7f77"
+    }
   }
 }
