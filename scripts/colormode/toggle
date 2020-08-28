@@ -35,7 +35,7 @@ switchconf() {
     echo "l" >$MODE_DIR
   fi
   if $(echo "$MODE" | grep -qw "l"); then
-    cp "$2_light.$3" $1
+    cp "$2_dark.$3" $1
     echo "d" >$MODE_DIR
   fi
 }
