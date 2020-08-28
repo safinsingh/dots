@@ -1,7 +1,11 @@
 #!/bin/bash
 
-dir=~/.splash
-[[ -d $dir ]] || mkdir $dir
+dir=~/dots/scripts/splash/img
+if [[ -d $dir ]]; then
+  rm -rf $dir
+fi
+
+mkdir $dir
 c=1
 
 while true; do
