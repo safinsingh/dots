@@ -2,6 +2,7 @@
 background = "#050505"
 foreground = "#f0f0f0"
 gray = "#363636"
+accent = "#f07f7f"
 transparent = "#00000000"
 
 [bar/gruv]
@@ -58,7 +59,7 @@ label-visible-padding = 1
 label-visible-margin = 0.5
 
 label-urgent = %index%
-label-urgent-foreground = ${colors.gray}
+label-urgent-foreground = ${colors.accent}
 label-urgent-padding = 1
 label-urgent-margin = 0.5
 
