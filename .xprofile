@@ -1,3 +1,0 @@
-feh --bg-fill /home/safin/dots/.config/images/gruv.jpg
-python /home/safin/dots/scripts/xob.py | xob
-picom --experimental-backends &
