@@ -5,6 +5,8 @@ killall dunst
 export DOTS="/home/safin/dots"
 export POLY="$DOTS/.config/polybar/config"
 export DUNST="$DOTS/.config/dunst/dunstrc"
+export TTY="$DOTS/.config/alacritty"
+
 export MODE_DIR="$DOTS/scripts/colormode/mode"
 export MODE=$(cat $MODE_DIR)
 
@@ -26,7 +28,20 @@ switch() {
   fi
 }
 
+switchconf() {
+  ext=$3
+  if $(echo "$MODE" | grep -qw "d"); then
+    cp "$2_light.$3" $1
+    echo "l" >$MODE_DIR
+  fi
+  if $(echo "$MODE" | grep -qw "l"); then
+    cp "$2_light.$3" $1
+    echo "d" >$MODE_DIR
+  fi
+}
+
 switch $POLY
 switch $DUNST
+switchconf "$TTY/alacritty.yml" "$TTY/skybox" "yml"
 
 dunst &

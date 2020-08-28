@@ -1,6 +1,6 @@
 [colors]
-background = "#050505"
-foreground = "#f0f0f0"
+background = "#f0f0f1"
+foreground = "#050506"
 gray = "#363636"
 transparent = "#00000000"
 
