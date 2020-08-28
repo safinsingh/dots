@@ -28,14 +28,14 @@ My dotfiles for Manjaro and i3!
 - `shotgun`
 - `wmutils`
 - `xclip`
-- `phicom2` (nope, not `picom`)
+- `phicom2`
 
 ## Programs
 
 - `visual-studio-code-bin`
 - `jdk-openjdk`
 - `jre-openjdk`
-- `nvm` (pnpm)
+- `nvm`
 - `brave`
 - `starship.rs`
 - `oomox`
