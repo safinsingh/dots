@@ -19,7 +19,7 @@
     separator_height = 2
     padding = 8
     horizontal_padding = 8
-    separator_color = "#f0f0f0"
+    separator_color = "#050506"
     startup_notification = false
 
 [shortcuts]
@@ -29,16 +29,16 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#050505"
-    foreground = "#f0f0f0"
+    background = "#f0f0f1"
+    foreground = "#050506"
     timeout = 5
 
 [urgency_normal]
-    background = "#050505"
+    background = "#f0f0f1"
     foreground = "#f07f7f"
     timeout = 20
 
 [urgency_critical]
     background = "#f07f7f"
-    foreground = "#050505"
+    foreground = "#f0f0f1"
     timeout = 0
