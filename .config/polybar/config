@@ -9,7 +9,7 @@ monitor = ${env:MONITOR:}
 width = 100%
 height = 50
 radius-top = 7.0
-click-middle = "/home/safin/dots/.config/polybar/toggle"
+click-middle = "/home/safin/dots/scripts/colormode/toggle"
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -30,18 +30,14 @@ module-margin-right = 1
 
 font-0 = "JetBrainsMono Nerd Font:size=12:style=bold"
 
-modules-left = filesystem separator cpu
+modules-left = filesystem cpu
 modules-center = i3
-modules-right = battery separator pulseaudio separator date
+modules-right = battery pulseaudio date
 
 wm-restack = i3
 override-redirect = false
 cursor-click = pointer
 enable-ipc = true
-
-[module/separator]
-type = custom/text
-content =  
 
 [module/i3]
 type = internal/i3
