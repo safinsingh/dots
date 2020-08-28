@@ -10,7 +10,6 @@ set t_Co=256
 let g:colors_name = "skybox"
 
 
-" Define reusable colorvariables.
 let s:bg="#050505"
 let s:fg="#f0f0f0"
 let s:fg2="#dddddd"
