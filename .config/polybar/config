@@ -65,9 +65,7 @@ label-urgent-margin = 0.5
 
 [module/date]
 type = internal/date
-
 interval = 1.0
-
 time = %I:%M %p
 
 label-foreground = ${colors.foreground}
@@ -88,20 +86,24 @@ label-muted-foreground = ${colors.foreground}
 [module/filesystem]
 type = internal/fs
 mount-0 = /
+
 label-mounted =  %percentage_used%%
 label-mounted-foreground = ${colors.foreground}
+
 interval = 600
 fixed-values = true
 
 [module/cpu]
 type = internal/cpu
 interval = 5
+
 label =  %percentage%%
 label-foreground = ${colors.foreground}
 
 [module/memory]
 type = internal/memory
 format = <label>
+
 label = ﬙ %percentage_used%%
 label-foreground = ${colors.foreground}
 

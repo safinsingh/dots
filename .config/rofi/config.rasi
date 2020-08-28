@@ -32,7 +32,7 @@ prompt, entry {
 
 element {
   border-radius: 2px;
-  padding: 3px;
+  padding: 4px;
 }
 
 element selected {
