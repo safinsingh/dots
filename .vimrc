@@ -42,9 +42,6 @@ endif
 
 " theme
 set termguicolors
-let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox_material'
-colorscheme gruvbox-material
 set background=dark
 
 " cursor
