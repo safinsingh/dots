@@ -30,7 +30,7 @@ border-top-size = 16
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = "JetBrainsMono Nerd Font:size=12:style=bold"
+font-0 = "Iosevka:size=12"
 
 modules-left = filesystem cpu
 modules-center = i3
