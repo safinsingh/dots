@@ -17,7 +17,7 @@ alias record='scr -m s -f 60 -c -n'
 alias git='hub'
 alias i="sudo pacman -S"
 alias up="sudo pacman -Syyu"
-
+alias clock="tty-clock -C 1"
 
 aegis() {
   cd /home/safin/Documents/aeacus/
