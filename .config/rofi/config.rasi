@@ -15,8 +15,12 @@ configuration {
 }
 
 * {
-  background-color: #050505;
-  text-color: #f0f0f0;
+  bg: #050505;
+  fg: #f0f0f0;
+  accent: #f07f7f;
+  
+  background-color: @bg;
+  text-color: @fg;
 }
 
 window {
@@ -25,9 +29,8 @@ window {
 }
 
 prompt, entry {
-  text-color: #f07f7f;
+  text-color: @accent;
   padding: 3px;
-  margin-bottom: 10px;
 }
 
 element {
@@ -36,13 +39,13 @@ element {
 }
 
 element selected {
-  background-color: #f07f7f;
-  text-color: #050505;
+  background-color: @accent;
+  text-color: @bg;
 }
 
 button selected {
-  background-color: #f07f7f;
-  text-color: #050505;
+  background-color: @accent;
+  text-color: @bg;
   border-radius: 2px;
   padding: 3px;
 }
