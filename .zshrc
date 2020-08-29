@@ -27,7 +27,7 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
-alias mirror='xrandr --output DP-1 --auto --same-as eDP-1 && killall polybar && bash ~/.config/polybar/launch.sh'
+alias mirror='xrandr --output DP-1 --auto --same-as eDP-1'
 alias fetch='/home/safin/Downloads/rsfetch -P -d -H -w -U -t -s -r'
 alias ls='exa --icons'
 alias la='exa -a --icons'
