@@ -21,7 +21,7 @@ My dotfiles for Manjaro and i3!
 - `zsh-autosuggestions`
 - `zsh-syntax-highlighting`
 - `vim-plug`
-- `nerd-fonts-jetbrains-mono`
+- `nerd-fonts-iosevka`
 - `feh`
 - `pulseaudio`
 - `xob`
