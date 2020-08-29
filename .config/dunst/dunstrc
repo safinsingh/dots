@@ -1,5 +1,5 @@
 [global]
-font = "JetBrainsMono Nerd Font 12"
+font = "Iosevka 12"
 allow_markup = yes
 format = "<b>%s</b>\n%b"
 sort = yes
