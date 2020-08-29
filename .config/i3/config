@@ -2,7 +2,7 @@
 set $mod Mod1
 
 # Font
-font pango:JetBrainsMono Nerd Font 12
+font pango:Iosevka 12
 
 # Mod as floating modifier
 floating_modifier $mod
