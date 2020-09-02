@@ -25,7 +25,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', { 'branch': 'release' }
     Plug 'sheerun/vim-polyglot'
     Plug 'junegunn/goyo.vim'
+    Plug 'rust-lang/rust.vim'
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+    Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
     Plug 'preservim/nerdtree'
+    Plug 'ap/vim-css-color'
+    Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " line nums
@@ -35,10 +40,10 @@ set nu rnu
 set wrap
 
 " tabs
-set tabstop=2
 set autoindent
 set expandtab
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
 
 " searching
 set ignorecase
@@ -47,9 +52,17 @@ set ignorecase
 set nobackup
 set noswapfile
 
-" statusline
+" statusbar
 set laststatus=2
 set noshowmode
+
+" extension-specific settings
+let g:rustfmt_autosave = 1
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#config#tab_width = 4
+let g:prettier#config#print_width = 80
+let g:prettier#config#use_tabs = 'false'
 
 " keybinds
 map <C-n> :NERDTreeToggle<CR>
@@ -59,7 +72,6 @@ hi Sl1 ctermfg=none cterm=none ctermbg=NONE
 hi Sl2 ctermfg=none cterm=none ctermbg=NONE
 hi Sl3 ctermfg=none cterm=none ctermbg=NONE
 hi Slrese ctermfg=none cterm=none ctermbg=none
-
 function! RedrawMode(mode)
     if a:mode == 'n'
         return 'normal mode'
@@ -80,7 +92,7 @@ endfunction
 
 function! SetModifiedSymbol(modified)
     if a:modified == 1
-        return '/ unsaved'
+        return '// unsaved'
     else
         return ''
     endif
@@ -101,3 +113,4 @@ set statusline+=%#SlRese#
 set statusline+=%=
 set statusline+=%#Sl2#\ %.20t\ //
 set statusline+=\%#Sl2#\ %l,%c
+
