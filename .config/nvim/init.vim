@@ -31,6 +31,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
     Plug 'ap/vim-css-color'
     Plug 'jiangmiao/auto-pairs'
+    Plug 'preservim/nerdcommenter'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " line nums
@@ -63,10 +66,12 @@ let g:prettier#autoformat_require_pragma = 0
 let g:prettier#config#tab_width = 4
 let g:prettier#config#print_width = 80
 let g:prettier#config#use_tabs = 'false'
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 
 " keybinds
 map <C-n> :NERDTreeToggle<CR>
-
+map <C-f> :BLines<CR>
+map <C-j> :GFiles<CR>
 " nuaNce's statusline
 hi Sl1 ctermfg=none cterm=none ctermbg=NONE
 hi Sl2 ctermfg=none cterm=none ctermbg=NONE
