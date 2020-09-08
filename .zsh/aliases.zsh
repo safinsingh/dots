@@ -8,7 +8,7 @@ alias g='git'
 alias gcl='git clone'
 alias gignore='git rm -r --cached . && git add .'
 alias npm='pnpm'
-alias cat='bat'
+alias bat='bat --theme base16'
 alias xwin='Xephyr -br -ac -noreset -screen 1600x900 :2'
 alias xdisp='DISPLAY=:2'
 alias grep='grep --color=auto'
@@ -50,7 +50,7 @@ mkcd() {
 precmd() $funcstack[1]() echo
 
 blocks() {
-	echo; for i in 0 1 2 3 4 5 6 7; do
+	echo; echo; for i in 0 1 2 3 4 5 6 7; do
 		printf '\033[10%bm   \033[s\033[1A\033[3D\033[4%bm   \033[u' "$i" "$i"
 	done; printf '\n\033[0m'
 }
