@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[[ -n $1  ]]  &&  C="$1 "   || C=" "           # reset
+[[ -n $1  ]]  &&  C="$1 "   || C=" "           # icon
 [[ -n $SP ]]  &&  SP=$SP    || SP="    "        # spacing
 [[ -n $BL ]]  &&  BL="$BL"  || BL='\033[0;30m'  # black
 [[ -n $M  ]]  &&  M="$M"    || M='\033[0;35m'   # magenta
