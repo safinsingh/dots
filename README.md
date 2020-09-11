@@ -1,4 +1,4 @@
-<img src="./.config/images/welcome.png">
+<img src="./.config/images/welcome.png" align="right" width="400px">
 
 ## Details
 
@@ -10,5 +10,7 @@
 - 📃 Editor: nvim
 - 💾 File browser: thunar
 - 🔍 Menu: rofi
+
+## Setup
 
 <img src="./.config/images/ss.png">
