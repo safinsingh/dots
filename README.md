@@ -1,17 +1,19 @@
 <p align="center">
-  <img src="./.config/images/welcome.png" width="70%">
+  <img src="./.config/images/welcome.png" width="70%" />
 </p>
 
-## Details
+### Details
 
-- 🐧 Distro: Manjaro
-- ⌨️ Terminal: alacritty
-- 🕹️ WM: i3-gaps
-- 🤖 Compositor: phicom
-- ⌛ Bar: polybar
-- 📃 Editor: nvim
-- 💾 File browser: thunar
-- 🔍 Menu: rofi
+Hey there! Here are some details about my current setup, codenamed `arctic`:
+
+- 🐧 **Distro**: Manjaro
+- ⌨️ **Terminal**: [alacritty](https://github.com/alacritty/alacritty)
+- 🕹️ **WM**: [i3-gaps](https://github.com/Airblader/i3)
+- 🤖 **Compositor**: [phicom](https://google.com)
+- ⌛ **Bar**: [polybar](https://github.com/polybar/polybar)
+- 📃 **Editor**: [neovim](https://github.com/neovim/neovim)
+- 💾 **File browser**: [thunar](https://wiki.archlinux.org/index.php/Thunar)
+- 🔍 **Menu**: [rofi](https://github.com/davatorium/rofi)
 
 ## Setup
 
