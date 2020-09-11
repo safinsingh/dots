@@ -8,7 +8,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 # Lock screen
-bindsym $mod+l exec i3lock-fancy -f "JetBrains-Mono-Regular-Nerd-Font-Complete-Mono"
+bindsym $mod+l exec i3lock-fancy -f "Blex-Mono-Nerd-Font-Complete" -- maim
 
 # Kill focused window
 bindsym $mod+q kill
