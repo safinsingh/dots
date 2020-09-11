@@ -7,10 +7,6 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch Polybar using default config location ~/.config/polybar/config
-polybar -rq -c /home/safin/dots/.config/polybar/config.ini windows &
-
-polybar -rq -c /home/safin/dots/.config/polybar/config.ini stats &
-
-polybar -rq -c /home/safin/dots/.config/polybar/config.ini today &
+polybar -rq -c /home/safin/dots/.config/polybar/config.ini skybox &
 
 echo "Polybar launched..."
