@@ -12,9 +12,11 @@ Terminal: alacritty
 
 WM: i3-gaps
 
+Compositor: phicom
+
 Bar: polybar
 
-Editor: NVIM
+Editor: nvim
 
 File browser: thunar
 
