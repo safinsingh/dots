@@ -1,4 +1,4 @@
-<img src="./.config/images/welcome.png" style="border-radius: 5px;">
+<img src="./.config/images/welcome.png">
 
 ## Details
 
@@ -11,4 +11,4 @@
 - File browser: thunar
 - Menu: rofi
 
-<img src="./.config/images/ss.png" style="border-radius: 5px;">
+<img src="./.config/images/ss.png">
