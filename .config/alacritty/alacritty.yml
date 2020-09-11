@@ -20,7 +20,7 @@ font:
 colors:
     primary:
         background: "0x0F1212"
-        foreground: "0xf0f0f0"
+        foreground: "0xE9E9E9"
 
     normal:
         black: "0x131717"
@@ -30,7 +30,7 @@ colors:
         blue: "0x7facf0"
         magenta: "0xd67ff0"
         cyan: "0x7fe7f0"
-        white: "0xf0f0f0"
+        white: "0xE9E9E9"
 
     bright:
         black: "0x928374"
