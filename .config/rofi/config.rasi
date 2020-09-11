@@ -17,7 +17,7 @@ configuration {
 * {
   bg: #0F1212;
   fg: #e3e3e3;
-  accent: #7ff088;
+  accent: #131717;
   
   background-color: @bg;
   text-color: @fg;
@@ -29,7 +29,7 @@ window {
 }
 
 prompt, entry {
-  text-color: @accent;
+  text-color: @fg;
   padding: 3px;
 }
 
@@ -39,12 +39,12 @@ element {
 }
 
 element selected {
-  background-color: @accent;
+  background-color: @fg;
   text-color: @bg;
 }
 
 button selected {
-  background-color: @accent;
+  background-color: @fg;
   text-color: @bg;
   border-radius: 2px;
   padding: 3px;
