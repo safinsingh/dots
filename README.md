@@ -1,4 +1,6 @@
-<img src="./.config/images/welcome.png" align="right" width="400px">
+<p align="center">
+  <img src="./.config/images/welcome.png" width="70%">
+</p>
 
 ## Details
 
