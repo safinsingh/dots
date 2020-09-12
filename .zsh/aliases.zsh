@@ -1,12 +1,8 @@
 alias mirror='xrandr --output DP-1 --auto --same-as eDP-1'
-alias fetch='/home/safin/Downloads/rsfetch -P -d -H -w -U -t -s -r'
 alias ls='exa --icons'
 alias la='exa -a --icons'
 alias ll='exa -l -a --icons'
 alias tree='exa -a --icons --tree'
-alias g='git'
-alias gcl='git clone'
-alias gignore='git rm -r --cached . && git add .'
 alias npm='pnpm'
 alias bat='bat --theme base16'
 alias xwin='Xephyr -br -ac -noreset -screen 1600x900 :2'
@@ -15,8 +11,6 @@ alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias record='scr -m s -f 60 -c -n'
 alias git='hub'
-alias i="sudo pacman -S"
-alias up="sudo pacman -Syyu"
 alias clock="tty-clock -C 1"
 alias vim="nvim"
 
@@ -42,15 +36,8 @@ aegis() {
   notify-send "Aeacus builds finished!"
 }
 
-mkcd() {
-  mkdir -p "$1"
-  cd "$1"
+function up {
+	curl -sF "file=@$1" "https://0x0.st" | xclip -selection c
 }
 
 precmd() $funcstack[1]() echo
-
-blocks() {
-	echo; echo; for i in 0 1 2 3 4 5 6 7; do
-		printf '\033[10%bm   \033[s\033[1A\033[3D\033[4%bm   \033[u' "$i" "$i"
-	done; printf '\n\033[0m'
-}
