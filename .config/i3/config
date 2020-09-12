@@ -11,7 +11,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 # Lock screen
-bindsym $mod+l exec "i3lock-fancy -f \"Blex-Mono-Nerd-Font-Complete\" -t \"locked, enter pass\" -- maim"
+bindsym $mod+l exec "i3lock-fancy -f 'Blex-Mono-Nerd-Font-Complete' -t 'locked, enter pass' -- maim"
 
 # Kill focused window
 bindsym $mod+q kill
@@ -53,20 +53,18 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# Split in horizontal orientation
+# Toggle splitting orientation
 bindsym $mod+h split h
-
-# Split in vertical orientation
 bindsym $mod+v split v
 
-# Enter fullscreen mode for the focused container
+# Enter fullscreen mode
 bindsym $mod+f fullscreen
 
 # Toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# Change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# Center currently focused floating window
+bindsym $mod+c exec /home/safin/dots/scripts/center
 
 # switch to workspace
 bindsym $mod+1 workspace 1
