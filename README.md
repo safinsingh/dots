@@ -4,7 +4,7 @@
 
 ### Details
 
-Hey there! Here are some details about my current setup, codenamed `arctic`:
+Hey there! Here are some details about my [current setup](https://www.reddit.com/r/unixporn/comments/irhskz/i3_the_arctic/), codenamed `arctic`:
 
 - 🐧 **Distro**: Manjaro
 - ⌨️ **Terminal**: [alacritty](https://github.com/alacritty/alacritty)
