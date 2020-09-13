@@ -14,6 +14,7 @@ alias git='hub'
 alias clock="tty-clock -C 1"
 alias vim="nvim"
 alias gpg="gpg2"
+alias o="open"
 
 aegis() {
   cd /home/safin/Documents/aeacus/
