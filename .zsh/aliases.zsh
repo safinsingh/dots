@@ -13,6 +13,7 @@ alias record='scr -m s -f 60 -c -n'
 alias git='hub'
 alias clock="tty-clock -C 1"
 alias vim="nvim"
+alias gpg="gpg2"
 
 aegis() {
   cd /home/safin/Documents/aeacus/
