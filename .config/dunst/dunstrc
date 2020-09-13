@@ -1,44 +1,47 @@
 [global]
-font = "BlexMono Nerd Font 12"
-allow_markup = yes
-format = "%s\n%b"
-sort = yes
-indicate_hidden = yes
-alignment = center
-bounce_freq = 0
-show_age_threshold = 60
-word_wrap = yes
-ignore_newline = no
-geometry = "300x10-60-60"
-transparency = 0
-idle_threshold = 120
-monitor = 0
-follow = mouse
-sticky_history = yes
-line_height = 0
-separator_height = 2
-padding = 8
-horizontal_padding = 8
-separator_color = "#E9E9E9"
-startup_notification = false
+	font = "BlexMono Nerd Font 12"
+	allow_markup = yes
+	format = "<b>%s</b>\n%b"
+	sort = yes
+	indicate_hidden = yes
+	alignment = center
+	bounce_freq = 0
+	show_age_threshold = 60
+	word_wrap = yes
+	ignore_newline = no
+	geometry = "300x10-60-60"
+	transparency = 0
+	idle_threshold = 120
+	monitor = 0
+	follow = mouse
+	sticky_history = yes
+	line_height = 0
+	separator_height = 2
+	padding = 8
+	horizontal_padding = 8
+	separator_color = "#E9E9E9"
+	startup_notification = false
+	show_indicators = false
 
 [shortcuts]
-close = ctrl+space
-close_all = ctrl+shift+space
-history = ctrl+grave
-context = ctrl+shift+period
+	close = ctrl+space
+	close_all = ctrl+shift+space
+	history = ctrl+grave
+	context = ctrl+shift+period
 
 [urgency_low]
-background = "#0f1212"
-foreground = "#E9E9E9"
-timeout = 5
+	background = "#0f1212"
+	foreground = "#E9E9E9"
+	timeout = 5
 
 [urgency_normal]
-background = "#0f1212"
-foreground = "#E9E9E9"
-timeout = 20
+	background = "#0f1212"
+	foreground = "#E9E9E9"
+	timeout = 20
 
 [urgency_critical]
-background = "#0f1212"
-foreground = "#7ff088"
-timeout = 0
+	background = "#0f1212"
+	foreground = "#7ff088"
+	timeout = 0
+
+; vim: filetype=dosini
