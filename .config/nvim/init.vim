@@ -7,7 +7,7 @@ set background=dark
 set t_Co=254
 
 syntax on
-colorscheme skybox
+colorscheme arctic
 
 set ruler
 set laststatus=2
@@ -27,13 +27,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/goyo.vim'
     Plug 'rust-lang/rust.vim'
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-    Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
     Plug 'preservim/nerdtree'
     Plug 'ap/vim-css-color'
     Plug 'jiangmiao/auto-pairs'
     Plug 'preservim/nerdcommenter'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+    Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 " line nums
@@ -44,7 +44,7 @@ set wrap
 
 " tabs
 set autoindent
-set expandtab
+set noexpandtab
 set tabstop=4
 set shiftwidth=4
 
@@ -72,6 +72,8 @@ let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 map <C-n> :NERDTreeToggle<CR>
 map <C-f> :BLines<CR>
 map <C-j> :GFiles<CR>
+map <C-l> :set nonumber! norelativenumber!<CR>
+
 " nuaNce's statusline
 hi Sl1 ctermfg=none cterm=none ctermbg=NONE
 hi Sl2 ctermfg=none cterm=none ctermbg=NONE
