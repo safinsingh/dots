@@ -28,4 +28,6 @@ cp -Rf ~/.bin					$DOTS/.bin
 cp -Rf ~/.Xresources			$DOTS/.Xresources
 cp -Rf ~/.zshrc					$DOTS/.zshrc
 
+rm -rf $DOTS/.bin/phicom
+
 cd $DOTS && push
