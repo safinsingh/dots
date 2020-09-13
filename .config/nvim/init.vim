@@ -34,6 +34,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'voldikss/vim-floaterm'
+	Plug 'z0mbix/vim-shfmt', { 'for': 'sh' }
 call plug#end()
 
 " line nums
@@ -67,6 +68,7 @@ let g:prettier#config#tab_width = 4
 let g:prettier#config#print_width = 80
 let g:prettier#config#use_tabs = 'false'
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let g:shfmt_fmt_on_save = 1
 
 " keybinds
 map <C-n> :NERDTreeToggle<CR>
