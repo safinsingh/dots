@@ -22,14 +22,14 @@ let s:configuration.current_word = get(g:, 'skybox_current_word', get(g:, 'skybo
 " }}}
 " Palette: {{{
 let s:palette = {
-      \ 'bg0':        ['#050505',   '235',  'Black'],
-      \ 'bg1':        ['#121212',   '236',  'DarkGrey'],
-      \ 'bg2':        ['#121212',   '237',  'DarkGrey'],
-      \ 'bg3':        ['#050505',   '238',  'DarkGrey'],
-      \ 'bg4':        ['#050505',   '239',  'Grey'],
-      \ 'bg_red':     ['#121212',   '52',   'DarkRed'],
-      \ 'bg_green':   ['#242424',   '22',   'DarkGreen'],
-      \ 'bg_blue':    ['#121212',   '17',   'DarkBlue'],
+      \ 'bg0':        ['#0f1212',   '235',  'Black'],
+      \ 'bg1':        ['#131717',   '236',  'DarkGrey'],
+      \ 'bg2':        ['#131717',   '237',  'DarkGrey'],
+      \ 'bg3':        ['#0f1212',   '238',  'DarkGrey'],
+      \ 'bg4':        ['#0f1212',   '239',  'Grey'],
+      \ 'bg_red':     ['#131717',   '52',   'DarkRed'],
+      \ 'bg_green':   ['#252e2e',   '22',   'DarkGreen'],
+      \ 'bg_blue':    ['#131717',   '17',   'DarkBlue'],
       \ 'fg':         ['#f0f0f0',   '223',  'White'],
       \ 'red':        ['#f07f7f',   '167',  'Red'],
       \ 'orange':     ['#ed9a9a',   '208',  'Red'],
@@ -38,9 +38,9 @@ let s:palette = {
       \ 'cyan':       ['#7fe7f0',   '108',  'Cyan'],
       \ 'blue':       ['#7facf0',   '109',  'Blue'],
       \ 'purple':     ['#d67ff0',   '175',  'Magenta'],
-      \ 'grey':       ['#363636',   '245',  'LightGrey'],
-      \ 'light_grey': ['#363636',   '245',  'LightGrey'],
-      \ 'gold':       ['#242424',   '214',  'Yellow'],
+      \ 'grey':       ['#3b4a4a',   '245',  'LightGrey'],
+      \ 'light_grey': ['#3b4a4a',   '245',  'LightGrey'],
+      \ 'gold':       ['#252e2e',   '214',  'Yellow'],
       \ 'none':       ['NONE',      'NONE', 'NONE']
       \ }
 " }}}
