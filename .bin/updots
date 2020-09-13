@@ -1,0 +1,28 @@
+#!/bin/bash
+
+export DOTS="~/dots"
+export RELEASE="arctic"
+
+rm -rf $DOTS/.config/*
+rm -rf $DOTS/.bin
+rm -rf $DOTS/.themes/$RELEASE
+rm -rf $DOTS/.zsh
+rm -rf $DOTS/.Xresources
+rm -rf $DOTS/.zshrc
+
+cp -Rf ~/.config/i3 			$DOTS/.config
+cp -Rf ~/.config/alacritty 		$DOTS/.config
+cp -Rf ~/.config/dunst 			$DOTS/.config
+cp -Rf ~/.config/img			$DOTS/.config
+cp -Rf ~/.config/nvim			$DOTS/.config
+cp -Rf ~/.config/picom			$DOTS/.config
+cp -Rf ~/.config/polybar		$DOTS/.config
+cp -Rf ~/.config/rofi			$DOTS/.config
+cp -Rf ~/.config/starship.toml	$DOTS/.config
+cp -Rf ~/.config/xob			$DOTS/xob
+
+cp -Rf ~/.themes/$RELEASE		$DOTS/.themes
+cp -Rf ~/.zsh					$DOTS/.zsh
+
+cp -Rf ~/.Xresources			$DOTS/.Xresources
+cp -Rf ~/.zshrc					$DOTS/.zshrc
