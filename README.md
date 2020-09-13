@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./.config/images/welcome.png" width="70%" />
+  <img src="./.config/img/welcome.png" width="70%" />
 </p>
 
 ### Details
@@ -17,4 +17,4 @@ Hey there! Here are some details about my current setup, codenamed `arctic`:
 
 ## Setup
 
-<img src="./.config/images/ss.png">
+<img src="./.config/img/ss.png">
