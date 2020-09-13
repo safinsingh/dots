@@ -1,0 +1,23 @@
+#!/bin/bash
+
+case $1 in
+*.mp3 | *.flac | *.wav)
+	mpv --no-video "$1"
+	;;
+
+*.mp4 | *.mkv | *.webm)
+	mpv "$1"
+	;;
+
+*.png | *.gif | *.jpg | *.jpe | *.jpeg)
+	sxiv "$1"
+	;;
+
+*.pdf)
+	zathura "$1"
+	;;
+
+*)
+	"${EDITOR:=nvim}" "$1"
+	;;
+esac
