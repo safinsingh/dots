@@ -17,7 +17,7 @@ bindsym $mod+l exec "i3lock-fancy -f 'Blex-Mono-Nerd-Font-Complete' -t 'locked, 
 bindsym $mod+q kill
 
 # Compositor
-exec_always /home/safin/dots/scripts/phicom
+exec_always /home/safin/.bin/phicom
 
 # Polybar
 exec_always ~/.config/polybar/launch.sh
@@ -26,7 +26,7 @@ exec_always ~/.config/polybar/launch.sh
 exec_always dunst
 
 # Background
-exec_always feh --bg-fill /home/safin/dots/.config/images/dark.jpg
+exec_always feh --bg-fill /home/safin/.config/img/dark.jpg
 
 # Borders
 for_window [class="^.*"] border pixel 0
@@ -36,10 +36,10 @@ gaps inner 60
 gaps outer 0
 
 # Rofi
-bindsym $mod+d exec rofi -show run --config ~/.config/rofi/config.rasi
+bindsym $mod+d exec rofi -show run
 
 # Volume
-exec_always killall xob; python /home/safin/dots/scripts/xob.py | xob
+exec_always killall xob; python /home/safin/.bin/xob.py | xob
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
@@ -64,7 +64,7 @@ bindsym $mod+f fullscreen
 bindsym $mod+Shift+space floating toggle
 
 # Center currently focused floating window
-bindsym $mod+c exec /home/safin/dots/scripts/center
+bindsym $mod+c exec /home/safin/.bin/center
 
 # switch to workspace
 bindsym $mod+1 workspace 1

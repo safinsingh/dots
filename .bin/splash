@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir=~/dots/scripts/splash/img
+dir=~/tmp/splash
 if [[ -d $dir ]]; then
   rm -rf $dir
 fi
