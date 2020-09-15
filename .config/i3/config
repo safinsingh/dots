@@ -66,6 +66,9 @@ bindsym $mod+Shift+space floating toggle
 # Center currently focused floating window
 bindsym $mod+c exec /home/safin/.bin/centerwin
 
+# Copy important quote to clipboard
+bindsym $mod+g exec /home/safin/.bin/gnu
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
