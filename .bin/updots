@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export DOTS="/home/safin/dots"
+export DOTS="/home/safin/.dots"
 export RELEASE="arctic"
 
 rm -rf $DOTS/.config/*
