@@ -12,7 +12,7 @@ alias bat="bat --theme base16"
 
 # screen capturing
 alias record="scr -m s -f 60 -c -n"
-alias scrot="scr -S"
+alias scrot="maim $(date '+%s').png"
 
 # colors
 alias grep="grep --color=auto"
