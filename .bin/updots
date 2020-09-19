@@ -30,4 +30,4 @@ cp -Rf ~/.zshrc					$DOTS/.zshrc
 
 rm -rf $DOTS/.bin/phicom
 
-cd $DOTS && push
+cd $DOTS && push "updots"

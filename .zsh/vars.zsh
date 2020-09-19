@@ -5,7 +5,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # scr
 export SCR_DIR="$HOME/opt/scrots/"
-export REC_DIR="$HOME/safin/opt/records/"
+export REC_DIR="$HOME/opt/records/"
 
 # less
 export LESS_TERMCAP_mb=$'\e[1;32m'
