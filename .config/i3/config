@@ -8,10 +8,10 @@ set $mod Mod1
 floating_modifier $mod
 
 # Start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec termite
 
 # Lock screen
-bindsym $mod+l exec "i3lock-fancy -f 'Blex-Mono-Nerd-Font-Complete' -t 'locked, enter pass'"
+bindsym $mod+l exec "i3lock-fancy -f 'Iosevka' -t 'locked, enter pass'"
 
 # Kill focused window
 bindsym $mod+q kill
@@ -26,7 +26,7 @@ exec_always ~/.config/polybar/launch.sh
 exec_always dunst
 
 # Background
-exec_always feh --bg-fill /home/safin/.config/img/dark.jpg
+exec_always feh --bg-fill /home/safin/.config/img/wp.jpeg
 
 # Borders
 for_window [class="^.*"] border pixel 0
