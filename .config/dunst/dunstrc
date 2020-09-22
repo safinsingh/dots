@@ -19,7 +19,7 @@
 	separator_height = 2
 	padding = 8
 	horizontal_padding = 8
-	separator_color = "#E9E9E9"
+	separator_color = "#363636"
 	startup_notification = false
 	show_indicators = false
 
@@ -30,18 +30,18 @@
 	context = ctrl+shift+period
 
 [urgency_low]
-	background = "#0f1212"
-	foreground = "#E9E9E9"
+	background = "#050505"
+	foreground = "#b1b1b1"
 	timeout = 5
 
 [urgency_normal]
-	background = "#0f1212"
-	foreground = "#E9E9E9"
+	background = "#050505"
+	foreground = "#b1b1b1"
 	timeout = 20
 
 [urgency_critical]
-	background = "#0f1212"
-	foreground = "#7ff088"
+	background = "#050505"
+	foreground = "#516853"
 	timeout = 0
 
 ; vim: filetype=dosini
