@@ -2,6 +2,7 @@
 export PATH="$HOME/.bin/:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
 
 # scr
 export SCR_DIR="$HOME/opt/scrots/"
