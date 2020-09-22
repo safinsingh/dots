@@ -7,6 +7,6 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch Polybar using default config location ~/.config/polybar/config
-polybar -rq -c /home/safin/.config/polybar/config.ini arctic &
+polybar -rq -c $HOME/.config/polybar/config.ini terra &
 
 echo "Polybar launched..."

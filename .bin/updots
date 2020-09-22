@@ -11,7 +11,7 @@ rm -rf $DOTS/.Xresources
 rm -rf $DOTS/.zshrc
 
 cp -Rf ~/.config/i3 			$DOTS/.config
-cp -Rf ~/.config/alacritty 		$DOTS/.config
+cp -Rf ~/.config/termite 		$DOTS/.config
 cp -Rf ~/.config/dunst 			$DOTS/.config
 cp -Rf ~/.config/img			$DOTS/.config
 cp -Rf ~/.config/nvim			$DOTS/.config

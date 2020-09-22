@@ -7,7 +7,7 @@ set background=dark
 set t_Co=254
 
 syntax on
-colorscheme arctic
+colorscheme terra
 
 set ruler
 set laststatus=2
@@ -25,7 +25,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', { 'branch': 'release' }
     Plug 'sheerun/vim-polyglot'
     Plug 'junegunn/goyo.vim'
-    Plug 'rust-lang/rust.vim'
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     Plug 'preservim/nerdtree'
     Plug 'ap/vim-css-color'
@@ -48,6 +47,7 @@ set autoindent
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
+" set list lcs=tab:\›\ 
 
 " searching
 set ignorecase
@@ -75,6 +75,7 @@ map <C-n> :NERDTreeToggle<CR>
 map <C-f> :BLines<CR>
 map <C-j> :GFiles<CR>
 map <C-l> :set nonumber! norelativenumber!<CR>
+map <C-t> :FloatermNew --height=0.8 --width=0.8<CR>
 
 " nuaNce's statusline
 hi Sl1 ctermfg=none cterm=none ctermbg=NONE

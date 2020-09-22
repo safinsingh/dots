@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -e
+
+if [[ -z $1 ]]; then
+  echo "Please specify a file!"
+  exit 1
+fi
+
+token=$(cat $HOME/.env/ninja-dog)
+
+mime=$(file -b --mime-type $1)
+res=$(
+  curl -# -i -X POST -H "Content-Type: application/octet-stream" \
+    -H "Authorization: Bearer $token" \
+    --data-binary "@$1" "https://pat.doggo.ninja/v1/upload?originalName=$1&mimeType=$mime" |
+    tail -n 1
+)
+
+url=$(echo $res | jq -r '.url')
+echo "URL: $url"
+
+echo -n $url | xclip -selection clipboard -i
+
+notify-send "Uploaded $1" "URL copied to clipboard"
