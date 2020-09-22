@@ -1,0 +1,42 @@
+[colors]
+
+# special
+foreground      = #b1b1b1
+foreground_bold = #b1b1b1
+cursor          = #b1b1b1
+background      = #050505
+
+# black
+color0  = #050505
+color8  = #363636
+
+# red
+color1  = #685351
+color9  = #a38c89
+
+# green
+color2  = #516853
+color10 = #89a38c
+
+# yellow
+color3  = #666851
+color11 = #a1a389
+
+# blue
+color4  = #535168
+color12 = #8c89a3
+
+# magenta
+color5  = #685166
+color13 = #a389a1
+
+# cyan
+color6  = #516668
+color14 = #89a1a3
+
+# white
+color7  = #b1b1b1
+color15 = #cccccc
+
+[options]
+font = Iosevka 16
