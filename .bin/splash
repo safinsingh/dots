@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir=~/tmp/splash
+dir=/tmp/splash
 if [[ -d $dir ]]; then
   rm -rf $dir
 fi
@@ -13,5 +13,4 @@ while true; do
   	feh --bg-fill $dir/$c.jpeg
   	echo "Picture $c.jpeg has been downloaded!"
   	c=$((c + 1))
-	sleep 60
 done

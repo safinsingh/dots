@@ -19,7 +19,6 @@ alias grep="grep --color=auto"
 alias ip="ip -color=auto"
 
 # programs
-alias npm="pnpm"
 alias git="hub"
 alias vim="nvim"
 alias gpg="gpg2"
