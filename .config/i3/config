@@ -26,7 +26,7 @@ exec_always ~/.config/polybar/launch.sh
 exec_always dunst
 
 # Background
-exec_always feh --bg-fill /home/safin/.config/img/wp.jpeg
+exec_always feh --bg-fill /home/safin/.config/img/wp/1.jpg
 
 # Borders
 for_window [class="^.*"] border pixel 0
@@ -69,7 +69,10 @@ bindsym $mod+c exec /home/safin/.bin/centerwin
 # Copy important quote to clipboard
 bindsym $mod+g exec /home/safin/.bin/gnu
 
-# switch to workspace
+# Random wallpaper
+bindsym $mod+w exec 'feh --bg-fill "$(find $HOME/.config/img/wp -type f | shuf -n 1)" &'
+
+# Switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
