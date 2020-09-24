@@ -9,7 +9,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
     s.taglist = awful.widget.taglist {
         screen = s,
         filter = awful.widget.taglist.filter.selected,
-        layout = {spacing = 3, layout = wibox.layout.fixed.horizontal}
+        layout = {spacing = gaps / 10, layout = wibox.layout.fixed.horizontal}
     }
 
     s.mylayoutbox = awful.widget.layoutbox {
@@ -25,8 +25,8 @@ screen.connect_signal("request::desktop_decoration", function(s)
     s.bar = awful.wibar({
         position = "bottom",
         screen = s,
-        width = 300,
-        height = 47
+        width = gaps * 10,
+        height = gaps * 1.5
     })
 
     s.bar:setup{
@@ -38,7 +38,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
             {layout = wibox.layout.fixed.horizontal, s.mylayoutbox}
         },
         widget = wibox.container.margin,
-        margins = 17
+        margins = gaps / 2
     }
 end)
 
