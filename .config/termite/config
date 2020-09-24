@@ -1,5 +1,4 @@
 [colors]
-
 # special
 foreground      = #b1b1b1
 foreground_bold = #b1b1b1
@@ -40,3 +39,5 @@ color15 = #cccccc
 
 [options]
 font = Iosevka 16
+
+; vim:syntax=dosini

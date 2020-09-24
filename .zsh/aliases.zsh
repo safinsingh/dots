@@ -23,5 +23,4 @@ alias ip="ip -color=auto"
 alias git="hub"
 alias vim="nvim"
 alias gpg="gpg2"
-
-precmd() $funcstack[1]() echo
+alias unode="source /usr/share/nvm/init-nvm.sh"
