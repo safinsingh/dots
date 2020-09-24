@@ -1,10 +1,11 @@
 local awful = require("awful")
 local wibox = require("wibox")
+local gears = require("gears")
 
 clock = wibox.widget.textclock()
 
 screen.connect_signal("request::desktop_decoration", function(s)
-    awful.tag({"1", "2", "3", "4", "5"}, s)
+    awful.tag({"1", "2", "3", "4", "5"}, s, awful.layout.suit.spiral.dwindle)
 
     s.taglist = awful.widget.taglist {
         screen = s,
@@ -26,7 +27,11 @@ screen.connect_signal("request::desktop_decoration", function(s)
         position = "bottom",
         screen = s,
         width = gaps * 10,
-        height = gaps * 1.5
+        height = gaps * 1.5,
+        shape = function(cr, width, height)
+            gears.shape.partially_rounded_rect(cr, width, height, true, true,
+                                               false, false, 6)
+        end
     })
 
     s.bar:setup{
@@ -41,13 +46,3 @@ screen.connect_signal("request::desktop_decoration", function(s)
         margins = gaps / 2
     }
 end)
-
-function remove_wibar(c)
-    if c.fullscreen or c.maximized then
-        s.mywibox.visible = false
-    else
-        s.mywibox.visible = true
-    end
-end
-
-client.connect_signal("property::fullscreen", remove_wibar)

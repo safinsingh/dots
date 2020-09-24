@@ -2,7 +2,7 @@
 background = "#050505"
 foreground = "#b1b1b1"
 gray = "#363636"
-accent = "#516853"
+accent = "#8c89a3"
 transparent = "#00000000"
 
 [bar/terra]
