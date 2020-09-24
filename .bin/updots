@@ -20,6 +20,7 @@ cp -Rf ~/.config/polybar		$DOTS/.config
 cp -Rf ~/.config/rofi			$DOTS/.config
 cp -Rf ~/.config/starship.toml	$DOTS/.config
 cp -Rf ~/.config/xob			$DOTS/.config
+cp -Rf ~/.config/awesome		$DOTS/.config
 
 cp -Rf ~/.themes/$RELEASE		$DOTS/.themes
 cp -Rf ~/.zsh					$DOTS/.zsh
