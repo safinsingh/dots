@@ -14,4 +14,5 @@ end)
 screen.connect_signal("request::wallpaper",
                       function(s) gears.wallpaper.maximized(wall, s, true) end)
 
-beautiful.init("themes/" .. theme .. "/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/" .. theme ..
+                   "/theme.lua")

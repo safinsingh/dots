@@ -5,7 +5,7 @@ awful.keyboard.append_global_keybindings(
     {
         awful.key({modkey}, "s", hotkeys_popup.show_help,
                   {description = "show help", group = "awesome"}),
-        awful.key({modkey}, "w", function() mymainmenu:show() end,
+        awful.key({modkey}, "w", function() main_menu:show() end,
                   {description = "show main menu", group = "awesome"}),
         awful.key({modkey, "Control"}, "r", awesome.restart,
                   {description = "reload awesome", group = "awesome"}),
@@ -150,7 +150,7 @@ awful.keyboard.append_global_keybindings(
     })
 
 awful.mouse.append_global_mousebindings({
-    awful.button({}, 3, function() mymainmenu:toggle() end),
+    awful.button({}, 3, function() main_menu:toggle() end),
     awful.button({}, 4, awful.tag.viewprev),
     awful.button({}, 5, awful.tag.viewnext)
 })
@@ -172,14 +172,9 @@ end)
 client.connect_signal("request::default_keybindings", function()
     awful.keyboard.append_client_keybindings(
         {
-            awful.key({modkey}, "f", function(c)
-                c.fullscreen = not c.fullscreen
-                c:raise()
-            end, {description = "toggle fullscreen", group = "client"}),
             awful.key({modkey}, "q", function(c) c:kill() end,
                       {description = "close", group = "client"}),
-            awful.key({modkey, "Control"}, "space",
-                      awful.client.floating.toggle,
+            awful.key({modkey, "shift"}, "space", awful.client.floating.toggle,
                       {description = "toggle floating", group = "client"}),
             awful.key({modkey, "Control"}, "Return",
                       function(c) c:swap(awful.client.getmaster()) end,
@@ -189,11 +184,8 @@ client.connect_signal("request::default_keybindings", function()
             awful.key({modkey}, "t", function(c)
                 c.ontop = not c.ontop
             end, {description = "toggle keep on top", group = "client"}),
-            awful.key({modkey}, "n", function(c)
-                -- The client currently has the input focus, so it cannot be
-                -- minimized, since minimized clients can't have the focus.
-                c.minimized = true
-            end, {description = "minimize", group = "client"}),
+            awful.key({modkey}, "n", function(c) c.minimized = true end,
+                      {description = "minimize", group = "client"}),
             awful.key({modkey}, "m", function(c)
                 c.maximized = not c.maximized
                 c:raise()

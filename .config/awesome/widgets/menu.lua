@@ -9,7 +9,7 @@ awesome_menu = {
     },
     {
         "edit config",
-        editor_cmd .. os.getenv("HOME") .. "/.config/awesome/rc.lua"
+        editor_cmd .. os.getenv("HOME") .. " /.config/awesome/rc.lua"
     }, {"restart", awesome.restart}
 }
 
