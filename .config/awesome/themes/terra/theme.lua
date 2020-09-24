@@ -7,7 +7,7 @@ local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 local theme = dofile(themes_path .. "default/theme.lua")
 
-theme.font = "Iosevka 14"
+theme.font = font
 
 accents = {xrdb.color14, xrdb.color12, xrdb.color13}
 
