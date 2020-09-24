@@ -1,6 +1,7 @@
 # x
 alias mirror="xrandr --output DP-1 --auto --same-as eDP-1"
 alias xwin="Xephyr -br -ac -noreset -screen 1600x900 :2"
+alias bigxwin="Xephyr -br -ac -noreset -screen 1920x1080 :2"
 alias xdisp="DISPLAY=:2"
 
 # files
