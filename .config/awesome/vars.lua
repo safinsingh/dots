@@ -8,4 +8,4 @@ editor_cmd = terminal .. " -e " .. editor
 wall = "/home/safin/.config/img/wp/1.jpg"
 font = "Iosevka 14"
 gaps = 30
-border = 8
+border = 10
