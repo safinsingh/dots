@@ -9,28 +9,28 @@ client.connect_signal("request::titlebars", function(c)
         end)
     }
 
-    top_bar = awful.titlebar(c, {
-        size = 4,
+    awful.titlebar(c, {
+        size = border / 2,
         bg_normal = theme.muted,
         bg_focus = theme.accent
     })
 
-    bottom_bar = awful.titlebar(c, {
-        size = 4,
+    awful.titlebar(c, {
+        size = border / 2,
         bg_normal = theme.muted,
         bg_focus = theme.accent,
         position = "bottom"
     })
 
-    right_bar = awful.titlebar(c, {
-        size = 4,
+    awful.titlebar(c, {
+        size = border / 2,
         bg_normal = theme.muted,
         bg_focus = theme.accent,
         position = "right"
     })
 
-    left_bar = awful.titlebar(c, {
-        size = 4,
+    awful.titlebar(c, {
+        size = border / 2,
         bg_normal = theme.muted,
         bg_focus = theme.accent,
         position = "left"
