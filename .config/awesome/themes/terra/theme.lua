@@ -5,18 +5,17 @@ local dpi = xresources.apply_dpi
 local xrdb = xresources.get_current_theme()
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
-local theme = dofile(themes_path .. "default/theme.lua")
+theme = dofile(themes_path .. "default/theme.lua")
 
 theme.font = "Iosevka 14"
 
-bg = xrdb.background
-fg = xrdb.foreground
-muted = xrdb.color8
-accent = xrdb.color12
+theme.bg = xrdb.background
+theme.fg = xrdb.foreground
+theme.accent = xrdb.color12
+theme.muted = xrdb.color8
 
 theme.bg_normal = bg
 theme.fg_normal = fg
-theme.accent = accent
 
 theme.bg_systray = bg
 

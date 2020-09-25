@@ -13,8 +13,8 @@ client.connect_signal("request::titlebars", function(c)
 
     local top_tb = awful.titlebar(c, {
         size = border / 2,
-        bg_normal = "#363636",
-        bg_focus = "#050505"
+        bg_normal = theme.muted,
+        bg_focus = theme.bg
     })
 
     top_tb:setup{
@@ -25,7 +25,7 @@ client.connect_signal("request::titlebars", function(c)
                                                    true, false, false,
                                                    border / 2)
             end,
-            bg = "#8c89a3",
+            bg = theme.accent,
             widget = wibox.container.background
         },
         nil,
@@ -34,8 +34,8 @@ client.connect_signal("request::titlebars", function(c)
 
     local bottom_tb = awful.titlebar(c, {
         size = border / 2,
-        bg_normal = "#363636",
-        bg_focus = "#050505",
+        bg_normal = theme.muted,
+        bg_focus = theme.bg,
         position = "bottom"
     })
 
@@ -46,7 +46,7 @@ client.connect_signal("request::titlebars", function(c)
                 gears.shape.partially_rounded_rect(cr, width, height, false,
                                                    false, true, true, border / 2)
             end,
-            bg = "#8c89a3",
+            bg = theme.accent,
             widget = wibox.container.background
         },
         nil,
@@ -55,14 +55,14 @@ client.connect_signal("request::titlebars", function(c)
 
     awful.titlebar(c, {
         size = border / 2,
-        bg_normal = "#363636",
+        bg_normal = theme.muted,
         bg_focus = theme.accent,
         position = "right"
     })
 
     awful.titlebar(c, {
         size = border / 2,
-        bg_normal = "#363636",
+        bg_normal = theme.muted,
         bg_focus = theme.accent,
         position = "left"
     })
