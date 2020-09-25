@@ -36,6 +36,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'z0mbix/vim-shfmt', { 'for': 'sh' }
     Plug 'andrejlevkovitch/vim-lua-format'
     Plug 'wakatime/vim-wakatime'
+    Plug 'safinsingh/terra.vim'
 call plug#end()
 
 " line nums
