@@ -10,7 +10,7 @@ Hey there! Here are some details about my current setup, codenamed `terra`.
 
 - 🐧 **Distro**: Arch Linux
 - ⌨️ **Terminal**: [termite](https://github.com/thestinger/termite)
-- 🕹️ **WM**: [i3-gaps](https://github.com/Airblader/i3)
+- 🕹️ **WM**: [i3-gaps](https://github.com/Airblader/i3) (awesomeWM in [progress](https://github.com/safinsingh/dots/tree/master/.config/awesome)!)
 - ⌛ **Bar**: [polybar](https://github.com/polybar/polybar)
 - 📃 **Editor**: [neovim](https://github.com/neovim/neovim)
 - 💾 **File browser**: [thunar](https://wiki.archlinux.org/index.php/Thunar)
