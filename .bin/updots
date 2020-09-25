@@ -1,11 +1,11 @@
 #!/bin/bash
 
 export DOTS="/home/safin/.dots"
-export RELEASE="arctic"
+export RELEASE="terra"
 
 rm -rf $DOTS/.config/*
 rm -rf $DOTS/.bin
-rm -rf $DOTS/.themes/$RELEASE
+rm -rf $DOTS/.themes/*
 rm -rf $DOTS/.zsh
 rm -rf $DOTS/.Xresources
 rm -rf $DOTS/.zshrc
