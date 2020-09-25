@@ -1,11 +1,9 @@
 #!/bin/bash
 
 export DOTS="/home/safin/.dots"
-export RELEASE="terra"
 
 rm -rf $DOTS/.config/*
 rm -rf $DOTS/.bin
-rm -rf $DOTS/.themes/*
 rm -rf $DOTS/.zsh
 rm -rf $DOTS/.Xresources
 rm -rf $DOTS/.zshrc
@@ -22,13 +20,12 @@ cp -Rf ~/.config/starship.toml	$DOTS/.config
 cp -Rf ~/.config/xob			$DOTS/.config
 cp -Rf ~/.config/awesome		$DOTS/.config
 
-cp -Rf ~/.themes/$RELEASE		$DOTS/.themes
 cp -Rf ~/.zsh					$DOTS/.zsh
 cp -Rf ~/.bin					$DOTS/.bin
-
 cp -Rf ~/.Xresources			$DOTS/.Xresources
 cp -Rf ~/.zshrc					$DOTS/.zshrc
 
 rm -rf $DOTS/.bin/phicom
+rm -rf $DOTS/.config/nvim/colors
 
 cd $DOTS && push "updots"
