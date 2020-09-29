@@ -2,72 +2,24 @@ local awful = require("awful")
 local gears = require("gears")
 local wibox = require("wibox")
 
-client.connect_signal("request::titlebars", function(c)
-    local buttons = {
-        awful.button({}, 1, function()
-            c:activate{context = "titlebar", action = "mouse_move"}
-        end), awful.button({}, 3, function()
-            c:activate{context = "titlebar", action = "mouse_resize"}
-        end)
-    }
+function draw_borders(c, active)
+    local color = theme.accent
 
-    local top_tb = awful.titlebar(c, {
-        size = border / 2,
-        bg_normal = theme.muted,
-        bg_focus = theme.bg
-    })
-
-    top_tb:setup{
+    local left_tb = awful.titlebar(c, {size = border * 2, position = "left"})
+    left_tb:setup{
         nil,
         {
             shape = function(cr, width, height)
                 gears.shape.partially_rounded_rect(cr, width, height, true,
-                                                   true, false, false,
-                                                   border / 2)
+                                                   false, false, true, 2)
             end,
-            bg = theme.accent,
-            widget = wibox.container.background
+            widget = wibox.container.background,
+            bg = color
         },
         nil,
         layout = wibox.layout.align.horizontal
     }
+end
 
-    local bottom_tb = awful.titlebar(c, {
-        size = border / 2,
-        bg_normal = theme.muted,
-        bg_focus = theme.bg,
-        position = "bottom"
-    })
-
-    bottom_tb:setup{
-        nil,
-        {
-            shape = function(cr, width, height)
-                gears.shape.partially_rounded_rect(cr, width, height, false,
-                                                   false, true, true, border / 2)
-            end,
-            bg = theme.accent,
-            widget = wibox.container.background
-        },
-        nil,
-        layout = wibox.layout.align.horizontal
-    }
-
-    awful.titlebar(c, {
-        size = border / 2,
-        bg_normal = theme.muted,
-        bg_focus = theme.accent,
-        position = "right"
-    })
-
-    awful.titlebar(c, {
-        size = border / 2,
-        bg_normal = theme.muted,
-        bg_focus = theme.accent,
-        position = "left"
-    })
-end)
-
-client.connect_signal("mouse::enter", function(c)
-    c:activate{context = "mouse_enter", raise = true}
-end)
+client.connect_signal("request::titlebars",
+                      function(c) draw_borders(c, true) end)
