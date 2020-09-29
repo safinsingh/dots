@@ -11,7 +11,7 @@ colorscheme terra
 
 set ruler
 set laststatus=2
-set noshowmode 
+set noshowmode
 set linebreak
 set hidden
 set cursorline
@@ -22,21 +22,17 @@ filetype on
 
 " plugins
 call plug#begin('~/.vim/plugged')
-    Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+    Plug 'dense-analysis/ale'
     Plug 'sheerun/vim-polyglot'
     Plug 'junegunn/goyo.vim'
-    Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     Plug 'preservim/nerdtree'
     Plug 'ap/vim-css-color'
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'preservim/nerdcommenter'
+    Plug 'tpope/vim-surround'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'voldikss/vim-floaterm'
-	Plug 'z0mbix/vim-shfmt', { 'for': 'sh' }
     Plug 'andrejlevkovitch/vim-lua-format'
     Plug 'wakatime/vim-wakatime'
-    Plug 'safinsingh/terra.vim'
 call plug#end()
 
 " line nums
@@ -50,7 +46,7 @@ set autoindent
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
-" set list lcs=tab:\›\ 
+" set list lcs=tab:\›\
 
 " searching
 set ignorecase
@@ -64,15 +60,70 @@ set laststatus=2
 set noshowmode
 
 " extension-specific settings
-let g:rustfmt_autosave = 1
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
-let g:prettier#config#tab_width = 4
-let g:prettier#config#print_width = 80
-let g:prettier#config#use_tabs = 'false'
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
+
+"" fzf
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+
+"" shfmt
 let g:shfmt_fmt_on_save = 1
+
+"" ale
+let g:ale_rust_rls_config = {
+	\ 'rust': {
+		\ 'all_targets': 1,
+		\ 'build_on_save': 1,
+		\ 'clippy_preference': 'on'
+	\ }
+	\ }
+let g:ale_rust_rls_toolchain = ''
+let g:ale_rust_rls_executable = 'rust-analyzer'
+let g:ale_linters = {
+    \ 'rust': ['analyzer'],
+    \ 'go': ['golangci-lint'],
+    \ 'javascript': ['eslint', 'prettier'],
+    \ 'css': ['prettier'],
+    \ 'typescript': ['eslint', 'prettier'],
+    \ 'scss': ['prettier'],
+    \ 'yaml': ['prettier'],
+    \ 'graphql': ['eslint', 'prettier'],
+    \ 'html': ['prettier'],
+    \ 'json': ['prettier'],
+    \ 'markdown': ['prettier'],
+    \ 'lua': ['luacheck']
+    \ }
+let g:ale_fixers = {
+    \ '*': [
+        \ 'remove_trailing_lines',
+        \ 'trim_whitespace'
+        \ ],
+    \ 'rust': ['rustfmt'],
+    \ 'sh': ['shfmt'],
+    \ 'zsh': ['shfmt'],
+    \ 'python': ['black'],
+    \ 'typescript': ['eslint', 'prettier'],
+    \ 'javascript': ['eslint', 'prettier'],
+    \ 'css': ['prettier'],
+    \ 'less': ['prettier'],
+    \ 'scss': ['prettier'],
+    \ 'json': ['prettier'],
+    \ 'json5': ['prettier'],
+    \ 'graphql': ['prettier'],
+    \ 'markdown': ['prettier'],
+    \ 'html': ['prettier'],
+    \ 'yaml': ['prettier']
+    \ }
+let g:ale_rust_rls_toolchain = "stable"
+let g:ale_fix_on_save = 1
+let g:ale_go_golangci_lint_package = 1
+let g:ale_go_golangci_lint_options = "--fast -E gofumpt unparam unconvert maligned goimports godot goconst"
+
+"" luaformat
 autocmd BufWrite *.lua call LuaFormat()
+
+"" comments
+let g:NERDSpaceDelims = 1
+
 
 " keybinds
 map <C-n> :NERDTreeToggle<CR>
@@ -127,4 +178,3 @@ set statusline+=%#SlRese#
 set statusline+=%=
 set statusline+=%#Sl2#\ %.20t\ //
 set statusline+=\%#Sl2#\ %l,%c
-
