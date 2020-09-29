@@ -1,3 +1,3 @@
 #!/usr/bin/env zsh
 
-export PROMPT='%B%F{blue}卑%1~%f%b '
+export PROMPT='%B%F{cyan}卑%1~%f%b '
