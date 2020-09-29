@@ -1,6 +1,7 @@
 local naughty = require("naughty")
 local beautiful = require("beautiful")
 local gears = require("gears")
+local awful = require("awful")
 
 naughty.connect_signal("request::display_error", function(message, startup)
     naughty.notification {
@@ -16,3 +17,5 @@ screen.connect_signal("request::wallpaper",
 
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/" .. theme ..
                    "/theme.lua")
+
+awful.spawn(os.getenv("HOME") .. "/.bin/phicom")
