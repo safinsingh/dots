@@ -1,42 +1,19 @@
 #!/bin/bash
 
-function hcenter {
-  text=$@
-  cols=`tput cols`
+c="$(tput setaf 6)$(tput bold)"
+w="$(tput setaf 8)"
+r="$(tput sgr0)"
 
-  IFS=$'\n'$'\r'
-  for line in $(echo -e $text); do
-    line_length=`echo $line | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" | wc -c`
-    half_of_line_length=`expr $line_length / 2`
-    is_odd=`expr $line_length % 2 == 1`
-    half_of_line_length=`expr $half_of_line_length + $is_odd`
-    center=`expr \( $cols / 2 \) - $half_of_line_length`
-    spaces=""
+wm=$(wmctrl -m |
+   grep "Name" |
+   cut -d " " -f2)
+os=$(
+   . /etc/os-release
+   echo "$ID"
+)
+pk=$(pacman -Qq | wc -l)
 
-    for ((i=0; i < $center; i++)) {
-      spaces+=" "
-    }
-    echo "$spaces$line"
-  done
-}
-
-function vcenter {
-  text=$@
-  rows=`tput lines`
-  text_length=`echo -e $text | wc -l`
-  half_of_text_length=`expr $text_length / 2`
-  center=`expr \( $rows / 2 \) - $half_of_text_length`
-  lines=""
-
-  for ((i=0; i < $center; i++)) {
-    lines+="\n"
-  }
-  echo -e "$lines$text$lines"
-}
-
-function center {
-  text=$@
-  vcenter "`hcenter $text`"
-}
-
-center "$(tput bold)\033[0;32mos:\033[0m ar\n$(tput bold)\033[0;32mkr:\033[0m lx\n$(tput bold)\033[0;32mcu:\033[0m i7\033[0;32m\n$(tput bold)\033[0;32mwm:\033[0m i3"
+echo "${w}  卑    ${c}os ${r}$os
+${w} 卑卑   ${c}wm ${r}$wm
+${w}卑卑卑  ${c}pk ${r}$pk
+"
