@@ -22,5 +22,9 @@ alias ip="ip -color=auto"
 # programs
 alias git="hub"
 alias vim="nvim"
+alias v="nvim"
 alias gpg="gpg2"
-alias unode="source /usr/share/nvm/init-nvm.sh"
+alias nodenv="source /usr/share/nvm/init-nvm.sh"
+
+# configs
+alias vconf="cd $HOME/.config/nvim && nvim init.vim"
