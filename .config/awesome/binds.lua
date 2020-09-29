@@ -11,7 +11,7 @@ awful.keyboard.append_global_keybindings(
                   {description = "reload awesome", group = "awesome"}),
         awful.key({modkey}, "Return", function() awful.spawn(terminal) end,
                   {description = "open a terminal", group = "launcher"}),
-        awful.key({modkey}, "d", function() awful.spawn("rofi -show run") end,
+        awful.key({modkey}, "d", function() awful.spawn("dmenu_run") end,
                   {description = "show run prompt"}),
         awful.key({}, "Print", function()
             awful.spawn.with_shell("SCR_DIR=/home/safin/opt/scrots scr -S")
