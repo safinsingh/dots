@@ -12,7 +12,7 @@ naughty.connect_signal("request::display_error", function(message, startup)
 end)
 
 screen.connect_signal("request::wallpaper",
-                      function(s) gears.wallpaper.maximized(wall, s, true) end)
+                      function(s) gears.wallpaper.tiled(wall, s) end)
 
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/" .. theme ..
                    "/theme.lua")
