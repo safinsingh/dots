@@ -1,6 +1,4 @@
-<p align="center">
-  <h1>~</h1>
-</p>
+<h1 align="center"><i>~ dots ~</i></h1>
 
 ### Details
 
