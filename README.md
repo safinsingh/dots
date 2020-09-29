@@ -1,4 +1,4 @@
-<h1 align="center"><i>~ dots ~</i></h1>
+<h1 align="center">~ dots ~</h1>
 
 ### Details
 
