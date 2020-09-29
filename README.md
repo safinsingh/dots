@@ -1,21 +1,22 @@
 <p align="center">
-  <img src="./.config/img/welcome.png" width="70%" />
+  <h1>~</h1>
 </p>
 
 ### Details
 
 Hey there! Here are some details about my current setup, codenamed `terra`.
 
-> If you're looking for my [last setup](https://www.reddit.com/r/unixporn/comments/irhskz/i3_the_arctic/), codenamed `arctic`, click [here](https://github.com/safinsingh/dots/tree/e5b8775e6ed751c2300a5a7644fea176a39b6e4f).
-
-- 🐧 **Distro**: Arch Linux
-- ⌨️ **Terminal**: [termite](https://github.com/thestinger/termite)
-- 🕹️ **WM**: [i3-gaps](https://github.com/Airblader/i3) (awesomeWM in [progress](https://github.com/safinsingh/dots/tree/master/.config/awesome)!)
-- ⌛ **Bar**: [polybar](https://github.com/polybar/polybar)
-- 📃 **Editor**: [neovim](https://github.com/neovim/neovim)
-- 💾 **File browser**: [thunar](https://wiki.archlinux.org/index.php/Thunar)
-- 🔍 **Menu**: [rofi](https://github.com/davatorium/rofi)
-
 ## Setup
 
-<img src="./.config/img/ss.png">
+![](./.config/img/ss.png)
+
+> If you're looking for my [last setup](https://www.reddit.com/r/unixporn/comments/irhskz/i3_the_arctic/), codenamed `arctic`, click [here](https://github.com/safinsingh/dots/tree/e5b8775e6ed751c2300a5a7644fea176a39b6e4f).
+
+- 🐧 **Distro**: [Arch](https://www.archlinux.org/)
+- ⌨️ **Terminal**: [termite](https://github.com/thestinger/termite)
+- 🕹️ **WM**: [awesome](https://awesomewm.org/)
+- 📃 **Editor**: [neovim](https://github.com/neovim/neovim)
+- 🔍 **Menu**: [dmenu](https://tools.suckless.org/dmenu/)
+- 🐚 **Shell**: [zsh](https://www.zsh.org/)
+- 🔤 **Font**: [Iosevka](https://aur.archlinux.org/packages/nerd-fonts-iosevka/)
+- 📖 **Start page**: [custom](https://safinsingh.github.io/start)
