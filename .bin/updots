@@ -8,15 +8,10 @@ rm -rf $DOTS/.zsh
 rm -rf $DOTS/.Xresources
 rm -rf $DOTS/.zshrc
 
-cp -Rf ~/.config/i3 			$DOTS/.config
 cp -Rf ~/.config/termite 		$DOTS/.config
-cp -Rf ~/.config/dunst 			$DOTS/.config
 cp -Rf ~/.config/img			$DOTS/.config
 cp -Rf ~/.config/nvim			$DOTS/.config
 cp -Rf ~/.config/picom			$DOTS/.config
-cp -Rf ~/.config/polybar		$DOTS/.config
-cp -Rf ~/.config/rofi			$DOTS/.config
-cp -Rf ~/.config/starship.toml	$DOTS/.config
 cp -Rf ~/.config/xob			$DOTS/.config
 cp -Rf ~/.config/awesome		$DOTS/.config
 cp -Rf ~/.config/dmenu			$DOTS/.config
