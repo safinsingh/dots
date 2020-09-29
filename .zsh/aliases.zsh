@@ -10,6 +10,7 @@ alias la="exa -a --icons --group-directories-first"
 alias ll="exa -l -a --icons --group-directories-first"
 alias tree="exa -a --icons --tree --group-directories-first"
 alias bat="bat --theme base16"
+alias space="df -h /dev/sda6"
 
 # screen capturing
 alias record="scr -m s -f 60 -c -n"

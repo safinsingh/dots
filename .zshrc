@@ -5,4 +5,4 @@ source ~/.zsh/aliases.zsh
 source ~/.zsh/vars.zsh
 source ~/.zsh/prompt.zsh
 
-clear && fet
+clear && trifetch
