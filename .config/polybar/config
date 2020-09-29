@@ -23,8 +23,8 @@ padding-left = 2
 padding-right = 2
 
 # Handle transparency with compositor
-border-left-size = 60
-border-right-size = 60
+border-left-size = 800
+border-right-size = 800
 border-top-size = 16
 
 module-margin-left = 1
@@ -33,9 +33,9 @@ module-margin-right = 1
 font-0 = "Iosevka:size=11"
 font-1 = "Iosevka:size=11:weight=bold"
 
-modules-left = filesystem cpu
-modules-center = i3
-modules-right = battery date
+modules-left = i3
+modules-center = date
+modules-right = cpu
 
 wm-restack = i3
 override-redirect = false
@@ -49,40 +49,22 @@ label-focused-foreground = ${colors.foreground}
 label-focused-padding = 1
 label-focused-margin = 0.5
 
-label-unfocused = %index%
-label-unfocused-foreground = ${colors.gray}
-label-unfocused-padding = 1
-label-unfocused-margin = 0.5
-
-label-urgent = %index%
-label-urgent-font = 2
-label-urgent-foreground = ${colors.accent}
-label-urgent-padding = 1
-label-urgent-margin = 0.5
+label-unfocused = 
+label-urgent = 
 
 [module/date]
 type = internal/date
 interval = 1.0
-time = %a %d, %I:%M %p
+time = %a %d, %I:%M
 
 label-foreground = ${colors.foreground}
-label =  %time%
-
-[module/filesystem]
-type = internal/fs
-mount-0 = /
-
-label-mounted =  %percentage_used%%
-label-mounted-foreground = ${colors.foreground}
-
-interval = 600
-fixed-values = true
+label = %time%
 
 [module/cpu]
 type = internal/cpu
 interval = 5
 
-label =  %percentage%%
+label = %percentage%%
 label-foreground = ${colors.foreground}
 
 [module/memory]

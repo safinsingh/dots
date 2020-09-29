@@ -1,41 +1,42 @@
 [colors]
+
 # special
-foreground      = #b1b1b1
-foreground_bold = #b1b1b1
-cursor          = #b1b1b1
+foreground      = #cacaca
+foreground_bold = #cacaca
+cursor          = #cacaca
 background      = #050505
 
 # black
 color0  = #050505
-color8  = #363636
+color8  = #404040
 
 # red
-color1  = #685351
-color9  = #a38c89
+color1  = #654c59
+color9  = #937081
 
 # green
-color2  = #516853
-color10 = #89a38c
+color2  = #59654c
+color10 = #709381
 
 # yellow
-color3  = #666851
-color11 = #a1a389
+color3  = #65594c
+color11 = #938170
 
 # blue
-color4  = #535168
-color12 = #8c89a3
+color4  = #4c5965
+color12 = #708193
 
 # magenta
-color5  = #685166
-color13 = #a389a1
+color5  = #594c65
+color13 = #817093
 
 # cyan
-color6  = #516668
-color14 = #89a1a3
+color6  = #4c6559
+color14 = #709381
 
 # white
-color7  = #b1b1b1
-color15 = #cccccc
+color7  = #cacaca
+color15 = #e6e6e6
 
 [options]
 font = Iosevka 16
