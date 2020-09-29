@@ -1,3 +1,0 @@
-#!/bin/bash
-
-curl -sF "file=@$1" "https://0x0.st" | xclip -selection c
