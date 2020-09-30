@@ -60,8 +60,6 @@ set laststatus=2
 set noshowmode
 
 " extension-specific settings
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
-
 "" fzf
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 
