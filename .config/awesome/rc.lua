@@ -15,3 +15,4 @@ require("windows/clients")
 
 require("widgets/bar")
 require("widgets/menu")
+require("widgets/sidebar")
