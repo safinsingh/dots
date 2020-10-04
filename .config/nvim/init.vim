@@ -7,7 +7,7 @@ set background=dark
 set t_Co=254
 
 syntax on
-colorscheme terra
+colorscheme moss
 
 set ruler
 set laststatus=2
