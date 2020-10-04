@@ -33,6 +33,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'voldikss/vim-floaterm'
     Plug 'andrejlevkovitch/vim-lua-format'
     Plug 'wakatime/vim-wakatime'
+    Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " line nums
