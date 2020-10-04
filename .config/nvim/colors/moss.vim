@@ -6,7 +6,7 @@ endif
 set background=dark
 
 let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
-let g:colors_name = 'terra'
+let g:colors_name = 'moss'
 " }}}
 " Configuration: {{{
 let s:configuration = {}
