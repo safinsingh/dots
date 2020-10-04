@@ -1,0 +1,9 @@
+#!/bin/bash
+
+loc="/tmp/lock.png"
+loc2="/tmp/lock2.png"
+maim "$loc"
+
+convert -blur "$loc" "$loc2"
+i3lock -i -e "$loc"
+
