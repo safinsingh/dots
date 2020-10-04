@@ -151,8 +151,13 @@ awful.keyboard.append_global_keybindings(
 
 awful.mouse.append_global_mousebindings({
     awful.button({}, 3, function() main_menu:toggle() end),
-    awful.button({}, 4, awful.tag.viewprev),
-    awful.button({}, 5, awful.tag.viewnext)
+    awful.button({}, 2, function()
+        if sidebar.visible == true then
+            sidebar.visible = false
+        else
+            sidebar.visible = true
+        end
+    end)
 })
 
 client.connect_signal("request::default_mousebindings", function()
