@@ -2,7 +2,7 @@
 
 ### Details
 
-Hey there! Here are some details about my current setup, codenamed `terra`.
+Hey there! Here are some details about my current setup, codenamed `moss`.
 
 ## Setup
 

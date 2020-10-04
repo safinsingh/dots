@@ -1,4 +1,4 @@
-theme = "terra"
+theme = "moss"
 modkey = "Mod1"
 
 terminal = "termite"
