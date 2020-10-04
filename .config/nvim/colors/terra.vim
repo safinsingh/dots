@@ -8,8 +8,6 @@ set background=dark
 let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
 let g:colors_name = 'terra'
 " }}}
-
-
 " Configuration: {{{
 let s:configuration = {}
 let s:configuration.palette = get(g:, 'terra_palette', 'soft')
@@ -19,7 +17,6 @@ let s:configuration.enable_italic = get(g:, 'terra_enable_italic', 0)
 let s:configuration.cursor = get(g:, 'terra_cursor', 'auto')
 let s:configuration.current_word = get(g:, 'terra_current_word', get(g:, 'terra_transparent_background', 0) == 0 ? 'grey background' : 'bold')
 " }}}
-
 " Palette: {{{
 let s:palette = {
       \ 'bg0':        ['#050505',   '235',  'Black'],
@@ -44,7 +41,6 @@ let s:palette = {
       \ 'none':       ['NONE',      'NONE', 'NONE']
       \ }
 " }}}
-
 " Function: {{{
 " call s:HL(group, foreground, background)
 " call s:HL(group, foreground, background, gui, guisp)
@@ -114,8 +110,6 @@ else  " ctermfg ctermbg cterm
   endfunction
 endif
 " }}}
-
-
 " Common Highlight Groups: {{{
 " UI: {{{
 if s:configuration.transparent_background
@@ -198,7 +192,6 @@ call s:HL('ToolbarButton', s:palette.fg, s:palette.bg0, 'bold')
 call s:HL('QuickFixLine', s:palette.blue, s:palette.bg1)
 call s:HL('Debug', s:palette.yellow, s:palette.none)
 " }}}
-
 " Syntax: {{{
 call s:HL('Boolean', s:palette.purple, s:palette.none)
 call s:HL('Number', s:palette.purple, s:palette.none)
@@ -256,7 +249,6 @@ call s:HL('Delimiter', s:palette.fg, s:palette.none)
 call s:HL('Ignore', s:palette.grey, s:palette.none)
 call s:HL('Underlined', s:palette.none, s:palette.none, 'underline')
 " }}}
-
 " Predefined Highlight Groups: {{{
 call s:HL('Fg', s:palette.fg, s:palette.none)
 call s:HL('Grey', s:palette.grey, s:palette.none)
@@ -294,9 +286,7 @@ else
   call s:HL('PurpleSign', s:palette.purple, s:palette.bg1)
 endif
 " }}}
-
 " }}}
-
 " Extended File Types: {{{
 " Markdown: {{{
 " builtin: {{{
