@@ -36,9 +36,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
-" line nums
-set nu rnu
-
 " text wrap
 set wrap
 
@@ -115,7 +112,7 @@ let g:ale_fixers = {
 let g:ale_rust_rls_toolchain = "stable"
 let g:ale_fix_on_save = 1
 let g:ale_go_golangci_lint_package = 1
-let g:ale_go_golangci_lint_options = "--fast -E gofumpt unparam unconvert maligned goimports godot goconst"
+let g:ale_go_golangci_lint_options = "--fast -E gofumpt -E unparam -E unconvert -E maligned -E goimports -E godot -E goconst"
 
 "" luaformat
 autocmd BufWrite *.lua call LuaFormat()
