@@ -11,9 +11,9 @@ theme = dofile(themes_path .. "default/theme.lua")
 
 theme.font = font
 
-theme.bg = xrdb.background
+theme.bg = "#0F1010"
 theme.fg = xrdb.foreground
-theme.accent = xrdb.color6
+theme.accent = xrdb.color0
 theme.muted = xrdb.color8
 
 theme.bg_normal = theme.bg
