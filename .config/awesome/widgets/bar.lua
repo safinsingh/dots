@@ -36,11 +36,11 @@ screen.connect_signal("request::desktop_decoration", function(s)
 
     s.bar:setup{
         {
-            layout = wibox.layout.align.vertical,
-            expand = "none",
             {layout = wibox.layout.fixed.vertical, s.taglist},
             {layout = wibox.layout.fixed.vertical, s.clock},
-            {layout = wibox.layout.fixed.vertical, s.layout}
+            {layout = wibox.layout.fixed.vertical, s.layout},
+            expand = "none",
+            layout = wibox.layout.align.vertical
         },
         widget = wibox.container.margin,
         margins = gaps / 2

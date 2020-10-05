@@ -19,25 +19,25 @@ let s:configuration.current_word = get(g:, 'terra_current_word', get(g:, 'terra_
 " }}}
 " Palette: {{{
 let s:palette = {
-      \ 'bg0':        ['#050505',   '235',  'Black'],
-      \ 'bg1':        ['#1e1e1e',   '236',  'DarkGrey'],
-      \ 'bg2':        ['#1e1e1e',   '237',  'DarkGrey'],
-      \ 'bg3':        ['#050505',   '238',  'DarkGrey'],
-      \ 'bg4':        ['#050505',   '239',  'Grey'],
-      \ 'bg_red':     ['#654c59',   '52',   'DarkRed'],
-      \ 'bg_green':   ['#59654c',   '22',   'DarkGreen'],
-      \ 'bg_blue':    ['#4c5965',   '17',   'DarkBlue'],
-      \ 'fg':         ['#cacaca',   '223',  'White'],
-      \ 'red':        ['#937081',   '167',  'Red'],
+      \ 'bg0':        ['#0F1010',   '235',  'Black'],
+      \ 'bg1':        ['#1f2625',   '236',  'DarkGrey'],
+      \ 'bg2':        ['#1f2625',   '237',  'DarkGrey'],
+      \ 'bg3':        ['#171C1B',   '238',  'DarkGrey'],
+      \ 'bg4':        ['#171C1B',   '239',  'Grey'],
+      \ 'bg_red':     ['#bfa7a3',   '52',   'DarkRed'],
+      \ 'bg_green':   ['#98c4ad',   '22',   'DarkGreen'],
+      \ 'bg_blue':    ['#a29dca',   '17',   'DarkBlue'],
+      \ 'fg':         ['#d9e6f2',   '223',  'White'],
+      \ 'red':        ['#B5968F',   '167',  'Red'],
       \ 'orange':     ['#937570',   '208',  'Red'],
       \ 'yellow':     ['#938170',   '214',  'Yellow'],
-      \ 'green':      ['#819370',   '108',  'Green'],
-      \ 'cyan':       ['#709381',   '108',  'Cyan'],
-      \ 'blue':       ['#708193',   '109',  'Blue'],
-      \ 'purple':     ['#817093',   '175',  'Magenta'],
-      \ 'grey':       ['#363636',   '245',  'LightGrey'],
-      \ 'light_grey': ['#363636',   '245',  'LightGrey'],
-      \ 'gold':       ['#666851',   '214',  'Yellow'],
+      \ 'green':      ['#84ba9c',   '108',  'Green'],
+      \ 'cyan':       ['#84adc0',   '108',  'Cyan'],
+      \ 'blue':       ['#9189c0',   '109',  'Blue'],
+      \ 'purple':     ['#b589b3',   '175',  'Magenta'],
+      \ 'grey':       ['#34403d',   '245',  'LightGrey'],
+      \ 'light_grey': ['#34403d',   '245',  'LightGrey'],
+      \ 'gold':       ['#baba8f',   '214',  'Yellow'],
       \ 'none':       ['NONE',      'NONE', 'NONE']
       \ }
 " }}}
@@ -236,15 +236,10 @@ call s:HL('Constant', s:palette.cyan, s:palette.none, 'bold')
 call s:HL('Macro', s:palette.cyan, s:palette.none)
 call s:HL('Identifier', s:palette.blue, s:palette.none)
 call s:HL('SpecialKey', s:palette.blue, s:palette.none)
-if s:configuration.disable_italic_comment
-  call s:HL('Comment', s:palette.light_grey, s:palette.none)
-  call s:HL('SpecialComment', s:palette.light_grey, s:palette.none)
-  call s:HL('Todo', s:palette.purple, s:palette.none)
-else
-  call s:HL('Comment', s:palette.light_grey, s:palette.none, 'italic')
-  call s:HL('SpecialComment', s:palette.light_grey, s:palette.none, 'italic')
-  call s:HL('Todo', s:palette.purple, s:palette.none, 'italic')
-endif
+call s:HL('Comment', s:palette.light_grey, s:palette.none)
+call s:HL('SpecialComment', s:palette.light_grey, s:palette.none)
+call s:HL('Todo', s:palette.purple, s:palette.none)
+call s:HL('shShebang', s:palette.purple, s:palette.none)
 call s:HL('Delimiter', s:palette.fg, s:palette.none)
 call s:HL('Ignore', s:palette.grey, s:palette.none)
 call s:HL('Underlined', s:palette.none, s:palette.none, 'underline')
