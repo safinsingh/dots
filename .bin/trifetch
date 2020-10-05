@@ -1,8 +1,8 @@
 #!/bin/bash
 
-c="$(tput setaf 6)$(tput bold)"
 w="$(tput setaf 8)"
-r="$(tput sgr0)"
+c="$w$(tput bold)"
+r="$(tput sgr0)$(tput setaf 8)"
 
 wm=$(wmctrl -m |
    grep "Name" |
@@ -13,7 +13,7 @@ os=$(
 )
 pk=$(pacman -Qq | wc -l)
 
-echo "${w}  卑    ${c}os ${r}$os
-${w} 卑卑   ${c}wm ${r}$wm
-${w}卑卑卑  ${c}pk ${r}$pk
+echo "${w}  卑    ${c}os :: ${r}$os
+${w} 卑卑   ${c}wm :: ${r}$wm
+${w}卑卑卑  ${c}pk :: ${r}$pk
 "
