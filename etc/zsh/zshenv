@@ -30,6 +30,8 @@ export LESSHISTFILE="${XDG_CONFIG_HOME:-$HOME/etc/}.lesshst"
 # programs
 export CARGO_HOME="${XDG_DATA_HOME}.cargo"
 export WAKATIME_HOME="${XDG_DATA_HOME}.wakatime/"
+export GOPATH="${XDG_DATA_HOME}go"
+
 # scr
 export SCR_DIR="$HOME/opt/scrots/"
 export REC_DIR="$HOME/opt/records/"

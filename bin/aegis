@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cd /home/safin/opt/git/aeacus/
-cp /home/safin/opt/vault/crypto.go cmd/crypto.go
+cd "$HOME/opt/git/aeacus" || exit
+cp "$HOME/opt/vault/crypto.go" cmd/crypto.go
 
 make release
 unzip aeacus-win32.zip 1>/dev/null
