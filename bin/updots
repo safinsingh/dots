@@ -19,5 +19,6 @@ cp -Rf "/etc/zsh/zshenv"			"${DOTS:?}/etc/zsh"
 
 rm -rf "${DOTS:?}/bin/phicom"
 rm -rf "${DOTS:?}/etc/nvim/plugged"
+rm -rf "${DOTS:?}/etc/zsh/history"
 
 cd $DOTS || exit && push
