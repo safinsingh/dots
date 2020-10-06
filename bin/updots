@@ -1,0 +1,23 @@
+#!/bin/bash
+
+export DOTS="/home/opt/git/dots"
+
+rm -rf "${DOTS:?}/etc"
+rm -rf "${DOTS:?}/bin"
+mkdir "${DOTS:?}/etc"
+
+cp -Rf "${XDG_CONFIG_HOME}awesome"	"${DOTS:?}/etc"
+cp -Rf "${XDG_CONFIG_HOME}dmenu"	"${DOTS:?}/etc"
+cp -Rf "${XDG_CONFIG_HOME}img"		"${DOTS:?}/etc"
+cp -Rf "${XDG_CONFIG_HOME}nvim"		"${DOTS:?}/etc"
+cp -Rf "${XDG_CONFIG_HOME}picom"	"${DOTS:?}/etc"
+cp -Rf "${XDG_CONFIG_HOME}termite"	"${DOTS:?}/etc"
+cp -Rf "${XDG_CONFIG_HOME}x" 		"${DOTS:?}/etc"
+cp -Rf "${XDG_CONFIG_HOME}zsh" 		"${DOTS:?}/etc"
+cp -Rf "$HOME/bin"					"${DOTS:?}/bin"
+cp -Rf "/etc/zsh/zshenv"			"${DOTS:?}/etc/zsh"
+
+rm -rf "${DOTS:?}/bin/phicom"
+rm -rf "${DOTS:?}/etc/nvim/plugged"
+
+cd $DOTS || exit && push

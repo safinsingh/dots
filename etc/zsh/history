@@ -1,0 +1,240 @@
+exit
+echo $HOME
+ls
+cd etc/awesome
+ls
+vim
+vim themes/steel/theme.lua
+vim rc.lua
+vim vars.lua
+vim startup.lua
+xrdb
+xrdb --help
+xrdb -query
+fet.sh
+vim etc/zsh/.zshrc
+vim etc/x/xresources
+vim /etc/zsh/zshenv
+vim /etc/zsh/.zs
+vim etc/zsh/.zshrc
+phicom
+vim ~/etc/awesome/startup.lua
+clear
+ls -la
+cd .pki
+ls
+ls -la
+cd nssdb
+ls
+cat pkcs11.txt
+cd
+rm -rf safin
+ls
+rm -rf wpilib
+ls
+rm log
+ls
+clear
+ls -la
+cd etc
+ls
+cd gtk-3.0
+ls
+cd ..
+cd ..
+cd th
+bat .Xr
+bat etc/x/xresources
+sudo oomox-gui
+ls
+ls -la
+cd safin
+ls
+cd opt
+ls
+cd sco
+cd ,,
+cd ..
+cd ..
+rm -rf safin
+cd /usr/share/th
+cd /usr/share/themes
+ls
+cd ..
+chown -R safin th
+chown -R safin themes
+sudo chown -R safin themes
+ls
+cd th
+cd themes
+oomox-gui
+clear
+cs
+cd
+cd etc
+cd gtk-3.0
+ls
+vim settings.ini
+ls -la
+cd .fontconfig
+ls
+vim a46a90b3114f4679f37745d4a8f3e608-le64.cache-7
+cd ..
+rm -rf .fontconfig
+mkdir /etc/cache
+mkdir etc/cache
+cd .parallel
+ls
+cd tmp
+ls
+cd sshlogin
+ls
+cd element
+l
+s
+ls
+cd ..
+cd ..
+cd ..
+cd ..
+rm -rf .parallel
+ls
+ls -la
+rm -rf safin
+rm -rf .pki
+echo $HOME
+echo $XDG_CONFIG_HOME
+ls -al
+ls -al | wc -l
+vim etc/zsh/.zshrc
+curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | sudo bash -s -- --to /usr/bin/just
+just
+chmod +x /usr/bin/just
+sudo chmod +x /usr/bin/just
+just
+which just
+just
+ls -al
+man exa
+exa --hel[
+exa --help
+exa --help | grep icons
+ls
+ls -l
+ls -l
+ls -la
+la -al
+rm -rf safin
+pwd
+ls -al
+bat /etc/zsh/zshenv
+vim /etc/zsh/zshenv
+vim etc/zsh/.zshrc
+cd bin
+ls -1a
+cd etc/zsh
+vim .zshrc
+vim bin/updots
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \\
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+ls
+rm -rf safin
+cd opt
+ls
+cd ..
+cd etc
+ls
+nvim
+cd
+clear
+cd bin
+ls
+vim updots
+cd ~/opt/git
+ls
+git clone https://github.com/safinsingh/dots
+cd dots
+ls
+ls -la
+rm -rf .bin .config .git .zsh .Xresources .zshrc
+ls
+ls -la
+cd ..
+rm -rf dots
+git clone https://github.com/safinsingh/dots
+cd dots
+rm -rf .bin .config .zsh .Xresources .zshrc
+ls
+ls -la
+vim /etc/zsh/zshenv
+sudo vim /etc/zsh/zshenv
+cd
+cd var
+mkdir .wakatime
+cd ..
+cp -f .wakatime* var/.wakatime
+cd var/.wakatime
+;s
+ls
+ls -al
+cd
+rm .wakatime.cfg .wakatime.data .wakatime.db .wakatime.log 
+source /etc/zsh/zshenv
+cd opt/git
+ls
+cd aeacus
+ls
+vim aeacus
+unalias ls
+ls
+exa
+ytop
+top
+htop
+man top
+cd /tmp
+git clone https://github.com/eankeen/dotty
+cd dotty
+go install
+dotty
+dotty
+cd etc/go/bin
+ls
+./dotty
+cd /tmp/dott
+cd /tmp/dotty
+ls
+go build
+ls
+mv dotty ~/etc/go/bin
+cd etc/
+ls
+ls -la
+cd ..
+cd var
+ls
+ls -al
+mv ~/etc/go .
+ls
+dotty
+./etc/go/bin/dotty
+vim /etc/zsh/zshenv
+cd etc/awesome
+s
+ls
+ls -al
+ls -1a
+cd safin
+ls
+cd opt
+ls
+cd ..
+cd ..
+rm -rf safin .vscode .pki
+cd var
+ls
+cd safin/opt/scrots
+sxiv 2020-10-05_23-17-26-1921x1080.png
+cp 2020-10-05_23-17-26-1921x1080.png ~/etc/img/ss.png
+cd
+rm -rf safin
