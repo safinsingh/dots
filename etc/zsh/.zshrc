@@ -1,6 +1,9 @@
 export LANG=en_US.UTF-8
 
 ## init
+# source env vars
+source /etc/zsh/zshenv
+
 # reload x colors
 xrdb -load "${XDG_CONFIG_HOME}x/xresources"
 
