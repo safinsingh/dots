@@ -14,7 +14,7 @@ awful.keyboard.append_global_keybindings(
         awful.key({modkey}, "d", function() awful.spawn("dmenu_run") end,
                   {description = "show run prompt"}),
         awful.key({}, "Print", function()
-            awful.spawn.with_shell("SCR_DIR=/home/safin/opt/scrots scr -S")
+            awful.spawn.with_shell("SCR_DIR=/home/opt/scrots scr -S")
         end), awful.key({}, "XF86AudioRaiseVolume", function()
             awful.spawn("pactl set-sink-volume 0 +5%")
         end), awful.key({}, "XF86AudioLowerVolume", function()
