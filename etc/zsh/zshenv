@@ -1,0 +1,51 @@
+## vars
+# home
+export HOME="/home"
+
+# xdg
+export XDG_CONFIG_HOME="$HOME/etc/"
+export XDG_DATA_HOME="$HOME/var/"
+export XDG_CACHE_HOME="$HOME/var/cache/"
+
+# x
+export XAUTHORITY="${XDG_CONFIG_HOME:-$HOME/etc/}x/xauth"
+export XINITRC="${XDG_CONFIG_HOME:-$HOME/etc/}x/xinitrc"
+
+# zsh
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/etc/}zsh"
+
+# path
+export PATH="$HOME/bin/:$PATH"
+export PATH="$XDG_DATA_HOME/go/bin:$PATH"
+export PATH="$XDG_DATA_HOME/cargo/bin:$PATH"
+export PATH="$XDG_DATA_HOME/yarn/bin:$PATH"
+
+# defaults
+export TERMINAL="termite"
+export EDITOR="nvim"
+export VISUAL="$EDITOR"
+export BROWSER="brave"
+export LESSHISTFILE="${XDG_CONFIG_HOME:-$HOME/etc/}.lesshst"
+
+# programs
+export CARGO_HOME="${XDG_DATA_HOME}.cargo"
+export WAKATIME_HOME="${XDG_DATA_HOME}.wakatime/"
+# scr
+export SCR_DIR="$HOME/opt/scrots/"
+export REC_DIR="$HOME/opt/records/"
+
+# less
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+# terminal
+export TERM="xterm-256color"
+export HISTFILE="${XDG_CONFIG_HOME:-$HOME/etc/}zsh/history"
+export HISTSIZE=10000
+export SAVEHIST=1000
+
