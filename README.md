@@ -2,7 +2,18 @@
 
 ### Details
 
-Hey there! Here are some details about my current setup, codenamed `moss`.
+Hey there! Here are some details about my current setup, codenamed `steel`.
+
+I'm using the `dotless` approach to managing my dotfiles, so here's what my directories would look like on a normal machine:
+
+```
+~ (/home)
++-- ~/bin -> ~/.local/bin
++-- ~/etc -> ~/.config
++-- ~/opt -> ~/Desktop, ~/Downloads, etc
++-- ~/var -> ~/.themes, ~/.icons
+    +-- ~/var/cache -> ~/.cache
+```
 
 ## Setup
 
