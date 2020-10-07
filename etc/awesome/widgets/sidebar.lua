@@ -1,13 +1,29 @@
+-- .▄▄ · ▪  ·▄▄▄▄  ▄▄▄ .▄▄▄▄·  ▄▄▄· ▄▄▄  
+-- ▐█ ▀. ██ ██▪ ██ ▀▄.▀·▐█ ▀█▪▐█ ▀█ ▀▄ █·
+-- ▄▀▀▀█▄▐█·▐█· ▐█▌▐▀▀▪▄▐█▀▀█▄▄█▀▀█ ▐▀▀▄ 
+-- ▐█▄▪▐█▐█▌██. ██ ▐█▄▄▌██▄▪▐█▐█ ▪▐▌▐█•█▌
+--  ▀▀▀▀ ▀▀▀▀▀▀▀▀•  ▀▀▀ ·▀▀▀▀  ▀  ▀ .▀  ▀
+
+-- NOTE: This is still VERY WIP! PLEASE
+-- do not use this as an example for creating your
+-- own widgets!
+
 local awful = require("awful")
 local wibox = require("wibox")
 local gears = require("gears")
+local beautiful = require("beautiful")
 
-local clock = wibox.widget.textclock("<span foreground='" .. theme.fg ..
-                                         "'><b>%H<span foreground='" .. theme.fg ..
-                                         "'>:</span>%M</b></span>")
+local foreground = "#ff0000"
+
+local clock = wibox.widget.textclock(
+    "<span foreground='" .. beautiful.fg ..
+    "'><b>%H<span foreground='" .. beautiful.fg ..
+    "'>:</span>%M</b></span>"
+)
+
 local function intro(t)
     return wibox.widget {
-        markup = '<span foreground="' .. theme.fg .. '"><i>' .. t ..
+        markup = '<span foreground="' .. beautiful.fg .. '"><i>' .. t ..
             '</i></span>',
         align = 'center',
         valign = 'center',
@@ -16,7 +32,7 @@ local function intro(t)
     }
 end
 
-local day = wibox.widget.textclock("<span foreground='" .. theme.accent ..
+local day = wibox.widget.textclock("<span foreground='" .. beautiful.accent ..
                                        "'><i>%A</i></span>")
 
 clock.font = "Rubik Medium 80"
@@ -36,7 +52,7 @@ local function hwrap(w, --[[optional]] h)
     }
 end
 
-sidebar = awful.popup {
+local sidebar = awful.popup {
     widget = {
         {
             nil,
@@ -48,7 +64,7 @@ sidebar = awful.popup {
                     shape = function(cr, w, h)
                         gears.shape.rounded_rect(cr, w, h, 5)
                     end,
-                    bg = theme.accent,
+                    bg = beautiful.accent,
                     widget = wibox.container.background
                 }),
                 hwrap({
@@ -85,3 +101,5 @@ sidebar = awful.popup {
     visible = false,
     ontop = true
 }
+
+return sidebar
