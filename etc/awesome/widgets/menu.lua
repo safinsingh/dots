@@ -1,17 +1,16 @@
 local awful = require("awful")
 local beautiful = require("beautiful")
 local menubar = require("menubar")
-local hotkeys_popup = require("awful.hotkeys_popup")
 
 awesome_menu = {
     {
         "hotkeys",
         function() hotkeys_popup.show_help(nil, awful.screen.focused()) end
-    },
+    }, 
     {
-        "edit config",
-        editor_cmd .. os.getenv("HOME") .. " /.config/awesome/rc.lua"
-    }, {"restart", awesome.restart}
+        "restart", 
+        awesome.restart
+    }
 }
 
 main_menu = awful.menu({
@@ -27,3 +26,5 @@ launcher = awful.widget.launcher({
 })
 
 menubar.utils.terminal = terminal
+
+return main_menu
