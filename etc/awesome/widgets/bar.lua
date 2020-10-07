@@ -2,7 +2,9 @@ local awful = require("awful")
 local wibox = require("wibox")
 local gears = require("gears")
 
-screen.connect_signal("request::desktop_decoration", function(s)
+local bar = {}
+
+bar.draw_bar = function(s, gaps)
     awful.tag({"1", "2", "3", "4", "5"}, s, awful.layout.suit.spiral.dwindle)
 
     s.clock = wibox.widget.textclock("%H%M")
@@ -10,7 +12,10 @@ screen.connect_signal("request::desktop_decoration", function(s)
     s.taglist = awful.widget.taglist {
         screen = s,
         filter = awful.widget.taglist.filter.selected,
-        layout = {spacing = gaps / 10, layout = wibox.layout.fixed.horizontal}
+        layout = {
+            spacing = gaps / 10, 
+            layout = wibox.layout.fixed.horizontal
+        }
     }
 
     s.layout = awful.widget.layoutbox {
@@ -34,15 +39,27 @@ screen.connect_signal("request::desktop_decoration", function(s)
         end
     })
 
-    s.bar:setup{
+    s.bar:setup {
         {
-            {layout = wibox.layout.fixed.vertical, s.taglist},
-            {layout = wibox.layout.fixed.vertical, s.clock},
-            {layout = wibox.layout.fixed.vertical, s.layout},
+            {
+                layout = wibox.layout.fixed.vertical, 
+                s.taglist
+            },
+            {
+                layout = wibox.layout.fixed.vertical, 
+                s.clock
+            },
+            {
+                layout = wibox.layout.fixed.vertical, 
+                s.layout
+            },
             expand = "none",
             layout = wibox.layout.align.vertical
         },
         widget = wibox.container.margin,
         margins = gaps / 2
     }
-end)
+end
+
+
+return bar
