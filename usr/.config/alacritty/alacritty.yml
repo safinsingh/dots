@@ -1,0 +1,37 @@
+
+font:
+   normal:
+      family: UW ttyp0
+
+cursor:
+   style: Beam
+
+colors:
+   primary:
+      background: '0x0f0f0f'
+      foreground: '0xf0f0f0'
+
+   normal:
+      black:   '0x000000'
+      red:     '0xe182a9'
+      green:   '0xa9e182'
+      yellow:  '0xe1b982'
+      blue:    '0x82a9e1'
+      magenta: '0xb982e1'
+      cyan:    '0x82e1b9'
+      white:   '0xf0f0f0'
+  
+   bright:
+     black:   '0x262626'
+     red:     '0xe182a9'
+     green:   '0xa9e182'
+     yellow:  '0xe1b982'
+     blue:    '0x82a9e1'
+     magenta: '0xb982e1'
+     cyan:    '0x82e1b9'
+     white:   '0xf0f0f0'
+
+window:
+   padding:
+      x: 50
+      y: 50
