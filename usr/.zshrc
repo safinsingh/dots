@@ -41,6 +41,7 @@ alias space="df -h /dev/sda6"
 
 alias record="scr -m s -f 60 -c -n"
 alias scrot="maim $(date '+%s').png"
+alias s="sleep 3 && maim ~/rice.png && notify-send \"screenshot taken!\""
 
 alias mirror="xrandr --output DP-1 --auto --same-as eDP-1"
 alias xwin="Xephyr -br -ac -noreset -screen 1600x900 :2"
@@ -51,3 +52,5 @@ alias nodenv="source /usr/share/nvm/init-nvm.sh"
 
 # sources
 source ~/.cargo/env
+
+clear && f
