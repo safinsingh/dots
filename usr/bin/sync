@@ -1,0 +1,36 @@
+#!/bin/sh
+
+dots="/home/safin/dot/"
+
+s() {
+	mkdir -p "$(dirname "${dots}usr$1")"
+	cp -Rf "${HOME}$1" "${dots}usr$1"
+}
+
+sy() {
+	mkdir -p "$(dirname "${dots}sys$1")"
+	cp -Rf "$1" "${dots}sys$1"
+}
+
+r() {
+	rm -rf "${dots}usr$1"
+}
+
+ry() {
+	rm -rf "${dots}sys$1"
+}
+
+s "/.bashrc"
+s "/.Xresources"
+s "/.xinitrc"
+s "/bin"
+s "/.config/bspwm"
+s "/.config/sxhkd"
+s "/.config/nvim"
+r "/.config/nvim/plugged"
+s "/.config/polybar"
+s "/.config/rofi"
+s "/.config/alacritty"
+
+sy "/etc/ly/config.ini"
+sy "/etc/systemd/logind.conf"
