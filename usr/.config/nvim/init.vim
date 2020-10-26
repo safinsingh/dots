@@ -34,6 +34,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'jiangmiao/auto-pairs'	
 	Plug 'mhinz/vim-startify'
+	Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server'}
 call plug#end()
 
 " text wrap
