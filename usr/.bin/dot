@@ -36,3 +36,5 @@ s "/.config/alacritty"
 
 sy "/etc/ly/config.ini"
 sy "/etc/systemd/logind.conf"
+
+cd ~/dot && push

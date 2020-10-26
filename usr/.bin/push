@@ -1,0 +1,56 @@
+#!/bin/bash
+
+if [[ -z $1 ]]; then
+	read -p "[COMMIT MESSAGE]: " cmt
+else
+	cmt=$1
+fi
+
+cat <<EOF
+Can be:
+ - (b) build: 		affects build system
+ - (c) ci: 		continuous integration
+ - (d) docs: 		documentation
+ - (f) feat: 		new feature
+ - (u) fix: 		bugfix
+ - (p) perf: 		improves performance
+ - (r) refactor: 	organization
+ - (s) style: 		formatting
+ - (t) test: 		testing
+EOF
+
+read -p "[COMMIT TYPE]: " ct
+
+case $ct in
+"b")
+	msg="build: $cmt"
+	;;
+"c")
+	msg="ci: $cmt"
+	;;
+"d")
+	msg="docs: $cmt"
+	;;
+"f")
+	msg="feat: $cmt"
+	;;
+"u")
+	msg="fix: $cmt"
+	;;
+"p")
+	msg="perf: $cmt"
+	;;
+"r")
+	msg="refactor: $cmt"
+	;;
+"s")
+	msg="style: $cmt"
+	;;
+"t")
+	msg="test: $cmt"
+	;;
+esac
+
+git add .
+git commit -m "$msg"
+git push origin master
