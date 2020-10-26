@@ -25,6 +25,7 @@ ry() {
 s "/.zshrc"
 s "/.Xresources"
 s "/.xinitrc"
+s "/.editorconfig"
 s "/.bin"
 s "/.config/bspwm"
 s "/.config/sxhkd"

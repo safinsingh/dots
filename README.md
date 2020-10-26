@@ -13,7 +13,7 @@ Hey there! Here are some details about my current setup, codenamed `tropical`.
 - 🕹️ **WM**: [bspwm](https://github.com/baskerville/bspwm)
 - 📃 **Editor**: [neovim](https://github.com/neovim/neovim)
 - 🔍 **Menu**: [rofi](https://github.com/davatorium/rofi)
-- 🐚 **Shell**: [bash](https://www.gnu.org/software/bash/)
+- 🐚 **Shell**: [zsh](https://www.zsh.org/)
 - 🔤 **Font**: [uw ttyp0](https://people.mpi-inf.mpg.de/~uwe/misc/uw-ttyp0/)
 - 📖 **Start page**: [custom](https://safinsingh.github.io/start)
 
