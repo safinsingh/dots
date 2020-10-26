@@ -34,4 +34,3 @@ alias bigxwin="Xephyr -br -ac -noreset -screen 1920x1080 :2"
 alias xdisp="DISPLAY=:2"
 alias nodenv="source /usr/share/nvm/init-nvm.sh"
 alias dotty='dotty --dot-dir=$HOME/dot'
-
