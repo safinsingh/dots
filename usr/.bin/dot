@@ -34,6 +34,7 @@ r "/.config/nvim/plugged"
 s "/.config/polybar"
 s "/.config/rofi"
 s "/.config/alacritty"
+s "/.config/dunst"
 
 sy "/etc/ly/config.ini"
 sy "/etc/systemd/logind.conf"
