@@ -10,7 +10,7 @@ rm -rf ~/ss/*
 rm -rf ~/.Xauthority
 
 sudo pacman --noconfirm -Scc >/dev/null 2>&1
-pacman -Qtdq && sudo pacman --noconfirm -Rns $(pacman -Qtdq) >/dev/null 2>&1
+pacman -Qtdq && sudo pacman --noconfirm -Rns "$(pacman -Qtdq)" >/dev/null 2>&1
 
 printf "new space: "
 df -h /dev/sda6 | tail -n 1 | awk '{print $3}'
