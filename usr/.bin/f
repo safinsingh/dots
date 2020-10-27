@@ -5,14 +5,14 @@ c="$w$(tput bold)"
 r="$(tput sgr0)$(tput setaf 7)"
 
 wm=$(wmctrl -m 2>/dev/null |
-   grep "Name" |
-   cut -d " " -f2)
+	grep "Name" |
+	cut -d " " -f2)
 
 [[ -z $wm ]] && wm="bspwm"
 
 os=$(
-   . /etc/os-release
-   echo "$ID"
+	. /etc/os-release
+	echo "$ID"
 )
 pk=$(pacman -Qq | wc -l)
 
