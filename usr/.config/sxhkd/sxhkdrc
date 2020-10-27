@@ -8,12 +8,12 @@ super + Return
 
 # take a full-screen screenshot
 super + Print
-	maim ~/rice.png; \
+	maim ~/rice.png && \
 	notify-send "screenshot taken!"
 
 # take a selection screenshot
 Print
-	scr -S; \
+	scr -S && \
 	notify-send "screenshot taken!"
 
 # increase volume
