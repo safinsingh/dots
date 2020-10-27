@@ -1,15 +1,13 @@
 #!/bin/bash
 
-if [[ -z $1 ]]; then
-	read -p "[COMMIT MESSAGE]: " cmt
-else
-	cmt=$1
-fi
+[[ -d ".git" ]] || echo "not a git repository!"
+
+[[ -z $1 ]] && read -rp "[COMMIT MESSAGE]: " cmt || cmt=$1
 
 cat <<EOF
 Can be:
- - (b) build: 		affects build system
- - (c) ci: 		continuous integration
+ - (b) build:		affects build system
+ - (c) ci:			continuous integration
  - (d) docs: 		documentation
  - (f) feat: 		new feature
  - (u) fix: 		bugfix
@@ -19,7 +17,7 @@ Can be:
  - (t) test: 		testing
 EOF
 
-read -p "[COMMIT TYPE]: " ct
+read -rp "[COMMIT TYPE]: " ct
 
 case $ct in
 "b")

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 w="$(tput setaf 6)"
-c="$w$(tput bold)"
+c="${w}$(tput bold)"
 r="$(tput sgr0)$(tput setaf 7)"
 
 wm=$(wmctrl -m 2>/dev/null |
@@ -11,7 +11,8 @@ wm=$(wmctrl -m 2>/dev/null |
 [[ -z $wm ]] && wm="bspwm"
 
 os=$(
-	. /etc/os-release
+	# shellcheck disable=SC1091
+	source /etc/os-release
 	echo "$ID"
 )
 pk=$(pacman -Qq | wc -l)
