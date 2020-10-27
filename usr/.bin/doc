@@ -1,3 +1,0 @@
-#!/bin/sh
-
-pandoc $1.md -o $1.pdf --from markdown --template eisvogel --titlepage true --toc-own-page true
