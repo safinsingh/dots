@@ -22,8 +22,8 @@ ry() {
 	rm -rf "${dots}sys$1"
 }
 
-rm -rf "${dots}usr/*"
-rm -rf "${dots}sys/*"
+r "/*"
+ry "/*"
 
 s "/.zshrc"
 s "/.Xresources"
