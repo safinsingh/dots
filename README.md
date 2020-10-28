@@ -2,7 +2,7 @@
 
 ### Details
 
-Hey there! Here are some details about my current setup, codenamed `tropical`.
+Hey there! Here are some details about my [current setup](https://www.reddit.com/r/unixporn/comments/jiprq7/bspwm_the_tropics/), codenamed `tropical`.
 
 ## Setup
 
