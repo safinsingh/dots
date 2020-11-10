@@ -4,20 +4,16 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
-bspc config border_width            5
-bspc config focused_border_color    "#82e1b9"
-bspc config normal_border_color     "#0f0f0f"
+bspc config border_width	5
+bspc config window_gap		20
 
-bspc config window_gap          20
+bspc config normal_border_color		"#101933"
+bspc config focused_border_color	"#18264d"
 
 bspc config focus_follows_pointer	true
 bspc config split_ratio          	0.52
 bspc config borderless_monocle   	true
 bspc config gapless_monocle      	true
 
-# startup
+xsetroot -solid "#050810" &
 xsetroot -cursor_name left_ptr &
-feh --bg-fill --no-fehbg ~/dot/wp/tropical.jpg &
-
-polybar -r -c ~/.config/polybar/config.ini tropical &
-dunst &

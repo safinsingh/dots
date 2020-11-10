@@ -7,7 +7,7 @@ set background=dark
 set t_Co=254
 
 syntax on
-colorscheme tropical
+colorscheme azul
 
 set ruler
 set laststatus=2
@@ -32,7 +32,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'voldikss/vim-floaterm'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'editorconfig/editorconfig-vim'
-	Plug 'jiangmiao/auto-pairs'	
+	Plug 'jiangmiao/auto-pairs'
 	Plug 'mhinz/vim-startify'
 	Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server'}
 call plug#end()

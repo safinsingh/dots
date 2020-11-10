@@ -1,6 +1,6 @@
 #!/bin/sh
 
-dots="/home/safin/dot/"
+dots="/home/pdx/dot/"
 
 s() {
 	d=$(dirname "${dots}usr$1")
@@ -34,12 +34,8 @@ s "/.config/bspwm"
 s "/.config/sxhkd"
 s "/.config/nvim"
 r "/.config/nvim/plugged"
-s "/.config/polybar"
 s "/.config/rofi"
 s "/.config/alacritty"
 s "/.config/dunst"
-
-sy "/etc/ly/config.ini"
-sy "/etc/systemd/logind.conf"
 
 cd ~/dot && push

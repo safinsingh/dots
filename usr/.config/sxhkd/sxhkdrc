@@ -11,6 +11,10 @@ super + Print
 	maim ~/rice.png && \
 	notify-send "screenshot taken!"
 
+# send sysinfo notif
+super + i
+    /home/pdx/.bin/sysinfo
+
 # take a selection screenshot
 Print
 	scr -S && \

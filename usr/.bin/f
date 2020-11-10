@@ -15,7 +15,7 @@ os=$(
 	source /etc/os-release
 	echo "$ID"
 )
-pk=$(pacman -Qq | wc -l)
+pk=$(xbps-query -l | wc -l)
 
 echo "${w}  卑${r}    os ${c}::${r} $os
 ${w} 卑卑${r}   wm ${c}::${r} $wm
