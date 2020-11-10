@@ -1,16 +1,16 @@
 [global]
-    geometry = "300x20-20-70"
+    geometry = "330x40-40-40"
     indicate_hidden = no
     shrink = no
     transparency = 0
     separator_height = 1
     padding = 20
     horizontal_padding = 20
-    frame_width = 3
-    frame_color = "#82e1b9"
+    frame_width = 4
+    frame_color = "#18264d"
     separator_color = frame
     sort = yes
-    font = UW ttyp0 11
+    font = Roboto Mono 12
     line_height = 0
     markup = full
     format = "%s\n%b"
@@ -35,18 +35,18 @@
     mouse_right_click = close_all
 
 [urgency_low]
-    background = "#0f0f0f"
-    foreground = "#f0f0f0"
+    background = "#050810"
+    foreground = "#d9e6f2"
     timeout = 10
 
 [urgency_normal]
-    background = "#0f0f0f"
-    foreground = "#f0f0f0"
+    background = "#050810"
+    foreground = "#d9e6f2"
     timeout = 15
 
 [urgency_critical]
-    background = "#0f0f0f"
-    foreground = "#82e1b9"
-    timeout = 10
+    background = "#d9e6f2"
+    foreground = "#74af9b"
+    timeout = 30
 
 # vim: ft=cfg

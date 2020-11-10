@@ -20,10 +20,10 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 export TERMINAL="alacritty"
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export BROWSER="brave"
+export BROWSER="firefox"
 export TERM="xterm-256color"
 
-export PATH="/home/safin/.bin:$PATH"
+export PATH="/home/pdx/.bin:$PATH"
 
 # prompt
 export PROMPT="%B%F{cyan}$%f%b %1~ "
@@ -37,9 +37,9 @@ alias tree="exa -a --icons --tree --group-directories-first"
 alias grep="grep --color=auto"
 alias vim="nvim"
 
-alias space="df -h /dev/sda6"
+alias space="sudo du -sh / 2>/dev/null"
 
-alias record="scr -m s -f 60 -c -n"
+alias record="scr -c -e -r60 2>/dev/null"
 alias scrot="maim $(date '+%s').png"
 alias s="sleep 3 && maim ~/rice.png && notify-send \"screenshot taken!\""
 

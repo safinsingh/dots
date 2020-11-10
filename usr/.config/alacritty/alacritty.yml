@@ -1,37 +1,38 @@
-
 font:
-   normal:
-      family: UW ttyp0
-
-cursor:
-   style: Beam
-
-colors:
-   primary:
-      background: '0x0f0f0f'
-      foreground: '0xf0f0f0'
-
-   normal:
-      black:   '0x000000'
-      red:     '0xe182a9'
-      green:   '0xa9e182'
-      yellow:  '0xe1b982'
-      blue:    '0x82a9e1'
-      magenta: '0xb982e1'
-      cyan:    '0x82e1b9'
-      white:   '0xf0f0f0'
-  
-   bright:
-     black:   '0x262626'
-     red:     '0xe182a9'
-     green:   '0xa9e182'
-     yellow:  '0xe1b982'
-     blue:    '0x82a9e1'
-     magenta: '0xb982e1'
-     cyan:    '0x82e1b9'
-     white:   '0xf0f0f0'
+  normal:
+    family: Roboto Mono
+  size: 10
 
 window:
-   padding:
-      x: 50
-      y: 50
+  padding:
+    x: 40
+    y: 40
+
+colors:
+  # Default colors
+  primary:
+    background: '0x050810'
+    foreground: '0xd9e6f2'
+
+  # Normal colors
+  normal:
+    black:   '0x050810'
+    red:     '0xad779b'
+    green:   '0x90af7f'
+    yellow:  '0xad937f'
+    blue:    '0x7493b8'
+    magenta: '0x9077b8'
+    cyan:    '0x74af9b'
+    white:   '0xcbcdd6'
+
+  # Bright colors
+  bright:
+    black:   '0x282b33'
+    red:     '0xcdb4ca'
+    green:   '0xbfcfbc'
+    yellow:  '0xcdc2bc'
+    blue:    '0xb1c2d7'
+    magenta: '0xbfb4d7'
+    cyan:    '0xb1cfca'
+    white:   '0xedf0f8'
+

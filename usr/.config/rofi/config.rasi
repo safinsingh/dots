@@ -1,7 +1,7 @@
 configuration {
   modi: "run";
   width: 20;
-  font: "UW ttyp0 12";
+  font: "Roboto Mono 12";
   terminal: "alacritty";
   disable-history: false;
   sidebar-mode: true;
@@ -15,17 +15,17 @@ configuration {
 }
 
 * {
-  bg: #0f0f0f;
-  fg: #f0f0f0;
-  accent: #82e1b9;
-  
+  bg: #050810;
+  fg: #d9e6f2;
+  accent: #18264d;
+
   background-color: @bg;
   text-color: @fg;
 }
 
 window {
   padding: 50px;
-  border: 3px;
+  border: 5px;
   border-color: @accent;
 }
 
@@ -40,7 +40,7 @@ element {
 
 element selected {
   background-color: @accent;
-  text-color: @bg;
+  text-color: @fg;
 }
 
 button {
