@@ -1,5 +1,0 @@
-#!/bin/sh
-clang++ --target=i686-pc-none-elf -march=i686 \
-    -nostdlib -nostdinc -nostdinc++ -fno-builtin \
-    -ffreestanding "${@}"
-
