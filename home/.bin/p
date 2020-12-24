@@ -5,7 +5,10 @@
 	exit 1
 }
 
-[ -z $1 ] && read -rp "[COMMIT MESSAGE]: " cmt || cmt=${1:-"n/a"}
+[ -z "$1" ] && {
+	printf "[COMMIT MESSAGE]: "
+	read -r cmt
+} || cmt="${1:-"n/a"}"
 
 cat <<EOF
 Can be:
@@ -20,7 +23,8 @@ Can be:
  - (t) test: 		testing
 EOF
 
-read -rp "[COMMIT TYPE]: " ct
+printf "[COMMIT TYPE]: "
+read -r ct
 
 case $ct in
 "b")
@@ -52,6 +56,8 @@ case $ct in
 	;;
 esac
 
-git add .
-git commit -m "$msg"
-git push origin master
+[ -z "$ct" ] || {
+	git add .
+	git commit -m "$msg"
+	git push origin master
+}
