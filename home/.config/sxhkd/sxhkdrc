@@ -32,6 +32,10 @@ XF86AudioMute
 super + d
 	rofi -show run
 
+#info
+super + shift + t
+	notify-send "$(~/.bin/t)"
+
 # make sxhkd reload its config
 super + Escape
 	pkill -USR1 -x sxhkd

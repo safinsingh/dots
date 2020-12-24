@@ -10,7 +10,7 @@
     frame_color = "#3d292e"
     separator_color = frame
     sort = yes
-    font = SF Mono 14
+    font = SF Mono 12
     line_height = 0
     markup = full
     format = "%s\n%b"
