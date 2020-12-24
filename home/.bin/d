@@ -2,44 +2,52 @@
 
 dots="$HOME/dots/"
 
-sy() {
-	d=$(dirname "${dots}$1")
+#raw
+_r() {
+	d=$(dirname "${dots}${1}")
 	mkdir -p "$d"
 	cp -Rf "$1" "$d"
 }
 
-s() {
-	d=$(dirname "${dots}home$1")
+_rd() {
+	rm -rf "${dots}${1}"
+}
+
+#home
+_() {
+	d=$(dirname "${dots}home${1}")
 	mkdir -p "$d"
-	cp -Rf "${HOME}$1" "$d"
+	cp -Rf "${HOME}${1}" "$d"
 }
 
-ry() {
-	rm -rf "${dots}$1"
+_d() {
+	rm -rf "${dots}home${1}"
 }
 
-r() {
-	rm -rf "${dots}home$1"
-}
+#cleanup
+_rd "/*"
+_d "/*"
 
-r "/*"
-ry "/*"
+#home
+_ "/.zshrc"
+_ "/.Xresources"
+_ "/.gitconfig"
+_ "/.bin"
+_ "/.wp"
+_ "/.config/bspwm"
+_ "/.config/sxhkd"
+_ "/.config/alacritty"
+_ "/.config/picom"
+_ "/.config/rofi"
+_ "/.config/nvim"
 
-s "/.zshrc"
-s "/.Xresources"
-s "/.gitconfig"
-s "/.bin"
-s "/.wp"
-s "/.config/bspwm"
-s "/.config/sxhkd"
-s "/.config/alacritty"
-s "/.config/picom"
-s "/.config/rofi"
-s "/.config/nvim"
-r "/.config/nvim/plugged"
+#sys
+_r "/etc/X11/xorg.conf.d/30-touchpad.conf"
+_r "/etc/systemd/logind.conf"
+_r "/etc/ly/config.ini"
 
-sy "/etc/X11/xorg.conf.d/30-touchpad.conf"
-sy "/etc/systemd/logind.conf"
-sy "/etc/ly/config.ini"
+#rms
+_d "/.config/nvim/plugged"
 
+#push
 cd "$HOME/dots" && p
