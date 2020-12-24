@@ -72,6 +72,10 @@ map <C-j> :GFiles<CR>
 map <C-l> :set nonumber! norelativenumber!<CR>
 map <C-t> :FloatermNew --height=0.8 --width=0.8<CR>
 
+" file association
+autocmd BufNewFile,BufRead *.prettierrc set ft=json
+autocmd BufNewFile,BufRead *.eslintrc set ft=json
+
 " nuaNce's statusline
 hi Sl1 ctermfg=none cterm=none ctermbg=NONE
 hi Sl2 ctermfg=none cterm=none ctermbg=NONE
