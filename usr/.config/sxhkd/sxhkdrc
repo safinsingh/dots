@@ -6,37 +6,11 @@
 super + Return
 	alacritty
 
-# take a full-screen screenshot
-super + Print
-	maim ~/rice.png && \
-	notify-send "screenshot taken!"
-
-# send sysinfo notif
-super + i
-    /home/pdx/.bin/sysinfo
-
-# take a selection screenshot
-Print
-	scr -S && \
-	notify-send "screenshot taken!"
-
-# increase volume
-XF86AudioRaiseVolume
-	pactl set-sink-volume 0 +5%
-
-# decrease volume
-XF86AudioLowerVolume
-	pactl set-sink-volume 0 -5%
-
-# mute sink
-XF86AudioMute
-	pactl set-sink-mute 0 toggle
-
 # program launcher
-super + d
-	rofi -show run
+super + @space
+	dmenu_run
 
-# make sxhkd reload its config
+# make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
@@ -52,6 +26,10 @@ super + alt + {q,r}
 super + {_,shift + }w
 	bspc node -{c,k}
 
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
 # send the newest marked node to the newest preselected node
 super + y
 	bspc node newest.marked.local -n newest.!automatic.local
@@ -65,8 +43,8 @@ super + g
 #
 
 # set the window state
-super + {t,s,f}
-	bspc node -t {tiled,floating,fullscreen}
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
 super + ctrl + {m,x,y,z}
@@ -79,6 +57,10 @@ super + ctrl + {m,x,y,z}
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
 super + {_,shift + }c

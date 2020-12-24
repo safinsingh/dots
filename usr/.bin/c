@@ -1,0 +1,24 @@
+#!/bin/sh
+clear
+
+i=" "
+
+r='\033[0;31m'
+g='\033[0;32m'
+y='\033[0;33m'
+b='\033[0;34m'
+c='\033[0;35m'
+s='\033[0m'
+
+#intro
+printf "~ @iota ~\n"
+
+#colors
+printf "${r}${i}"
+printf "${g}${i}"
+printf "${y}${i}"
+printf "${b}${i}"
+printf "${c}${i}"
+
+#cleanup
+printf "${s}\n\n"

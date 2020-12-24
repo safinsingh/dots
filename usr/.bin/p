@@ -1,8 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 
-[[ -d ".git" ]] || echo "not a git repository!"
+[ -d ".git" ] || {
+	echo "not a git repository!"
+	exit 1
+}
 
-[[ -z $1 ]] && read -rp "[COMMIT MESSAGE]: " cmt || cmt=$1
+[ -z $1 ] && read -rp "[COMMIT MESSAGE]: " cmt || cmt=${1:-"n/a"}
 
 cat <<EOF
 Can be:

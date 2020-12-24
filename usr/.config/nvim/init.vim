@@ -7,14 +7,14 @@ set background=dark
 set t_Co=254
 
 syntax on
-colorscheme azul
+colorscheme siori
+syntax on
 
 set ruler
 set laststatus=2
 set noshowmode
 set linebreak
 set hidden
-set cursorline
 
 " compatibility
 set nocompatible
@@ -22,8 +22,9 @@ filetype on
 
 " plugins
 call plug#begin('~/.config/nvim/plugged')
-	Plug 'dense-analysis/ale'
+	Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 	Plug 'sheerun/vim-polyglot'
+	Plug 'z0mbix/vim-shfmt', { 'for': 'sh' }
 	Plug 'junegunn/goyo.vim'
 	Plug 'preservim/nerdtree'
 	Plug 'ap/vim-css-color'
@@ -33,8 +34,6 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'jiangmiao/auto-pairs'
-	Plug 'mhinz/vim-startify'
-	Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server'}
 call plug#end()
 
 " text wrap
@@ -44,7 +43,6 @@ set wrap
 set autoindent
 set noexpandtab
 set tabstop=4
-" set list lcs=tab:\›\
 
 " searching
 set ignorecase
@@ -63,56 +61,6 @@ let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 
 "" shfmt
 let g:shfmt_fmt_on_save = 1
-
-"" ale
-let g:ale_rust_rls_config = {
-	\ 'rust': {
-		\ 'all_targets': 1,
-		\ 'build_on_save': 1,
-		\ 'clippy_preference': 'on'
-	\ }
-	\ }
-let g:ale_rust_rls_toolchain = ''
-let g:ale_rust_rls_executable = 'rust-analyzer'
-let g:ale_linters = {
-	\ 'rust': ['analyzer'],
-	\ 'go': ['golangci-lint'],
-	\ 'javascript': ['eslint', 'prettier'],
-	\ 'css': ['prettier'],
-	\ 'typescript': ['eslint', 'prettier'],
-	\ 'scss': ['prettier'],
-	\ 'yaml': ['prettier'],
-	\ 'graphql': ['eslint', 'prettier'],
-	\ 'html': ['prettier'],
-	\ 'json': ['prettier'],
-	\ 'markdown': ['prettier'],
-	\ 'lua': ['luacheck']
-	\ }
-let g:ale_fixers = {
-	\ '*': [
-		\ 'remove_trailing_lines',
-		\ 'trim_whitespace'
-		\ ],
-	\ 'rust': ['rustfmt'],
-	\ 'sh': ['shfmt'],
-	\ 'zsh': ['shfmt'],
-	\ 'python': ['black'],
-	\ 'typescript': ['eslint', 'prettier'],
-	\ 'javascript': ['eslint', 'prettier'],
-	\ 'css': ['prettier'],
-	\ 'less': ['prettier'],
-	\ 'scss': ['prettier'],
-	\ 'json': ['prettier'],
-	\ 'json5': ['prettier'],
-	\ 'graphql': ['prettier'],
-	\ 'markdown': ['prettier'],
-	\ 'html': ['prettier'],
-	\ 'yaml': ['prettier']
-	\ }
-let g:ale_rust_rls_toolchain = "stable"
-let g:ale_fix_on_save = 1
-let g:ale_go_golangci_lint_package = 1
-let g:ale_go_golangci_lint_options = "--fast -E gofumpt -E unparam -E unconvert -E maligned -E goimports -E godot -E goconst"
 
 "" comments
 let g:NERDSpaceDelims = 1

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-dots="/home/pdx/dot/"
+dots="$HOME/dots/"
 
 s() {
 	d=$(dirname "${dots}usr$1")
@@ -27,15 +27,16 @@ ry "/*"
 
 s "/.zshrc"
 s "/.Xresources"
-s "/.xinitrc"
-s "/.editorconfig"
+s "/.gitconfig"
 s "/.bin"
 s "/.config/bspwm"
 s "/.config/sxhkd"
+s "/.config/alacritty"
+s "/.config/picom"
 s "/.config/nvim"
 r "/.config/nvim/plugged"
-s "/.config/rofi"
-s "/.config/alacritty"
-s "/.config/dunst"
 
-cd ~/dot && push
+sy "/etc/systemd/logind.conf"
+sy "/etc/ly/config.ini"
+
+cd "$HOME/dots" && p

@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-vol="$(awk -F"[][]" '/dB/ { print $2 }' <(amixer sget Master))"
-bat="$(acpi | grep "Battery 0" | cut -d, -f2 | cut -d" " -f2)"
-mem="$(free -m | tail -n 2 | head -n 1 | awk '{ print $3 }' | sed 's/$/M/')"
-date="$(date +"%a %d")"
-time="$(date +"%H:%M %p")"
-
-notify-send "${date}"$'\n'"${time}"$'\n'"Volume: ${vol}"$'\n'"Battery: ${bat}"$'\n'"Memory: ${mem}"
