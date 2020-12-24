@@ -18,7 +18,7 @@ rm -rf ~/.node_repl_history
 rm -rf ~/.wget-hsts
 
 sudo pacman --noconfirm -Scc >/dev/null 2>&1
-sudo rm -rf /var/cache/pacman
+sudo rm -rf /var/cache/pacman/pkg/*
 
 b="$(pacman -Qtdq)"
 [ -n "$b" ] && {
