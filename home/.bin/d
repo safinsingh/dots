@@ -42,6 +42,7 @@ _ "/.config/alacritty"
 _ "/.config/picom"
 _ "/.config/rofi"
 _ "/.config/nvim"
+_ "/.config/dunst"
 
 #sys
 _r "/etc/X11/xorg.conf.d/30-touchpad.conf"
