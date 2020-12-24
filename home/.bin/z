@@ -16,4 +16,4 @@ done
 printf "copy? "
 read -r _c
 
-printf "%s" "$out" | grep -w "[$_c]" | awk '{ print $2 }' | xclip -sel c
+printf "%s" "$out" | grep -w "[$_c]" | cut -d " " -f2 | xclip -sel c
