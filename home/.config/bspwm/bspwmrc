@@ -6,7 +6,7 @@ _m() { bspc monitor "$@"; }
 _s() {
 	pkill -x "$1"
 	{
-		sleep 1
+		sleep 0.1
 		"$@" &
 	}
 }
@@ -30,3 +30,4 @@ _s sxhkd
 _s picom -b
 _s xsetroot -cursor_name left_ptr
 _s ~/.fehbg
+_s xrdb -load ~/.Xresources
