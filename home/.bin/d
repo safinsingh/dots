@@ -38,6 +38,7 @@ s "/.config/rofi"
 s "/.config/nvim"
 r "/.config/nvim/plugged"
 
+sy "/etc/X11/xorg.conf.d/30-touchpad.conf"
 sy "/etc/systemd/logind.conf"
 sy "/etc/ly/config.ini"
 
