@@ -1,13 +1,14 @@
 {
 	"diagnostic-languageserver.filetypes": {
-    "sh": "shellcheck"
-  },
-  "diagnostic-languageserver.formatFiletypes": {
-    "sh": "shfmt"
-  },
-  "diagnostic-languageserver.formatters": {
-    "shfmt": {
-      "command": "shfmt"
-    }
-  }
+		"sh": "shellcheck"
+	},
+	"diagnostic-languageserver.formatFiletypes": {
+		"sh": "shfmt"
+	},
+	"diagnostic-languageserver.formatters": {
+		"shfmt": {
+			"command": "shfmt"
+		}
+	},
+	"coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "json"]
 }
