@@ -33,6 +33,7 @@ s "/.config/bspwm"
 s "/.config/sxhkd"
 s "/.config/alacritty"
 s "/.config/picom"
+s "/.config/rofi"
 s "/.config/nvim"
 r "/.config/nvim/plugged"
 
