@@ -1,0 +1,19 @@
+#!/bin/sh
+
+files="$#"
+out=""
+
+while [ "$#" -gt 0 ]; do
+	link="$(curl -s -F"file=@$1" http://0x0.st)"
+	ident="[$((files - $#))] $link ($1)"
+
+	out="${out}${ident}
+"
+	echo "$ident"
+	shift
+done
+
+printf "copy? "
+read -r _c
+
+printf "%s" "$out" | grep -w "[$_c]" | awk '{ print $2 }' | xclip -sel c
