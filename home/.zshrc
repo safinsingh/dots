@@ -24,6 +24,7 @@ export BROWSER="firefox"
 export TERM="xterm-256color"
 
 export PATH="/home/pdx/.bin:$PATH"
+export PATH="/home/pdx/.deno/bin:$PATH"
 export PROMPT='%F{red}%B*%b%f '
 
 #aliases
