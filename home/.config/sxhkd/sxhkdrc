@@ -36,6 +36,10 @@ super + d
 super + shift + t
 	notify-send "$(~/.bin/t)"
 
+#primary display brightness
+XF86MonBrightness{Up,Down}
+	~/.bin/l {u,d}
+
 # make sxhkd reload its config
 super + Escape
 	pkill -USR1 -x sxhkd
