@@ -14,11 +14,11 @@ s='\033[0m'
 printf "~ @iota ~\n"
 
 #colors
-printf "%s%s" "$r" "$i"
-printf "%s%s" "$g" "$i"
-printf "%s%s" "$y" "$i"
-printf "%s%s" "$b" "$i"
-printf "%s%s" "$c" "$i"
+printf "$r$i"
+printf "$g$i"
+printf "$y$i"
+printf "$b$i"
+printf "$c$i"
 
 #cleanup
-printf "%s\n\n" "$s"
+printf "$s\n\n"

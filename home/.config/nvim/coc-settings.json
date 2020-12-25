@@ -1,4 +1,7 @@
 {
+	"languageserver": {
+		"erlang": { "command": "erlang_ls", "filetypes": ["erlang"] }
+	},
 	"diagnostic-languageserver.filetypes": {
 		"sh": "shellcheck"
 	},
