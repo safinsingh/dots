@@ -16,7 +16,7 @@ _m -d I II III IV V
 
 #borders
 _c border_width 10
-_c normal_border_color "#2e2527"
+_c normal_border_color "#261c1f"
 _c focused_border_color "#3d292e"
 _c borderless_monocle false
 _c gapless_monocle false
