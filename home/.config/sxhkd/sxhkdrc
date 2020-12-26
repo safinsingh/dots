@@ -18,15 +18,16 @@ Print
 
 # increase volume
 XF86AudioRaiseVolume
-	pactl set-sink-volume 0 +5%
+	~/.bin/s u
 
 # decrease volume
 XF86AudioLowerVolume
-	pactl set-sink-volume 0 -5%
+	~/.bin/s d
 
 # mute sink
 XF86AudioMute
-	pactl set-sink-mute 0 toggle
+	pactl set-sink-mute 0 toggle && \
+	notify-send "婢 muted"
 
 # program launcher
 super + d
@@ -37,8 +38,11 @@ super + shift + t
 	notify-send "$(~/.bin/t)"
 
 #primary display brightness
-XF86MonBrightness{Up,Down}
-	~/.bin/l {u,d}
+XF86MonBrightnessUp
+	~/.bin/l u
+
+XF86MonBrightnessDown
+	~/.bin/l d
 
 # make sxhkd reload its config
 super + Escape

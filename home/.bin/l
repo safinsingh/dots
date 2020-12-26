@@ -1,7 +1,5 @@
 #!/bin/bash
 
-[ -z "$1" ] && exit 1
-
 help='l v0.1
 
 USAGE:
@@ -14,10 +12,16 @@ FLAGS:
 '
 current=$(xrandr --current --verbose | grep -w "Brightness" | head -n 1 | cut -d" " -f2)
 
+[ -z "$1" ] && {
+	printf '%s' "$help"
+	exit 1
+}
+
 run() {
 	[ "$(echo "$1 > 1" | bc)" = "1" ] && exit 1
 	xrandr --output eDP-1 --brightness $1
-	notify-send "brightness: $1"
+	notify-send "brightness: $(echo "$1 * 100" | bc | cut -d. -f1)%" \
+		-h string:x-canonical-private-synchronous:brightness
 }
 
 case $1 in
