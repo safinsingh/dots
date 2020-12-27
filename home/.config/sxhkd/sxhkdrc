@@ -16,13 +16,9 @@ Print
 	scr -S && \
 	notify-send "screenshot taken!"
 
-# increase volume
-XF86AudioRaiseVolume
-	~/.bin/s u
-
-# decrease volume
-XF86AudioLowerVolume
-	~/.bin/s d
+# volume
+XF86Audio{Raise,Lower}Volume
+    ~/.bin/s {u,d}
 
 # mute sink
 XF86AudioMute
